@@ -1,0 +1,725 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*#form #accordion .ui-accordion-header {*/
+    /*background-color: red;*/
+/*}*/
+
+/*#form #accordion .ui-accordion-header h3 {*/
+    /*color: #ffffff;*/
+    /*font-size: 14px;*/
+/*}*/
+
+body {
+    background: url('../img/Medium-Landing-Page-Backdrop.png') 0 0 no-repeat;
+    height: 100%;
+    display: block;
+    background-color: rgb(61, 123, 172);
+    min-height: 800px;
+}
+
+body.thankyou {
+	background: none;
+}
+
+/* International Order Form */
+
+#content.international {
+	background: #fff4f4;
+	padding: 10px;
+	width: 780px;
+}
+
+#content.international #wrapper {
+	background-color: rgb(61, 123, 172);
+}
+
+#content.international span.skip {
+	display: none;
+	color: red;
+}
+
+#content.international .submit {
+	margin-left: 10px;
+}
+
+#content.international table img.addRow {
+	height: 16px;
+	width: 16px;
+}
+
+#content.international p.allcaps,
+#pdf p.allcaps{
+	text-transform: uppercase;
+}
+
+#content.international input,
+#content.international textarea {
+	font-size: 12px;
+}
+
+#content.international p,
+#pdf p,
+#content.international ol,
+#pdf ol,
+#content.international label {
+	font-size: 12px;
+}
+
+#content.international section,
+#pdf section {
+	padding: 5px;
+}
+
+#content.international .floatleft,
+#pdf .floatleft{
+	float: left !important;
+}
+
+#content.international .floatright,
+#pdf .floatright {
+	float: right !important;
+}
+
+#content.international section.noborder,
+#pdf section.noborder {
+	border: none !important;
+}
+
+#content.international section.floatleft,
+#pdf section.floatleft {
+	width: 350px;
+	margin: 10px 20px 10px 0;
+	border: 1px solid #dddddd;
+}
+
+#content.international section.floatright,
+#pdf section.floatright {
+	width: 350px;
+	margin: 10px 0 10px 0;
+	border: 1px solid #dddddd;
+}
+
+#content.international section h2,
+#pdf h2 {
+	font-size: 14px;
+	color: white;
+	background: black;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+#content.international table,
+#pdf table {
+	width: 770px;
+	margin: 0 auto 3px;
+}
+
+#content.international th,
+#pdf th {
+	background-color: lightcyan;
+	font-weight: 400;
+	font-size: 12px;
+	text-align: center;
+}
+
+#content.international td.remove {
+	text-align: center;
+}
+
+#content.international td,
+#content.international th{
+	padding: 0px 5px;
+}
+
+#content.international td.quantity input,
+#content.international td.size input,
+#content.international td.liter input,
+#content.international td.container input
+{
+	width: 100%;
+}
+
+
+#content.international td.quantity,
+#content.international td.size,
+#content.international td.liter,
+#content.international td.container {
+	width: 95px;
+}
+
+#content.international td.product {
+	width: 280px;
+}
+
+#content.international td.product input {
+	width: 100%;
+}
+
+
+#content.international td.extension input {
+	width: 100%;
+}
+
+#content.international td.extension,
+#content.international th.extension,
+#pdf td.extension,
+#pdf th.extension {
+	border-left: 3px solid #000000;
+}
+
+#content.international td.comments textarea {
+	width: 100%;
+	height: 80px;
+	margin-left: 0px;
+}
+
+#content.international section span,
+#pdf section span{
+	display: block;
+	height: 30px;
+	margin: 3px 0;
+}
+
+#content.international section div,
+#pdf section div {
+	clear: both;
+}
+
+#content.international section label {
+	float: left;
+}
+
+#content.international section div.row,
+#pdf section div.row {
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+#content.international section span.checkbox label {
+	float: left;
+}
+
+#content.international section label strong,
+#pdf section label strong {
+	margin: 5px 0;
+}
+
+#content.international section input[type=checkbox] {
+	float: left;
+	margin: 0 10px;
+}
+
+#content.international section.floatleft input[type=text],
+#content.international section.floatright input[type=text]{
+	float: right;
+	width: 190px;
+}
+
+#content.international section span.checkbox {
+	float: left;
+	width: 100%;
+}
+
+#content.international label.error {
+	color: red;
+	float: right;
+}
+/* END International Order Form */
+
+
+
+#content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#entryform {
+    margin-bottom: 50px;
+}
+
+#content h1 {
+    color: red;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 0;
+
+}
+
+#entryform .row .cell {
+    float: left;
+    margin-right: 10px;
+}
+
+#entryform .row.important {
+    background-color: red;
+    padding: 25px;
+    width: 450px;
+    margin: 20px auto;
+}
+
+#entryform .row.license {
+    padding: 9px;
+    width: 450px;
+}
+
+#entryform .row .cell.checkbox {
+    float: left;
+    margin-right: 10px;
+    display: table-cell;
+    width: 50px;
+}
+
+#entryform .row .cell input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    clear: both;
+    float: left;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: 0px;
+}
+
+#entryform .row .cell.paragraph {
+    width: 350px;
+    float: right;
+}
+
+#entryform .important p {
+    margin-top: 0;
+}
+
+#entryform .row.license .cell.paragraph {
+    float: left;
+}
+
+#entryform .row.license .cell.paragraph p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#form .row.important .cell.paragraph p {
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+#entryform .row.important .cell.paragraph p strong,
+#entryform .row.important .cell.paragraph p em{
+    font-weight: 800;
+	color: #fff;
+	font-size: 12px;
+}
+
+#entryform .row {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#entryform .row label {
+    font-weight: 600;
+    font-size: 10px;
+}
+#entryform .row label strong {
+    font-weight: 800;
+    font-size: 12px;
+}
+
+#entryform .row input {
+    width: 100%;
+    height: 25px;
+    background-color: #b3d4fc;
+    margin-top: 5px;
+}
+
+#entryform .row textarea {
+    background-color: #b3d4fc;
+    height: 80px;
+    width: 400px;
+}
+
+#entryform h3.ui-accordion-header {
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#entryform h3 {
+    color: red;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+#entryform h3.reversed {
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #000000;
+    margin: 0 auto;
+    padding: 40px 49px;
+    width: 344px;
+    display: block;
+    text-align: center;
+    font-weight: 800;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+#entryform p {
+    font-size: 10px;
+}
+
+#entryform .row .instructions {
+    width: 400px;
+    margin: 20px auto;
+    background-color: red;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#entryform .row .instructions h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#entryform .row .instructions p {
+    color: #ffffff;
+}
+
+#entryform label.error {
+    background-color: red;
+    color: #ffffff;
+    display: block;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+/*.alert-box {*/
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*display: block;*/
+    /*font-weight: bold;*/
+    /*margin-bottom: 1.25em;*/
+    /*position: relative;*/
+    /*padding: 0.6875em 1.3125em 0.75em 0.6875em;*/
+    /*font-size: 0.875em;*/
+    /*background-color: #2ba6cb;*/
+    /*border-color: #2284a1;*/
+    /*color: white; }*/
+/*.alert-box .close {*/
+    /*font-size: 1.375em;*/
+    /*padding: 5px 4px 4px;*/
+    /*line-height: 0;*/
+    /*position: absolute;*/
+    /*top: 0.4375em;*/
+    /*right: 0.3125em;*/
+    /*color: #333333;*/
+    /*opacity: 0.3; }*/
+/*.alert-box .close:hover, .alert-box .close:focus {*/
+    /*opacity: 0.5; }*/
+/*.alert-box.radius {*/
+    /*-webkit-border-radius: 3px;*/
+    /*border-radius: 3px; }*/
+/*.alert-box.round {*/
+    /*-webkit-border-radius: 1000px;*/
+    /*border-radius: 1000px; }*/
+/*.alert-box.success {*/
+    /*background-color: #5da423;*/
+    /*border-color: #457a1a;*/
+    /*color: white; }*/
+/*.alert-box.error {*/
+    /*background-color: #c60f13;*/
+    /*border-color: #970b0e;*/
+    /*color: white; }*/
+/*.alert-box.secondary {*/
+    /*background-color: #e9e9e9;*/
+    /*border-color: #d0d0d0;*/
+    /*color: #505050; }*/
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

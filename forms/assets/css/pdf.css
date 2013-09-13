@@ -1,0 +1,139 @@
+/* Begin PDF Styles */
+
+body {
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	font-size: 10px;
+	line-height: 10px;
+}
+
+#pdf {
+	margin: 0;
+	padding: 0;
+}
+
+#pdf p.allcaps{
+	text-transform: uppercase;
+}
+
+#pdf h1 {
+	margin: 0;
+	line-height: 22px;
+	font-size: 22px;
+	padding: 5px 0;
+}
+
+#pdf p,
+#pdf ol
+{
+	font-size: 10px;
+	margin: 0 0 5px 0;
+	line-height: 10px;
+}
+
+#pdf ol {
+	font-style: italic;
+}
+
+#pdf section {
+	padding: 5px;
+}
+
+#pdf .floatleft{
+	float: left !important;
+}
+
+#pdf .floatright {
+	float: right !important;
+}
+
+#pdf div.noborder {
+	border: none !important;
+}
+
+#pdf div.floatleft {
+	width: 300px;
+	padding: 0 10px 10px;
+	border: 1px solid #dddddd;
+}
+
+#pdf div.floatleft.nobottom,
+#pdf div.floatright.nobottom {
+	border-bottom: 1px solid #ffffff;
+}
+
+#pdf div.floatleft.notop,
+#pdf div.floatright.notop {
+	border-top: 1px solid #ffffff;
+}
+
+#pdf div.floatright {
+	width: 300px;
+	padding: 0 10px 10px;
+	border: 1px solid #dddddd;
+}
+
+#pdf h2 {
+	font-size: 14px;
+	line-height: 14px;
+	color: white;
+	background: black;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 400;
+	padding: 5px 0;
+	margin-top: 0;
+}
+
+#pdf h2.order {
+	margin: 5px 0 0;
+}
+
+#pdf table {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#pdf th {
+	background-color: lightcyan;
+	font-weight: 400;
+	font-size: 12px;
+	text-align: center;
+}
+
+#pdf td {
+	text-align: left;
+}
+
+#pdf td.extension,
+#pdf th.extension {
+	border-left: 3px solid #000000;
+}
+
+#pdf div span{
+	display: block;
+	height: 30px;
+	margin: 3px 0;
+}
+
+#pdf div.row {
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+#pdf td {
+	text-align: center;
+}
+
+#pdf td.comments {
+	padding: 10px;
+}
+
+#pdf td.comments p {
+	margin: 5px;
+}
+
+
+/* END PDF Styles */

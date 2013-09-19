@@ -41,7 +41,9 @@ class Site extends CI_Controller
 		date_default_timezone_set('UTC');
 		$this->load->helper(array('My_Pdf'));   //  Load helper
 		$file_name = 'IPO-' . $file_name . date('dMY');
-		create_pdf($data, $file_name, $type, $sendername, $senderemail); //Create pdf
+		create_pdf($data, $file_name, $type, $sendername, $senderemail); //Email pdf
+
+		create_pdf($data, './assets/uploads/' . $file_name, 'F', $sendername, $senderemail); //Save pdf as file
 	}
 
 	public function int_purchase_order() {

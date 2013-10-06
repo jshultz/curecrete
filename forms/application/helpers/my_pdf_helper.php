@@ -29,6 +29,15 @@ if (!function_exists('create_pdf')) {
 
 			$content = $mypdf->Output($file_name, 'S');
 
+			if ( ! write_file('./assets/uploads/' . $file_name . '.pdf', $content))
+			{
+				echo '<div style="display:none">Unable to write the file</div>';
+			}
+			else
+			{
+				echo '<div style="display:none">File written!</div>';
+			}
+
 			$content = chunk_split(base64_encode($content));
 //			$mailto = 'Garrett.Soong@ashfordformula.com';
 			$mailto = 'customercare@curecrete.com';

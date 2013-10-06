@@ -43,7 +43,7 @@ class Site extends CI_Controller
 		$file_name = 'IPO-' . $file_name . date('dMY');
 		create_pdf($data, $file_name, $type, $sendername, $senderemail); //Email pdf
 
-		create_pdf($data, './assets/uploads/' . $file_name, 'F', $sendername, $senderemail); //Save pdf as file
+		
 	}
 
 	public function int_purchase_order() {

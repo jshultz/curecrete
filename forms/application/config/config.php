@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://curecrete.com/forms/';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------

@@ -27,6 +27,7 @@ class Site extends CI_Controller
 	 */
 	public function index()
 	{
+        var_dump(base_url());
 
 		$this->load->view('welcome_message');
 
@@ -48,13 +49,11 @@ class Site extends CI_Controller
 
 	public function int_purchase_order() {
 
-		if ($this->agent->is_referral())
+		if ($this->agent->is_referral() || base_url() == "http://curecrete-forms.local/forms/")
 		{
 			$this->load->view('int_purchase_order');
 
 		}
-
-
 	}
 
 	public function formsubmit()
@@ -128,6 +127,9 @@ class Site extends CI_Controller
 		$message .= '<p>' . '<strong>Product Requested On/Before:</strong> ' . (string)$this->input->post('productRequested', TRUE) .'</p>';
 		$message .= '<p>' . '<strong>Shipping Method:</strong> ' .'</p>';
 
+        $fedex = (isset($_POST['fedex']))?true:false;
+        if ($fedex == '1') { $fedex = '&#x2611;';} else { $fedex = '&#x2610;';}
+
 		$cif = (isset($_POST['cif']))?true:false;
 		if ($cif == '1') { $cif = '&#x2611;';} else { $cif = '&#x2610;';}
 
@@ -138,6 +140,7 @@ class Site extends CI_Controller
 		if ($destForwarder == '1') { $destForwarder = '&#x2611;';} else { $destForwarder = '&#x2610;';}
 
 		$message .= '<table style="width:325px">';
+        $message .= '<tr><td style="width 5px; text-align:left"><p>' . $fedex  .'</p></td><td style="text-align: left; padding-left: 0; width:300px"><p>' . '<strong>UPS / FedEx / Private Carrier</strong>: </p></td></tr>';
 		$message .= '<tr><td style="width 5px; text-align:left"><p>' . $cif  .'</p></td><td style="text-align: left; padding-left: 0; width:300px"><p>' . '<strong>CIF</strong>: </p></td></tr>';
 		$message .= '<tr><td colspan="2" style="text-align: left; padding-left: 0"><p>' . (string)$this->input->post('destPort', TRUE) . '</p></td></tr>';
 		$message .= '<tr><td style="width 5px; text-align:left"><p>' . $destEx_works .'</p></td><td style="text-align: left; padding-left: 0; width:300px"><p>' . '<strong>EX WORKS / Will Call</strong> </p></td></tr>';
@@ -457,6 +460,11 @@ class Site extends CI_Controller
 
 		}
 	}
+
+    public function project_report_warranty_request() {
+
+        $this->load->view('project_report_warranty_request');
+    }
 
 	public function thankyou() {
 		$this->load->view('thankyou');

@@ -299,6 +299,18 @@ $(function() {
 			$('.skip').css('display', 'none');
 		})
 
+        $('#fedex').click(function() {
+            var freight = '';
+            var otherFrieght = '';
+            freight = $('*[class^="freight"]');
+            otherFrieght = $('*[class^="otherFrieght"]');
+
+            $(freight).prop('disabled', false).addClass('required');
+            $(otherFrieght).prop('disabled', false);
+            $('#hamburg').prop('checked', false);
+            $('.skip').css('display', 'none');
+        })
+
 		$('#cif').click(function() {
 			var freight = '';
 			var otherFrieght = '';

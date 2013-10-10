@@ -204,10 +204,6 @@
 			<div class="clearfix">
 				<label style="margin: 5px 0;" for="destination"><strong>Shipping Method (<em>Select one</em>):</strong></label>
 					<div class="floatleft">
-                        <span class="clearfix">
-                            <input name="fedex" id="fedex" type="checkbox" class="require-origin radio1">
-							<label for="destPort">UPS / FedEx / Private Carrier</label><br>
-                        </span>
 						<span class="clearfix">
 							<input name="cif" id="cif" type="checkbox" class="require-origin radio1">
 							<label for="destPort">CIF – (<em>Specify port/destination below</em>)</label><br>

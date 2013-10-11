@@ -49,7 +49,7 @@ class Site extends CI_Controller
 
 	public function int_purchase_order() {
 
-		if (!$this->agent->is_referral() || base_url() == "http://curecrete-forms.local/forms/")
+		if ($this->agent->is_referral() || base_url() == "http://curecrete-forms.local/forms/")
 		{
 			$this->load->view('int_purchase_order');
 

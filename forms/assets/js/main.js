@@ -261,12 +261,6 @@ $(function() {
 			$(otherFrieght).prop('disabled', true);
 			$('.skip').css('display', 'block');
 			$('#destPort').val('');
-
-
-			// Uncheck the shipping origins and then check Hamburg
-//			var group3 = $('*[class^="require-origin radio3"]');
-//			$(group3).prop("checked", false);
-//			$('#hamburg').prop('checked', true);
 		});
 
 		$('#hamburg').click(function() {
@@ -302,13 +296,16 @@ $(function() {
         $('#fedex').click(function() {
             var freight = '';
             var otherFrieght = '';
-            freight = $('*[class^="freight"]');
+            freight = $('*[class^="required freight"]');
+            if (freight.length == '') {
+                freight = $('*[class^="freight required"]');
+            }
             otherFrieght = $('*[class^="otherFrieght"]');
 
-            $(freight).prop('disabled', false).addClass('required');
-            $(otherFrieght).prop('disabled', false);
-            $('#hamburg').prop('checked', false);
-            $('.skip').css('display', 'none');
+            $(freight).prop('disabled', true).removeClass('required');
+            $(otherFrieght).prop('disabled', true);
+            $('.skip').css('display', 'block');
+            $('#destPort').val('');
         })
 
 		$('#cif').click(function() {
@@ -338,34 +335,16 @@ $(function() {
 		$('#springville').click(function() {
 			var freight = '';
 			var otherFrieght = '';
-//			freight = $('*[class^="freight"]');
-//			otherFrieght = $('*[class^="otherFrieght"]');
-//			$(freight).prop('disabled', false).addClass('required');
-//			$(otherFrieght).prop('disabled', false);
-//			$('#destEx_works').prop('checked', false);
-//			$('.skip').css('display', 'none');
 		})
 
 		$('#orlando').click(function() {
 			var freight = '';
 			var otherFrieght = '';
-//			freight = $('*[class^="freight"]');
-//			otherFrieght = $('*[class^="otherFrieght"]');
-//			$(freight).prop('disabled', false).addClass('required');
-//			$(otherFrieght).prop('disabled', false);
-//			$('#destEx_works').prop('checked', false);
-//			$('.skip').css('display', 'none');
 		})
 
 		$('#otherShipping').click(function() {
 			var freight = '';
 			var otherFrieght = '';
-//			freight = $('*[class^="freight"]');
-//			otherFrieght = $('*[class^="otherFrieght"]');
-//			$(freight).prop('disabled', false).addClass('required');
-//			$(otherFrieght).prop('disabled', false);
-//			$('#destEx_works').prop('checked', false);
-//			$('.skip').css('display', 'none');
 		})
 
 		$(".radio2").click(function() {

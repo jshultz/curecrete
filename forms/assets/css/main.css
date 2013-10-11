@@ -321,7 +321,83 @@ body.thankyou {
 }
 /* END International Order Form */
 
+/* BGIN Project Warrany Request Form */
 
+#content.warranty {
+    background: #fff4f4;
+    padding: 10px;
+    width: 780px;
+    position: relative;
+}
+
+#content.warranty #header {
+    height: 140px;
+}
+
+#content.warranty #header .title {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#content.warranty #header .title h3 {
+    font-size: .75em;
+    line-height: 1em;
+    margin-bottom: 7px;
+    font-weight: 100;
+}
+
+#content.warranty #header .title h1 {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    color: #000000;
+    font-weight: 100;
+}
+
+#content.warranty #header .title p {
+    font-size: .6em;
+    line-height: .75em;
+}
+
+#content.warranty #headerCheckboxes {
+    height: 100px;
+    width: 780px;
+}
+
+#content.warranty #headerCheckboxes .block {
+    height: 75px;
+    width: 345px;
+    float: left;
+}
+
+#content.warranty #headerCheckboxes .block .checkbox {
+    float: left;
+    font-size: .75em;
+    margin-right: 5px;
+}
+
+#content.warranty #headerTextFields {
+    height: 75px;
+    width: 780px;
+}
+
+#content.warranty #headerTextFields .cell {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#content.warranty #headerTextFields .cell:last-of-type {
+    margin-right: 0;
+}
+
+#content.warranty #warrantyTable {
+    width: 750px;
+}
+
+/* END Project Warrany Request Form */
 
 #content {
     width: 800px;

@@ -36,38 +36,18 @@
 <section>
 	<img class="floatleft" src="/forms/assets/img/Curecrete-Logo_120x169.png" style="margin-right: 10px; height: 100px; width: 71px">
 	<h1>International Purchase Order</h1>
-	<hr>
+
 </section>
 <div class="floatleft" style="width:400px;">
 
-	<p style="margin-top: 0"> This form is intended to be used for the ordering of all Curecrete Distribution, Inc. products including: Ashford Formula™, RetroPlate®, CreteStrip™, CreteFill Pro Series™ and CreteClean plus with Scar Guard™.</p>
+	<h3>Ashford Formula <sup>&trade;</sup> &amp; Retroplate <sup>&reg;</sup></h3>
+    <h1>Project Report &amp; <br/> Warranty Request</h1>
+    <p>Fax: 801.489.3307 &nbsp; EMAIL | projectreports@curecrete.com</p>
 
-	<p class="allcaps"><strong>Instructions:</strong></p>
 
-	<div style="float: left; width: 400px">
-		<ol style="padding-left: 15px; margin-top:0;">
-			<li>Please complete all sections.</li>
-			<li>Required fields are identified by an asterisk (*).</li>
-			<li>Press “Submit Order” to submit the form.</li>
-			<li>A “Thank You” confirmation webpage will let you know that your order has been successfully submitted to the Customer Care team.</li>
-			<li> If you do not reach the “Thank You” confirmation webpage, your order has not been received.   Please review the form to make sure all the required fields have been completed and then re-submit the order.</li>
-			<li>Once your order has been successfully completed, you will also receive a confirmation email detailing your entire order submission to be kept for your records.</li>
-			<li>If you continue to experience problems with this form, contact the Customer Care team at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or by phone at <strong>801-489-5663</strong>.</li>
-		</ol>
-	</div>
 </div>
 <div class="floatright" style="width: 215px;">
-	<p style="margin-top:0;">
-		<strong>Curecrete Distribution, Inc.</strong><br/>
-		1203 W. Spring Creek Place<br/>
-		Springville, UT 84663 USA
-	</p>
 
-	<p>
-		PHN: 801.489.5663<br/>
-		FAX: 801.489.3307<br/>
-		EMAIL: <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a>
-	</p>
 </div>
 <section id="internationalPO">
 

@@ -364,6 +364,7 @@ body.thankyou {
 #content.warranty #headerCheckboxes {
     height: 100px;
     width: 780px;
+    font-size: .75em;
 }
 
 #content.warranty #headerCheckboxes .block {
@@ -374,13 +375,14 @@ body.thankyou {
 
 #content.warranty #headerCheckboxes .block .checkbox {
     float: left;
-    font-size: .75em;
+
     margin-right: 5px;
 }
 
 #content.warranty #headerTextFields {
     height: 75px;
     width: 780px;
+    font-size: .75em;
 }
 
 #content.warranty #headerTextFields .cell {
@@ -393,9 +395,29 @@ body.thankyou {
     margin-right: 0;
 }
 
-#content.warranty #warrantyTable {
+#content.warranty #projectInformation,
+#content.warranty #drumInformation,
+#content.warranty #warrantyRequest {
     width: 750px;
+    font-size: .75em;
 }
+
+#content.warranty #projectInformation th,
+#content.warranty #drumInformation th,
+#content.warranty #warrantyRequest th {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+#content.warranty #drumInformation input {
+    width: 70px;
+}
+
+#content.warranty #projectInformation td.label:nth-of-type(2) {
+    border-left: 1px solid #000;
+}
+
 
 /* END Project Warrany Request Form */
 

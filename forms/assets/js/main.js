@@ -416,6 +416,22 @@ $(function() {
     }
 
 
+    if($('#content.warranty').length > 0) {
+
+        var greatestWidth = 0;   // Stores the greatest width
+
+        $('#drumInformation td').each(function() {    // Select the elements you're comparing
+
+            var theWidth = $(this).width();   // Grab the current width
+
+            if( theWidth > greatestWidth) {   // If theWidth > the greatestWidth so far,
+                greatestWidth = theWidth;     //    set greatestWidth to theWidth
+            }
+        });
+
+        $('#drumInformation td').width(greatestWidth);
+
+    }
 
 
 });

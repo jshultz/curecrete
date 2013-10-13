@@ -51,34 +51,34 @@
     <div id="headerCheckboxes">
     <div class="block">
         <div class="checkbox">
-            <input name="projectReportOnly" id="projectReportOnly" type="checkbox" class="require-doc">
-            <label for="projectReportOnly">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/>
+            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" >
+            <label for="projectReportOnlyCheck">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/>
         </div>
         <div class="checkbox">
-            <input name="warrantyRequest" id="warrantyRequest" type="checkbox" class="require-doc">
-            <label for="warrantyRequest">Warranty Request <span>(Sections 1 - 3)</span></label><br/>
+            <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" >
+            <label for="warrantyRequestCheck">Warranty Request <span>(Sections 1 - 3)</span></label><br/>
         </div>
         <div class="checkbox">
-            <input name="ashfordFormula" id="ashfordFormula" type="checkbox" class="require-doc">
-            <label for="ashfordFormula">Ashford Formula</label><br/>
+            <input name="ashfordFormulaCheck" id="ashfordFormulaCheck" type="checkbox" >
+            <label for="ashfordFormulaCheck">Ashford Formula</label><br/>
         </div>
         <div class="checkbox">
-            <input name="retorplate" id="retorplate" type="checkbox" class="require-doc">
-            <label for="retorplate">Retroplate</label><br/>
+            <input name="retorplateCheck" id="retorplateCheck" type="checkbox" >
+            <label for="retorplateCheck">Retroplate</label><br/>
         </div>
     </div>
     <div class="block">
         <div class="checkbox">
-            <input name="domesticProject" id="domesticProject" type="checkbox" class="require-doc">
-            <label for="domesticProject">Domestic Project</label><br/>
+            <input name="domesticProjectCheck" id="domesticProjectCheck" type="checkbox" >
+            <label for="domesticProjectCheck">Domestic Project</label><br/>
         </div>
         <div class="checkbox">
-            <input name="internationalProject" id="internationalProject" type="checkbox" class="require-doc">
-            <label for="internationalProject">International Project</label><br/>
+            <input name="internationalProjectCheck" id="internationalProjectCheck" type="checkbox" >
+            <label for="internationalProjectCheck">International Project</label><br/>
         </div>
         <div class="checkbox">
-            <input name="leedNominated" id="leedNominated" type="checkbox" class="require-doc">
-            <label for="leedNominated">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
+            <input name="leedNominatedCheck" id="leedNominatedCheck" type="checkbox" >
+            <label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
         </div>
     </div>
 </div>
@@ -174,28 +174,28 @@
             </th>
         </tr>
         <tr class="labelRow">
-            <td>
+            <td class="label">
                 <label>Drum No.</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Liters <span>or</span> Gallons</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Drum No.</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Liters <span>or</span> Gallons</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Drum No.</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Liters <span>or</span> Gallons</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Drum No.</label>
             </td>
-            <td>
+            <td class="label">
                 <label>Liters <span>or</span> Gallons</label>
             </td>
         </tr>
@@ -375,6 +375,50 @@
             <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="required"></td>
         </tr>
 
+    </table>
+    <table id="warrantyRequest2">
+        <tr>
+            <td class="label first"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
+            <td colspan="3"><input name="environmentalConditions" id="environmentalConditions"> </td>
+        </tr>
+        <tr>
+            <td class="label first"><label for="weatherConditions">Weather Conditions During Ashford Formula Application<sup>*</sup></label></td>
+            <td colspan="3"><input name="weatherConditions" id="weatherConditions"> </td>
+        </tr>
+        <tr>
+            <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
+            <td>
+                <div class="checkbox">
+                    <input name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox" >
+                    <label for="ashfordForulaCureYes">Yes</label>
+                </div>
+                <div class="checkbox">
+                    <input name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox" >
+                    <label for="ashfordForulaCureNo">No</label>
+                </div>
+            </td>
+            <td class="label">
+                <label for="appliedToConcrete">Applied To Concrete?<sup>*</sup></label>
+            </td>
+            <td>
+                <div class="checkbox">
+                    <input name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox" >
+                    <label for="appliedOnExistingFloor">On Existing Floor?</label>
+                </div>
+                <div class="checkbox">
+                    <input name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox" >
+                    <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
+                </div>
+                <div class="checkbox">
+                    <input name="hoursAfterPlacement" id="hoursAfterPlacement" type="checkbox" >
+                    <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text">
+                    <label for="hoursAfterPlacement">Hours After Placement</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
     </table>
 
 

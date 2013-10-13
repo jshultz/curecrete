@@ -397,9 +397,30 @@ body.thankyou {
 
 #content.warranty #projectInformation,
 #content.warranty #drumInformation,
-#content.warranty #warrantyRequest {
+#content.warranty #warrantyRequest,
+#content.warranty #warrantyRequest2 {
     width: 750px;
     font-size: .75em;
+}
+
+#content.warranty #projectInformation td.label,
+#content.warranty #drumInformation td.label,
+#content.warranty #warrantyRequest td.label,
+#content.warranty #warrantyRequest2 td.label {
+    background-color: #D3D3D3;
+    padding-left: 5px;
+}
+
+#content.warranty #warrantyRequest2 td.label.first {
+    width: 210px;
+}
+
+#content.warranty #drumInformation td.label {
+    text-align: center;
+}
+
+#content.warranty #drumInformation td input {
+    width: 100%;
 }
 
 #content.warranty #projectInformation th,
@@ -408,10 +429,6 @@ body.thankyou {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-}
-
-#content.warranty #drumInformation input {
-    width: 70px;
 }
 
 #content.warranty #projectInformation td.label:nth-of-type(2) {

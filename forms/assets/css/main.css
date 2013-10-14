@@ -374,9 +374,8 @@ body.thankyou {
 }
 
 #content.warranty #headerCheckboxes .block .checkbox {
-    float: left;
-
-    margin-right: 5px;
+    /*float: left;*/
+    /*margin-right: 5px;*/
 }
 
 #content.warranty #headerTextFields {
@@ -403,6 +402,35 @@ body.thankyou {
     font-size: .75em;
 }
 
+#content.warranty #projectInformation #comments {
+    width: 197px;
+    height: 75px;
+}
+
+#content.warranty #warrantyRequest2 #environmentalConditions,
+#content.warranty #warrantyRequest2 #weatherConditions {
+    width: 587px;
+    height: 75px;
+}
+
+#content.warranty #warrantyRequest2 #hoursAfterPlacementCheckbox input[type="text"] {
+    width: 110px !important;
+}
+
+#content.warranty #warrantyRequest2 #hoursAfterPlacementCheckbox {
+    width: 150px;
+}
+
+#content.warranty #warrantyRequest2 #hoursAfterPlacementCheckbox label {
+    margin-left: 16px;
+}
+
+#content.warranty #drumInformation tr,
+#content.warranty #warrantyRequest tr,
+#content.warranty #warrantyRequest2 tr {
+    border: 1px solid #ededed;
+}
+
 #content.warranty #projectInformation td.label,
 #content.warranty #drumInformation td.label,
 #content.warranty #warrantyRequest td.label,
@@ -412,7 +440,11 @@ body.thankyou {
 }
 
 #content.warranty #warrantyRequest2 td.label.first {
-    width: 210px;
+    width: 133px;
+}
+
+#content.warranty #warrantyRequest2 .checkbox {
+    width: 130px;
 }
 
 #content.warranty #drumInformation td.label {
@@ -421,6 +453,22 @@ body.thankyou {
 
 #content.warranty #drumInformation td input {
     width: 100%;
+}
+
+#content.warranty #warrantyRequest input[type=text],
+#content.warranty #warrantyRequest2 input[type=text]{
+    width: 200px;
+    padding-left: 10px;
+}
+
+#content.warranty #projectInformation input {
+    width: 200px;
+}
+
+#content.warranty #projectInformation td.input,
+#content.warranty #warrantyRequest td.input,
+#content.warranty #warrantyRequest2 td.input {
+    padding-left: 5px;
 }
 
 #content.warranty #projectInformation th,

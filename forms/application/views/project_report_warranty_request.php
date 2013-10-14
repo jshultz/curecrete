@@ -101,7 +101,7 @@
     <table id="projectInformation">
 
         <tr>
-            <th colspan="4">
+            <th colspan="5">
                 <p>Project Information</p>
             </th>
         </tr>
@@ -145,7 +145,7 @@
             <td class="label"><label for="specifierArchitect">Specifier/Architect<sup>*</sup></label></td>
             <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class="required"></td>
             <td class="label" rowspan="4"><label for="comments">Comments<sup>*</sup></label> </td>
-            <td class="input" rowspan="4"><textarea name="comments"></textarea> </td>
+            <td class="input" rowspan="4"><textarea id="comments" name="comments"></textarea> </td>
         </tr>
         <tr>
             <td class="label"><label for="generalContractor">General Contractor<sup>*</sup></label></td>
@@ -379,19 +379,19 @@
     <table id="warrantyRequest2">
         <tr>
             <td class="label first"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
-            <td colspan="3"><input name="environmentalConditions" id="environmentalConditions"> </td>
+            <td class="input" colspan="5"><textarea name="environmentalConditions" id="environmentalConditions"></textarea> </td>
         </tr>
         <tr>
             <td class="label first"><label for="weatherConditions">Weather Conditions During Ashford Formula Application<sup>*</sup></label></td>
-            <td colspan="3"><input name="weatherConditions" id="weatherConditions"> </td>
+            <td class="input" colspan="5"><textarea name="weatherConditions" id="weatherConditions"></textarea> </td>
         </tr>
         <tr>
             <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
-            <td>
+            <td class="input">
                 <div class="checkbox">
                     <input name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox" >
                     <label for="ashfordForulaCureYes">Yes</label>
-                </div>
+                </div><br/>
                 <div class="checkbox">
                     <input name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox" >
                     <label for="ashfordForulaCureNo">No</label>
@@ -400,24 +400,66 @@
             <td class="label">
                 <label for="appliedToConcrete">Applied To Concrete?<sup>*</sup></label>
             </td>
-            <td>
+            <td class="input" width="155px">
                 <div class="checkbox">
                     <input name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox" >
                     <label for="appliedOnExistingFloor">On Existing Floor?</label>
                 </div>
+            <br/>
                 <div class="checkbox">
                     <input name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox" >
                     <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
                 </div>
-                <div class="checkbox">
+            </td>
+            <td colspan="2">
+                <div class="checkbox" id="hoursAfterPlacementCheckbox">
                     <input name="hoursAfterPlacement" id="hoursAfterPlacement" type="checkbox" >
-                    <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text">
-                    <label for="hoursAfterPlacement">Hours After Placement</label>
+                    <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text"><br/>
+                    <label for="hoursAfterPlacement" id="">Hours After Placement</label>
                 </div>
             </td>
+
         </tr>
         <tr>
-
+            <td class="label">
+                <label for="floorBurnished">Floor Burnished?<sup>*</sup></label>
+            </td>
+            <td class="input">
+                <div class="checkbox">
+                    <input name="floorBurnishedYes" id="floorBurnishedYes" type="checkbox" >
+                    <label for="floorBurnishedYes">Yes</label>
+                </div><br/>
+                <div class="checkbox">
+                    <input name="floorBurnishedNo" id="floorBurnishedNo" type="checkbox" >
+                    <label for="floorBurnishedNo">No</label>
+                </div>
+            </td>
+            <td class="label">
+                <label for="applicationSupervisedByDistributor">Application Supervised by Distributor?<sup>*</sup></label>
+            </td>
+            <td class="input">
+                <div class="checkbox">
+                    <input name="applicationSupervisedByDistributorYes" id="applicationSupervisedByDistributorYes" type="checkbox" >
+                    <label for="applicationSupervisedByDistributorYes">Yes</label>
+                </div><br/>
+                <div class="checkbox">
+                    <input name="applicationSupervisedByDistributorNo" id="applicationSupervisedByDistributorNo" type="checkbox" >
+                    <label for="applicationSupervisedByDistributorNo">No</label>
+                </div>
+            </td>
+            <td class="label">
+                <label for="maintenanceBrochureGiven">Maintenance Brochure Given?<sup>*</sup></label>
+            </td>
+            <td class="input">
+                <div class="checkbox">
+                    <input name="maintenanceBrochureGivenYes" id="maintenanceBrochureGivenYes" type="checkbox" >
+                    <label for="maintenanceBrochureGivenYes">Yes</label>
+                </div><br/>
+                <div class="checkbox">
+                    <input name="maintenanceBrochureGivenNo" id="maintenanceBrochureGivenNo" type="checkbox" >
+                    <label for="maintenanceBrochureGivenNo">No</label>
+                </div>
+            </td>
         </tr>
     </table>
 

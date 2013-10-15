@@ -205,20 +205,20 @@
 				<label style="margin: 5px 0;" for="destination"><strong>Shipping Method (<em>Select one</em>):</strong></label>
 					<div class="floatleft">
                         <span class="clearfix">
-                            <input name="fedex" id="fedex" type="checkbox" class="require-origin radio1">
+                            <input name="fedex" id="fedex" type="checkbox" class="require-method radio1">
 							<label for="destPort">UPS / FedEx / Private Carrier</label><br>
                         </span>
 						<span class="clearfix">
-							<input name="cif" id="cif" type="checkbox" class="require-origin radio1">
+							<input name="cif" id="cif" type="checkbox" class="require-method radio1">
 							<label for="destPort">CIF – (<em>Specify port/destination below</em>)</label><br>
 							<input class="floatleft" name="destPort" id="destPort" type="text" style="width: 345px;">
 						</span><br/>
 						<span>
-							<input name="destEx_works" id="destEx_works" type="checkbox" class="require-origin radio1">
+							<input name="destEx_works" id="destEx_works" type="checkbox" class="require-method radio1">
 							<label for="destEx_works">EX WORKS / Will Call</label>
 						</span>
 						<span>
-							<input name="destForwarder" id="destForwarder" type="checkbox" class="require-origin radio1">
+							<input name="destForwarder" id="destForwarder" type="checkbox" class="require-method radio1">
 							<label for="destForwarder">Deliver to Forwarder</label>
 						</span>
 					</div>
@@ -314,15 +314,15 @@
 			</div>
 			<div>
 				<span class="checkbox">
-					<input name="orderStock" id="orderStock" type="checkbox" class="radio2">
+					<input name="orderStock" id="orderStock" type="checkbox" class="require-order radio2">
 					<label for="orderStock">Stock &mdash; <em>Send Project Report Upon Use</em></label>
 				</span><br/>
 				<span class="checkbox">
-					<input name="orderOverStock" id="orderOverStock" type="checkbox" class="radio2">
+					<input name="orderOverStock" id="orderOverStock" type="checkbox" class="require-order radio2">
 					<label for="orderOverStock">Overstock &mdash; <em>Send Project Report Upon Use</em></label>
 				</span> <br/>
 				<span class="checkbox">
-					<input name="orderSpecific" id="orderSpecific" type="checkbox" class="radio2">
+					<input name="orderSpecific" id="orderSpecific" type="checkbox" class="require-order radio2">
 					<label for="orderSpecific">Specific Project &mdash; <em>Please List Project(s) Below</em>:</label>
 				</span> <br/>
 				<textarea name="orderSpecificProjects" id="orderSpecificProjects" style="width: 340px"></textarea>

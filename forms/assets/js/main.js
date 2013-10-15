@@ -371,9 +371,11 @@ $(function() {
 
         $('#international-purchase-form').validate({
             groups: {
+                order: require_order,
                 origin: require_origin,
                 doc: require_doc,
-				ship: require_ship
+				ship: require_ship,
+                method: require_method
             },
             rules: {
                 AccordionField: {
@@ -384,22 +386,42 @@ $(function() {
             ignore: []
         });
 
-        $.validator.addMethod('require-origin', function(value) {
-            return $('.require-origin:checked').size() > 0;
-        }, 'Please check at least one box.');
-
-        var origin = $('.require-origin');
-        var require_origin = $.map(origin, function(e, i) {
-            return $(e).attr("name")
-        }).join(" ");
-
-
         $.validator.addMethod('require-doc', function(value) {
             return $('.require-doc:checked').size() > 0;
         }, 'Please check at least one box.');
 
         var docs = $('.require-doc');
         var require_doc = $.map(docs, function(e, i) {
+            return $(e).attr("name")
+        }).join(" ");
+
+
+
+        $.validator.addMethod('require-method', function(value) {
+            return $('.require-method:checked').size() > 0;
+        }, 'Please check at least one box.');
+
+        var method = $('.require-method');
+        var require_method = $.map(method, function(e, i) {
+            return $(e).attr("name")
+        }).join(" ");
+
+        $.validator.addMethod('require-order', function(value) {
+            return $('.require-order:checked').size() > 0;
+        }, 'Please check at least one box.');
+
+        var order = $('.require-order');
+        var require_order = $.map(order, function(e, i) {
+            return $(e).attr("name")
+        }).join(" ");
+
+
+        $.validator.addMethod('require-origin', function(value) {
+            return $('.require-origin:checked').size() > 0;
+        }, 'Please check at least one box.');
+
+        var origin = $('.require-origin');
+        var require_origin = $.map(origin, function(e, i) {
             return $(e).attr("name")
         }).join(" ");
 

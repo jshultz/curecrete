@@ -397,9 +397,15 @@ body.thankyou {
 #content.warranty #projectInformation,
 #content.warranty #drumInformation,
 #content.warranty #warrantyRequest,
-#content.warranty #warrantyRequest2 {
+#content.warranty #warrantyRequest2,
+#content.warranty #corporateProjects {
     width: 750px;
     font-size: .75em;
+}
+
+#content.warranty #corporateProjects #corporateProjectsText {
+    width: 750px;
+    height: 100px;
 }
 
 #content.warranty #projectInformation #comments {
@@ -473,7 +479,8 @@ body.thankyou {
 
 #content.warranty #projectInformation th,
 #content.warranty #drumInformation th,
-#content.warranty #warrantyRequest th {
+#content.warranty #warrantyRequest th,
+#content.warranty #corporateProjects th {
     background-color: #000000;
     color: #ffffff;
     text-align: center;

@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="/forms/assets/css/normalize.css">
     <link rel="stylesheet" href="/forms/assets/css/main.css">
+    <link rel="stylesheet" href="/forms/assets/css/dropzone.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/forms/assets/css/custom-theme/jquery-ui-1.10.2.custom.min.css">
     <script src="/forms//assets/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -33,8 +34,8 @@
 
 <div id="content" class="warranty">
     <?php
-        $attributes = array('class' => 'email', 'id' => 'warrantRequest');
-        echo form_open('/site/formsubmit', $attributes);
+        $attributes = array('class' => 'email dropzone', 'id' => 'warrantRequest');
+        echo form_open_multipart('/site/formsubmit', $attributes);
     ?>
 
     <div id="header">
@@ -461,6 +462,15 @@
                 </div>
             </td>
         </tr>
+    </table>
+    <table id="corporateProjects">
+        <tr><th><p>Corporate Projects</p></th></tr>
+        <tr>
+            <td>
+                <textarea name="corporateProjectsText" id="corporateProjectsText" placeholder="If this is a Corporate Account Project, please indicate the final result of the project here."></textarea>
+            </td>
+        </tr>
+
     </table>
 
 

@@ -473,6 +473,9 @@
 
     </table>
 
+    <div class="dz-default dz-message"><span>Drop files here to upload.</span></div>
+    <div class="dz-begin dz-message"><span>Drop files here to upload.</span></div>
+
 
     </form>
 

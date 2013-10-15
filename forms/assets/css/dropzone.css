@@ -168,15 +168,15 @@
     -o-transition: opacity 0.3s ease-in-out;
     -ms-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    position: absolute;
     width: 428px;
-    height: 123px;
-    margin-left: -214px;
-    margin-top: -61.5px;
-    top: 50%;
-    left: 50%;
+    height: 23px;
     border: 1px solid #000000;
     background-color: #fff0f2;
+    position: relative;
+}
+
+.dropzone .dz-started.dz-message {
+    display: none;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     .dropzone .dz-default.dz-message {
@@ -187,7 +187,9 @@
     }
 }
 .dropzone .dz-default.dz-message span {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 30%;
 }
 .dropzone.dz-square .dz-default.dz-message {
     background-position: 0 -123px;
@@ -207,6 +209,11 @@
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
+
+.dropzone.dz-started .dz-begin.dz-message {
+    display: block;
+}
+
 .dropzone .dz-preview,
 .dropzone-previews .dz-preview {
     -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);

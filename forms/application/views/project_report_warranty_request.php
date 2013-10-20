@@ -18,7 +18,6 @@
 
     <link rel="stylesheet" href="/forms/assets/css/normalize.css">
     <link rel="stylesheet" href="/forms/assets/css/main.css">
-    <link rel="stylesheet" href="/forms/assets/css/dropzone.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/forms/assets/css/custom-theme/jquery-ui-1.10.2.custom.min.css">
     <script src="/forms//assets/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -34,8 +33,8 @@
 
 <div id="content" class="warranty">
     <?php
-        $attributes = array('class' => 'email dropzone', 'id' => 'warrantRequest');
-        echo form_open_multipart('/site/formsubmit', $attributes);
+        $attributes = array('class' => 'email', 'id' => 'warrantyRequestForm');
+        echo form_open_multipart('/site/projectsubmit', $attributes);
     ?>
 
     <div id="header">
@@ -109,13 +108,13 @@
         <tr>
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
             <td class="input"><input name="projectName" id="projectName" type="text" class="required"></td>
-            <td class="label"><label for="gallonsUsed">Liters or Gallons Used<sup>*</sup></label> </td>
+            <td class="label"><label for="gallonsUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
             <td class="input"><input name="gallonsUsed" id="gallonsUsed"> </td>
         </tr>
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
-            <td class="input"><input name="address" id="address" type="text" class="required"></td>
-            <td class="label"><label for="meters">m2 or ft2<sup>*</sup></label> </td>
+            <td class="input"><input name="address" id="address" type="text" class=""></td>
+            <td class="label"><label for="meters"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
             <td class="input"><input name="meters" id="meters"> </td>
         </tr>
         <tr>
@@ -134,31 +133,55 @@
             <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
             <td class="input"><input name="country" id="country" type="text" class="required"></td>
             <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
-            <td class="input"><input name="buildingUse" id="buildingUse"> </td>
+            <td class="input">
+                <select name="building_use" id="building_use">
+                    <option value="agricultural">Agricultural/Farm<sup>*</sup></option>
+                    <option value="airport">Airport<sup>*</sup></option>
+                    <option value="animal">Animal<sup>*</sup></option>
+                    <option value="church">Church</option>
+                    <option value="convention">Convention/Meeting Center<sup>*</sup></option>
+                    <option value="correctional">Correctional Facility<sup>*</sup></option>
+                    <option value="educational">Educational<sup>*</sup></option>
+                    <option value="freight">Freight/Shipping</option>
+                    <option value="government">Government/Municipal<sup>*</sup></option>
+                    <option value="health">Health Care</option>
+                    <option value="hotel">Hotel/Hospitality</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="office">Office</option>
+                    <option value="parking">Parking<sup>*</sup></option>
+                    <option value="power">Power Generation</option>
+                    <option value="printing">Printing</option>
+                    <option value="recreation">Recreation<sup>*</sup></option>
+                    <option value="residential">Residential</option>
+                    <option value="retail">Retail</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="warehouse">Warehouse/Distribution Center<sup>*</sup></option>
+                </select>
+            </td>
         </tr>
         <tr>
             <td class="label"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
             <td class="input"><input name="projectOwner" id="projectOwner" type="text" class="required"></td>
             <td class="label"><label for="industry">Industry<sup>*</sup></label> </td>
-            <td class="input"><input name="industry" id="industry"> </td>
+            <td class="input"><select name="industry" id="industry"></select> </td>
         </tr>
         <tr>
-            <td class="label"><label for="specifierArchitect">Specifier/Architect<sup>*</sup></label></td>
-            <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class="required"></td>
-            <td class="label" rowspan="4"><label for="comments">Comments<sup>*</sup></label> </td>
+            <td class="label"><label for="specifierArchitect">Specifier/Architect</label></td>
+            <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class=""></td>
+            <td class="label" rowspan="4"><label for="comments">Comments</label> </td>
             <td class="input" rowspan="4"><textarea id="comments" name="comments"></textarea> </td>
         </tr>
         <tr>
-            <td class="label"><label for="generalContractor">General Contractor<sup>*</sup></label></td>
-            <td class="input"><input name="generalContractor" id="generalContractor" type="text" class="required"></td>
+            <td class="label"><label for="generalContractor">General Contractor</label></td>
+            <td class="input"><input name="generalContractor" id="generalContractor" type="text" class=""></td>
         </tr>
         <tr>
             <td class="label"><label for="applicator">Applicator<sup>*</sup></label></td>
             <td class="input"><input name="applicator" id="applicator" type="text" class="required"></td>
         </tr>
         <tr>
-            <td class="label"><label for="flatWorker">Flat Worker / Floor Maker / Sub-Contractor<sup>*</sup></label></td>
-            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class="required"></td>
+            <td class="label"><label for="flatWorker">Flat Worker / Floor Maker / Sub-Contractor</label></td>
+            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class=""></td>
         </tr>
 
     </table>
@@ -179,159 +202,159 @@
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label>Liters <span>or</span> Gallons</label>
+                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
             </td>
             <td class="label">
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label>Liters <span>or</span> Gallons</label>
+                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
             </td>
             <td class="label">
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label>Liters <span>or</span> Gallons</label>
+                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
             </td>
             <td class="label">
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label>Liters <span>or</span> Gallons</label>
+                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
             </td>
         </tr>
         <tr>
             <td>
-                <input name="row[0][drumNumber][0]">
+                <input name="group[0][drumNumber]">
             </td>
             <td>
-                <input name="row[0][gallons][0]">
+                <input name="group[0][gallons]">
             </td>
             <td>
-                <input name="row[0][drumNumber][1]">
+                <input name="group[1][drumNumber]">
             </td>
             <td>
-                <input name="row[0][gallons][1]">
+                <input name="group[1][gallons]">
             </td>
             <td>
-                <input name="row[0][drumNumber][2]">
+                <input name="group[2][drumNumber]">
             </td>
             <td>
-                <input name="row[0][gallons][2]">
+                <input name="group[2][gallons]">
             </td>
             <td>
-                <input name="row[0][drumNumber][3]">
+                <input name="group[3][drumNumber]">
             </td>
             <td>
-                <input name="row[0][gallons][3]">
+                <input name="group[3][gallons]">
             </td>
             <td class="remove"></td>
         </tr>
         <tr>
             <td>
-                <input name="row[1][drumNumber][0]">
+                <input name="group[4][drumNumber]">
             </td>
             <td>
-                <input name="row[1][gallons][0]">
+                <input name="group[4][gallons]">
             </td>
             <td>
-                <input name="row[1][drumNumber][1]">
+                <input name="group[5][drumNumber]">
             </td>
             <td>
-                <input name="row[1][gallons][1]">
+                <input name="group[5][gallons]">
             </td>
             <td>
-                <input name="row[1][drumNumber][2]">
+                <input name="group[6][drumNumber]">
             </td>
             <td>
-                <input name="row[1][gallons][2]">
+                <input name="group[6][gallons]">
             </td>
             <td>
-                <input name="row[1][drumNumber][3]">
+                <input name="group[7][drumNumber]">
             </td>
             <td>
-                <input name="row[1][gallons][3]">
-            </td>
-            <td class="remove"></td>
-        </tr>
-        <tr>
-            <td>
-                <input name="row[2][drumNumber][0]">
-            </td>
-            <td>
-                <input name="row[2][gallons][0]">
-            </td>
-            <td>
-                <input name="row[2][drumNumber][1]">
-            </td>
-            <td>
-                <input name="row[2][gallons][1]">
-            </td>
-            <td>
-                <input name="row[2][drumNumber][2]">
-            </td>
-            <td>
-                <input name="row[2][gallons][2]">
-            </td>
-            <td>
-                <input name="row[2][drumNumber][3]">
-            </td>
-            <td>
-                <input name="row[2][gallons][3]">
+                <input name="group[7][gallons]">
             </td>
             <td class="remove"></td>
         </tr>
         <tr>
             <td>
-                <input name="row[3][drumNumber][0]">
+                <input name="group[8][drumNumber]">
             </td>
             <td>
-                <input name="row[3][gallons][0]">
+                <input name="group[8][gallons]">
             </td>
             <td>
-                <input name="row[3][drumNumber][1]">
+                <input name="group[9][drumNumber]">
             </td>
             <td>
-                <input name="row[3][gallons][1]">
+                <input name="group[9][gallons]">
             </td>
             <td>
-                <input name="row[3][drumNumber][2]">
+                <input name="group[10][drumNumber]">
             </td>
             <td>
-                <input name="row[3][gallons][2]">
+                <input name="group[10][gallons]">
             </td>
             <td>
-                <input name="row[3][drumNumber][3]">
+                <input name="group[11][drumNumber]">
             </td>
             <td>
-                <input name="row[3][gallons][3]">
+                <input name="group[11][gallons]">
             </td>
             <td class="remove"></td>
         </tr>
         <tr>
             <td>
-                <input name="row[4][drumNumber][0]">
+                <input name="group[12][drumNumber]">
             </td>
             <td>
-                <input name="row[4][gallons][0]">
+                <input name="group[12][gallons]">
             </td>
             <td>
-                <input name="row[4][drumNumber][1]">
+                <input name="group[13][drumNumber]">
             </td>
             <td>
-                <input name="row[4][gallons][1]">
+                <input name="group[13][gallons]">
             </td>
             <td>
-                <input name="row[4][drumNumber][2]">
+                <input name="group[14][drumNumber]">
             </td>
             <td>
-                <input name="row[4][gallons][2]">
+                <input name="group[14][gallons]">
             </td>
             <td>
-                <input name="row[4][drumNumber][3]">
+                <input name="group[15][drumNumber]">
             </td>
             <td>
-                <input name="row[4][gallons][3]">
+                <input name="group[15][gallons]">
+            </td>
+            <td class="remove"></td>
+        </tr>
+        <tr>
+            <td>
+                <input name="group[16][drumNumber]">
+            </td>
+            <td>
+                <input name="group[16][gallons]">
+            </td>
+            <td>
+                <input name="group[17][drumNumber]">
+            </td>
+            <td>
+                <input name="group[17][gallons]">
+            </td>
+            <td>
+                <input name="group[18][drumNumber]">
+            </td>
+            <td>
+                <input name="group[18][gallons]">
+            </td>
+            <td>
+                <input name="group[19][drumNumber]">
+            </td>
+            <td>
+                <input name="group[19][gallons]">
             </td>
             <td class="remove"><img src="/forms/assets/img/Plus-32.png" class="addRow"></td>
         </tr>
@@ -347,36 +370,37 @@
         </tr>
         <tr>
             <td class="label"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
-            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class="required"></td>
+            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class=""></td>
             <td class="label"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class="required"></td>
+            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class=""></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorCompany">Applicator Company Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class="required"></td>
+            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class=""></td>
             <td class="label"><label for="applicatorCity">City<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class="required"></td>
+            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class=""></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class="required"></td>
+            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class=""></td>
             <td class="label"><label for="applicatorState">State/Province<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class="required"></td>
+            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class=""></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class="required"></td>
+            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class=""></td>
             <td class="label"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="required"></td>
+            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class=""></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorFax">Fax</label> </td>
-            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class="required"></td>
+            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class=""></td>
             <td class="label"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="required"></td>
+            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class=""></td>
         </tr>
 
     </table>
+
     <table id="warrantyRequest2">
         <tr>
             <td class="label first"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
@@ -463,6 +487,7 @@
             </td>
         </tr>
     </table>
+
     <table id="corporateProjects">
         <tr><th><p>Corporate Projects</p></th></tr>
         <tr>
@@ -473,8 +498,52 @@
 
     </table>
 
-    <div class="dz-default dz-message"><span>Drop files here to upload.</span></div>
-    <div class="dz-begin dz-message"><span>Drop files here to upload.</span></div>
+    <table id="photos">
+        <tr>
+            <td class="input"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes"></td>
+            <td class="label"><label for="uploadPhotosYes">I will submit photos of this project with this form.</label> </td>
+            <td class="input"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo"></td>
+            <td class="label"><label for="uploadPhotosNo">I will submit photos of this project at a later time.</label> </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="uploadFiles">
+                    <table>
+                        <tr><td>
+                                <section class="row photoupload">
+                                    <label for="photo_upload_1"><strong>Upload Photo<sup>*</sup></strong></label><br/>
+                                    <input type="file" name="photo_upload_1" id="photo_upload_1">
+                                </section>
+                                <section class="row photoupload">
+                                    <label for="photo_upload_2"><strong>Upload Photo<sup>*</sup></strong></label><br/>
+                                    <input type="file" name="photo_upload_2" id="photo_upload_2">
+                                </section>
+                                <section class="row photoupload">
+                                    <label for="photo_upload_3"><strong>Upload Photo<sup>*</sup></strong></label><br/>
+                                    <input type="file" name="photo_upload_3" id="photo_upload_3">
+                                </section>
+                                <section class="row photoupload">
+                                    <label for="photo_upload_4"><strong>Upload Photo<sup>*</sup></strong></label><br/>
+                                    <input type="file" name="photo_upload_4" id="photo_upload_4">
+                                </section>
+                                <section class="row photoupload">
+                                    <label for="photo_upload_5"><strong>Upload Photo<sup>*</sup></strong></label><br/>
+                                    <input type="file" name="photo_upload_5" id="photo_upload_5">
+                                </section>
+                        </td></tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table id="submission">
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+
+    <div class="dz-begin dz-message"><span>Continue uploading files as needed. File previews will appear at the bottom of the form.</span></div>
+
+
 
 
     </form>

@@ -330,6 +330,14 @@ body.thankyou {
     position: relative;
 }
 
+#content.warranty .domestic {
+    display: inline;
+}
+
+#content.warranty .euro {
+    display: none;
+}
+
 #content.warranty #header {
     height: 140px;
 }
@@ -398,9 +406,20 @@ body.thankyou {
 #content.warranty #drumInformation,
 #content.warranty #warrantyRequest,
 #content.warranty #warrantyRequest2,
-#content.warranty #corporateProjects {
+#content.warranty #corporateProjects,
+#content.warranty #photos,
+#content.warranty #submission{
     width: 750px;
     font-size: .75em;
+    margin-bottom: 20px;
+}
+
+#content.warranty #warrantyRequest {
+    margin-bottom: 0;
+}
+
+#content.warranty .uploadFiles {
+    display: none;
 }
 
 #content.warranty #corporateProjects #corporateProjectsText {

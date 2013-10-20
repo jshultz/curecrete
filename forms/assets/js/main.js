@@ -1,8 +1,167 @@
 $(function() {
 
 
+    $("#building_use").change(function () {
+        var str = "";
 
-    // jQuery for Contest Form
+        var agricultural = '<option value="barn">Barn</option>' +
+            '<option value="botanical">Botanical/Garden</option>' +
+            '<option value="dairy">Dairy</option>' +
+            '<option value="silo">Silo</option>';
+
+        var airport = '<option value="airline">Airline/Terminal</option>' +
+            '<option value="hanger">Hanger</option>' +
+            '<option value="tarmac">Tarmac</option>' +
+            '<option value="cargo">Cargo Facility</option>';
+
+        var animal = '<option value="zoo">Zoo</option>' +
+            '<option value="pen">Pen</option>' +
+            '<option value="hospital">Hospital</option>' +
+            '<option value="kennel">Kennel</option>' +
+            '<option value="stall">Stall</option>';
+
+        var correctional = '<option value="prison">Prison</option>' +
+            '<option value="jail">Jail</option>' +
+            '<option value="penitentiary">Penitentiary</option>';
+
+        var educational = '<option value="mechanical">Mechanical Room</option>' +
+            '<option value="shower">Shower</option>' +
+            '<option value="lab">Lab</option>' +
+            '<option value="sidewalk">Sidewalk</option>' +
+            '<option value="storage">Storage Area</option>';
+
+        var government = '<option value="sidewalks">Sidewalks</option>' +
+            '<option value="maintenance">Maintenance Garages</option>' +
+            '<option value="curb">Curb and Gutter</option>' +
+            '<option value="concrete">Concrete Roadways</option>';
+
+        var parking = '<option value="covered">Outdoor-Covered</option>' +
+            '<option value="uncovered">Outdoor-Uncovered</option>' +
+            '<option value="indoor">Indoor and Subterranean</option>';
+
+        var recreation = '<option value="arena">Arena/Stadium</option>' +
+            '<option value="amusement">Amusement</option>' +
+            '<option value="museum">Museum</option>';
+
+        var warehouse = '<option value="applicance">Appliance</option>' +
+            '<option value="antique">Antique</option>' +
+            '<option value="automotive">Automotive and Tire</option>' +
+            '<option value="aviation">Aviation</option>' +
+            '<option value="baby">Baby Product</option>'+
+            '<option value="bakery">Bakery</option>' +
+            '<option value="bath">Bath and Body Product</option>' +
+            '<option value="beverage">Beverage</option>' +
+            '<option value="book">Book</option>'+
+            '<option value="building">Building Material and Hardware</option>' +
+            '<option value="camping">Camping and Outdoor</option>' +
+            '<option value="chemical">Chemical</option>' +
+            '<option value="clothing">Clothing and Textile</option>'+
+            '<option value="collectible">Collectible</option>' +
+            '<option value="cosmetic">Cosmetic</option>' +
+            '<option value="craft">Craft and Hobby</option>' +
+            '<option value="decoration">Decoration (Holiday and Home)</option>'+
+            '<option value="electronic">Electronic and Computer</option>' +
+            '<option value="fitness">Fitness Product</option>' +
+            '<option value="food">Food</option>' +
+            '<option value="furniture">Furniture</option>'+
+            '<option value="gardening">Gardening Product</option>' +
+            '<option value="gun">Gun and Ammunition</option>' +
+            '<option value="general">General Merchandise</option>' +
+            '<option value="gift">Gift and Boutique</option>'+
+            '<option value="greeting">Greeting Card</option>' +
+            '<option value="groceries">Groceries</option>' +
+            '<option value="heavy">Heavy Equipment</option>' +
+            '<option value="home">Home Center</option>'+
+            '<option value="houseware">House Ware</option>' +
+            '<option value="jewelry">Jewelry</option>' +
+            '<option value="luggage">Luggage and Bag</option>' +
+            '<option value="medical">Medical Supply</option>'+
+            '<option value="membership">Membership Club</option>' +
+            '<option value="motorcycle">Motorcycle</option>' +
+            '<option value="musical">Musical Instrument</option>' +
+            '<option value="office">Office Equipment and Supply</option>'+
+            '<option value="pet">Pet Supply</option>' +
+            '<option value="pharmaceutical">Pharmaceutical and Healthcare</option>' +
+            '<option value="photography">Photography</option>' +
+            '<option value="plant">Plant and Flower</option>'+
+            '<option value="plumbing">Plumbing</option>' +
+            '<option value="pottery">Pottery and Glass</option>' +
+            '<option value="sewing">Sewing Product</option>' +
+            '<option value="shoe">Shoe</option>'+
+            '<option value="speculative">Speculative Building</option>' +
+            '<option value="sporting">Sporting Good and Recreation</option>' +
+            '<option value="storage">Storage Facility</option>' +
+            '<option value="tobacco">Tobacco</option>'+
+            '<option value="toy">Toy</option>';
+
+
+
+        $("#building_use option:selected").each(function () {
+            str = $(this).val();
+            console.log(str);
+
+            if (str == 'agricultural') {
+                $('#industry').find('option').remove();
+                $('#industry').html(agricultural);
+            }
+
+            else if (str == 'airport') {
+                $('#industry').find('option').remove();
+                $('#industry').html(airport);
+            }
+
+            else if (str == 'animal') {
+                $('#industry').find('option').remove();
+                $('#industry').html(animal);
+            }
+
+            else if (str == 'convention') {
+                $('#industry').find('option').remove();
+                $('#industry').html('<option value="exhibit">Exhibit Hall</option>');
+            }
+
+            else if (str == 'correctional') {
+                $('#industry').find('option').remove();
+                $('#industry').html(correctional);
+            }
+
+            else if (str == 'educational') {
+                $('#industry').find('option').remove();
+                $('#industry').html(educational);
+            }
+
+            else if (str == 'government') {
+                $('#industry').find('option').remove();
+                $('#industry').html(government);
+            }
+
+            else if (str == 'parking') {
+                $('#industry').find('option').remove();
+                $('#industry').html(parking);
+            }
+
+            else if (str == 'recreation') {
+                $('#industry').find('option').remove();
+                $('#industry').html(recreation);
+            }
+
+            else if (str == 'warehouse') {
+                $('#industry').find('option').remove();
+                $('#industry').html(warehouse);
+            }
+
+            else {
+                $('#industry').find('option').remove();
+            }
+
+        });
+
+
+//        $("div").text(str);
+    })
+        .trigger('change');
+
+    // Contest Form
     if ($('#entryform').length > 0) {
         $( "#accordion" ).accordion({
             heightStyle: "content",
@@ -18,165 +177,7 @@ $(function() {
             ignore: []
         });
 
-        $("#building_use").change(function () {
-            var str = "";
 
-            var agricultural = '<option value="barn">Barn</option>' +
-                '<option value="botanical">Botanical/Garden</option>' +
-                '<option value="dairy">Dairy</option>' +
-                '<option value="silo">Silo</option>';
-
-            var airport = '<option value="airline">Airline/Terminal</option>' +
-                '<option value="hanger">Hanger</option>' +
-                '<option value="tarmac">Tarmac</option>' +
-                '<option value="cargo">Cargo Facility</option>';
-
-            var animal = '<option value="zoo">Zoo</option>' +
-                '<option value="pen">Pen</option>' +
-                '<option value="hospital">Hospital</option>' +
-                '<option value="kennel">Kennel</option>' +
-                '<option value="stall">Stall</option>';
-
-            var correctional = '<option value="prison">Prison</option>' +
-                '<option value="jail">Jail</option>' +
-                '<option value="penitentiary">Penitentiary</option>';
-
-            var educational = '<option value="mechanical">Mechanical Room</option>' +
-                '<option value="shower">Shower</option>' +
-                '<option value="lab">Lab</option>' +
-                '<option value="sidewalk">Sidewalk</option>' +
-                '<option value="storage">Storage Area</option>';
-
-            var government = '<option value="sidewalks">Sidewalks</option>' +
-                '<option value="maintenance">Maintenance Garages</option>' +
-                '<option value="curb">Curb and Gutter</option>' +
-                '<option value="concrete">Concrete Roadways</option>';
-
-            var parking = '<option value="covered">Outdoor-Covered</option>' +
-                '<option value="uncovered">Outdoor-Uncovered</option>' +
-                '<option value="indoor">Indoor and Subterranean</option>';
-
-            var recreation = '<option value="arena">Arena/Stadium</option>' +
-                '<option value="amusement">Amusement</option>' +
-                '<option value="museum">Museum</option>';
-
-            var warehouse = '<option value="applicance">Appliance</option>' +
-                '<option value="antique">Antique</option>' +
-                '<option value="automotive">Automotive and Tire</option>' +
-                '<option value="aviation">Aviation</option>' +
-                '<option value="baby">Baby Product</option>'+
-                '<option value="bakery">Bakery</option>' +
-                '<option value="bath">Bath and Body Product</option>' +
-                '<option value="beverage">Beverage</option>' +
-                '<option value="book">Book</option>'+
-                '<option value="building">Building Material and Hardware</option>' +
-                '<option value="camping">Camping and Outdoor</option>' +
-                '<option value="chemical">Chemical</option>' +
-                '<option value="clothing">Clothing and Textile</option>'+
-                '<option value="collectible">Collectible</option>' +
-                '<option value="cosmetic">Cosmetic</option>' +
-                '<option value="craft">Craft and Hobby</option>' +
-                '<option value="decoration">Decoration (Holiday and Home)</option>'+
-                '<option value="electronic">Electronic and Computer</option>' +
-                '<option value="fitness">Fitness Product</option>' +
-                '<option value="food">Food</option>' +
-                '<option value="furniture">Furniture</option>'+
-                '<option value="gardening">Gardening Product</option>' +
-                '<option value="gun">Gun and Ammunition</option>' +
-                '<option value="general">General Merchandise</option>' +
-                '<option value="gift">Gift and Boutique</option>'+
-                '<option value="greeting">Greeting Card</option>' +
-                '<option value="groceries">Groceries</option>' +
-                '<option value="heavy">Heavy Equipment</option>' +
-                '<option value="home">Home Center</option>'+
-                '<option value="houseware">House Ware</option>' +
-                '<option value="jewelry">Jewelry</option>' +
-                '<option value="luggage">Luggage and Bag</option>' +
-                '<option value="medical">Medical Supply</option>'+
-                '<option value="membership">Membership Club</option>' +
-                '<option value="motorcycle">Motorcycle</option>' +
-                '<option value="musical">Musical Instrument</option>' +
-                '<option value="office">Office Equipment and Supply</option>'+
-                '<option value="pet">Pet Supply</option>' +
-                '<option value="pharmaceutical">Pharmaceutical and Healthcare</option>' +
-                '<option value="photography">Photography</option>' +
-                '<option value="plant">Plant and Flower</option>'+
-                '<option value="plumbing">Plumbing</option>' +
-                '<option value="pottery">Pottery and Glass</option>' +
-                '<option value="sewing">Sewing Product</option>' +
-                '<option value="shoe">Shoe</option>'+
-                '<option value="speculative">Speculative Building</option>' +
-                '<option value="sporting">Sporting Good and Recreation</option>' +
-                '<option value="storage">Storage Facility</option>' +
-                '<option value="tobacco">Tobacco</option>'+
-                '<option value="toy">Toy</option>';
-
-
-
-            $("#building_use option:selected").each(function () {
-                str = $(this).val();
-                console.log(str);
-
-                if (str == 'agricultural') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(agricultural);
-                }
-
-                else if (str == 'airport') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(airport);
-                }
-
-                else if (str == 'animal') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(animal);
-                }
-
-                else if (str == 'convention') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html('<option value="exhibit">Exhibit Hall</option>');
-                }
-
-                else if (str == 'correctional') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(correctional);
-                }
-
-                else if (str == 'educational') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(educational);
-                }
-
-                else if (str == 'government') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(government);
-                }
-
-                else if (str == 'parking') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(parking);
-                }
-
-                else if (str == 'recreation') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(recreation);
-                }
-
-                else if (str == 'warehouse') {
-                    $('#industry').find('option').remove();
-                    $('#industry').html(warehouse);
-                }
-
-                else {
-                    $('#industry').find('option').remove();
-                }
-
-            });
-
-
-//        $("div").text(str);
-        })
-            .trigger('change');
     }
 
     // International Purchase Order
@@ -437,8 +438,74 @@ $(function() {
 
     }
 
+    // Project Submission and Warranty Request Form
 
     if($('#content.warranty').length > 0) {
+
+        $('#domesticProjectCheck').click(function() {
+            if ($(this).is(":checked")) {
+                $('#internationalProjectCheck').prop("checked", false);
+                $('.domestic').css('display','inline');
+                $('.euro').css('display', 'none');
+            } else {
+                $('#internationalProjectCheck').prop("checked", true);
+                $('.domestic').css('display','none');
+                $('.euro').css('display', 'inline');
+            }
+        });
+
+        $('#internationalProjectCheck').click(function() {
+            if ($(this).is(":checked")) {
+                $('#domesticProjectCheck').prop("checked", false);
+                $('.domestic').css('display','none');
+                $('.euro').css('display', 'inline');
+            } else {
+                $('#domesticProjectCheck').prop("checked", true);
+                $('.domestic').css('display','inline');
+                $('.euro').css('display', 'none');
+            }
+        });
+
+        $('#warrantyRequestCheck').click(function() {
+            if ($(this).is(":checked")) {
+                $('#warrantyRequest input').addClass('required');
+                $('#projectReportOnlyCheck').prop("checked", false);
+            } else {
+                $('#warrantyRequest input').removeClass('required');
+                $('#projectReportOnlyCheck').prop("checked", true);
+            }
+        });
+
+        $('#projectReportOnlyCheck').click(function() {
+            if ($(this).is(":checked")) {
+                $('#warrantyRequest input').removeClass('required');
+                $('#warrantyRequestCheck').prop("checked", false);
+            } else {
+                $('#warrantyRequest input').addClass('required');
+                $('#projectReportOnlyCheck').prop("checked", true);
+            }
+        });
+
+
+        $('#uploadPhotosYes').click(function() {
+            if ($(this).is(":checked")) {
+                $('#uploadPhotosNo').prop("checked", false);
+                $('.uploadFiles').css('display','block');
+            } else {
+                $('#uploadPhotosNo').prop("checked", true);
+                $('.uploadFiles').css('display','none');
+            }
+        });
+
+        $('#uploadPhotosNo').click(function() {
+            if ($(this).is(":checked")) {
+                $('.uploadFiles').css('display','none');
+                $('#uploadPhotosYes').prop("checked", false);
+            } else {
+                $('.uploadFiles').css('display','block');
+                $('#uploadPhotosNo').prop("checked", true);
+            }
+        });
 
         var greatestWidth = 0;   // Stores the greatest width
 

@@ -466,6 +466,13 @@ class Site extends CI_Controller
         $this->load->view('project_report_warranty_request');
     }
 
+    public function projectsubmit() {
+        echo '<pre>';
+
+        var_dump($_POST);
+        var_dump($_FILES);
+    }
+
 	public function thankyou() {
 		$this->load->view('thankyou');
 	}

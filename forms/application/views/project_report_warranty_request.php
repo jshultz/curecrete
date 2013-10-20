@@ -108,14 +108,14 @@
         <tr>
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
             <td class="input"><input name="projectName" id="projectName" type="text" class="required"></td>
-            <td class="label"><label for="gallonsUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
-            <td class="input"><input name="gallonsUsed" id="gallonsUsed"> </td>
+            <td class="label"><label for="amountUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
+            <td class="input"><input name="amountUsed" id="amountUsed"> </td>
         </tr>
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
             <td class="input"><input name="address" id="address" type="text" class=""></td>
-            <td class="label"><label for="meters"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
-            <td class="input"><input name="meters" id="meters"> </td>
+            <td class="label"><label for="squareDistance"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
+            <td class="input"><input name="squareDistance" id="squareDistance"> </td>
         </tr>
         <tr>
             <td class="label"><label for="city">City<sup>*</sup></label></td>
@@ -228,25 +228,25 @@
                 <input name="group[0][drumNumber]">
             </td>
             <td>
-                <input name="group[0][gallons]">
+                <input name="group[0][size]">
             </td>
             <td>
                 <input name="group[1][drumNumber]">
             </td>
             <td>
-                <input name="group[1][gallons]">
+                <input name="group[1][size]">
             </td>
             <td>
                 <input name="group[2][drumNumber]">
             </td>
             <td>
-                <input name="group[2][gallons]">
+                <input name="group[2][size]">
             </td>
             <td>
                 <input name="group[3][drumNumber]">
             </td>
             <td>
-                <input name="group[3][gallons]">
+                <input name="group[3][size]">
             </td>
             <td class="remove"></td>
         </tr>
@@ -255,25 +255,25 @@
                 <input name="group[4][drumNumber]">
             </td>
             <td>
-                <input name="group[4][gallons]">
+                <input name="group[4][size]">
             </td>
             <td>
                 <input name="group[5][drumNumber]">
             </td>
             <td>
-                <input name="group[5][gallons]">
+                <input name="group[5][size]">
             </td>
             <td>
                 <input name="group[6][drumNumber]">
             </td>
             <td>
-                <input name="group[6][gallons]">
+                <input name="group[6][size]">
             </td>
             <td>
                 <input name="group[7][drumNumber]">
             </td>
             <td>
-                <input name="group[7][gallons]">
+                <input name="group[7][size]">
             </td>
             <td class="remove"></td>
         </tr>
@@ -282,25 +282,25 @@
                 <input name="group[8][drumNumber]">
             </td>
             <td>
-                <input name="group[8][gallons]">
+                <input name="group[8][size]">
             </td>
             <td>
                 <input name="group[9][drumNumber]">
             </td>
             <td>
-                <input name="group[9][gallons]">
+                <input name="group[9][size]">
             </td>
             <td>
                 <input name="group[10][drumNumber]">
             </td>
             <td>
-                <input name="group[10][gallons]">
+                <input name="group[10][size]">
             </td>
             <td>
                 <input name="group[11][drumNumber]">
             </td>
             <td>
-                <input name="group[11][gallons]">
+                <input name="group[11][size]">
             </td>
             <td class="remove"></td>
         </tr>
@@ -309,25 +309,25 @@
                 <input name="group[12][drumNumber]">
             </td>
             <td>
-                <input name="group[12][gallons]">
+                <input name="group[12][size]">
             </td>
             <td>
                 <input name="group[13][drumNumber]">
             </td>
             <td>
-                <input name="group[13][gallons]">
+                <input name="group[13][size]">
             </td>
             <td>
                 <input name="group[14][drumNumber]">
             </td>
             <td>
-                <input name="group[14][gallons]">
+                <input name="group[14][size]">
             </td>
             <td>
                 <input name="group[15][drumNumber]">
             </td>
             <td>
-                <input name="group[15][gallons]">
+                <input name="group[15][size]">
             </td>
             <td class="remove"></td>
         </tr>
@@ -336,25 +336,25 @@
                 <input name="group[16][drumNumber]">
             </td>
             <td>
-                <input name="group[16][gallons]">
+                <input name="group[16][size]">
             </td>
             <td>
                 <input name="group[17][drumNumber]">
             </td>
             <td>
-                <input name="group[17][gallons]">
+                <input name="group[17][size]">
             </td>
             <td>
                 <input name="group[18][drumNumber]">
             </td>
             <td>
-                <input name="group[18][gallons]">
+                <input name="group[18][size]">
             </td>
             <td>
                 <input name="group[19][drumNumber]">
             </td>
             <td>
-                <input name="group[19][gallons]">
+                <input name="group[19][size]">
             </td>
             <td class="remove"><img src="/forms/assets/img/Plus-32.png" class="addRow"></td>
         </tr>

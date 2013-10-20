@@ -467,10 +467,79 @@ class Site extends CI_Controller
     }
 
     public function projectsubmit() {
-        echo '<pre>';
 
-        var_dump($_POST);
-        var_dump($_FILES);
+        date_default_timezone_set('UTC');
+
+        /* Begin Header Check Boxes */
+
+        $projectReportOnlyCheck = (isset($_POST['projectReportOnlyCheck']))?true:false;
+
+        $warrantyRequestCheck = (isset($_POST['warrantyRequestCheck']))?true:false;
+
+        $ashfordFormulaCheck = (isset($_POST['ashfordFormulaCheck']))?true:false;
+
+        $retorplateCheck = (isset($_POST['retorplateCheck']))?true:false;
+
+        $domesticProjectCheck = (isset($_POST['domesticProjectCheck']))?true:false;
+
+        $internationalProjectCheck = (isset($_POST['internationalProjectCheck']))?true:false;
+
+        $leedNominatedCheck = (isset($_POST['leedNominatedCheck']))?true:false;
+
+        /* END Header Check Boxes */
+
+        /* Begin Header Text Fields */
+
+        $distributorName = (string)$this->input->get_post('distributorName', TRUE);
+
+        $distributorEmail = (string)$this->input->get_post('distributorEmail', TRUE);
+
+        $poNumber = (string)$this->input->get_post('poNumber', TRUE);
+
+        /* END Header Text Fields */
+
+        /* Begin Project Information */
+
+        $projectName = (string)$this->input->get_post('projectName', TRUE);
+
+        $projectName = (string)$this->input->get_post('projectName', TRUE);
+
+        $amountUsed = (string)$this->input->get_post('amountUsed', TRUE);
+
+        $amountUsed = (string)$this->input->get_post('amountUsed', TRUE);
+
+        $address = (string)$this->input->get_post('address', TRUE);
+
+        $squareDistance = (string)$this->input->get_post('squareDistance', TRUE);
+
+        $city = (string)$this->input->get_post('city', TRUE);
+
+        $initialApplicationDate = (string)$this->input->get_post('initialApplicationDate', TRUE);
+
+        $state = (string)$this->input->get_post('state', TRUE);
+
+        $finalApplicationDate = (string)$this->input->get_post('finalApplicationDate', TRUE);
+
+        $country = (string)$this->input->get_post('country', TRUE);
+
+        $buildingUse = (string)$this->input->get_post('buildingUse', TRUE);
+
+        $projectOwner = (string)$this->input->get_post('projectOwner', TRUE);
+
+        $industry = (string)$this->input->get_post('industry', TRUE);
+
+        $specifierArchitect = (string)$this->input->get_post('specifierArchitect', TRUE);
+
+        $comments = (string)$this->input->get_post('comments', TRUE);
+
+        $generalContractor = (string)$this->input->get_post('generalContractor', TRUE);
+
+        $applicator = (string)$this->input->get_post('applicator', TRUE);
+
+        $flatWorker = (string)$this->input->get_post('flatWorker', TRUE);
+        
+        /* END Project Information */
+
     }
 
 	public function thankyou() {

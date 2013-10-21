@@ -472,73 +472,137 @@ class Site extends CI_Controller
 
         /* Begin Header Check Boxes */
 
-        $projectReportOnlyCheck = (isset($_POST['projectReportOnlyCheck']))?true:false;
+            $projectReportOnlyCheck = (isset($_POST['projectReportOnlyCheck']))?true:false;
 
-        $warrantyRequestCheck = (isset($_POST['warrantyRequestCheck']))?true:false;
+            $warrantyRequestCheck = (isset($_POST['warrantyRequestCheck']))?true:false;
 
-        $ashfordFormulaCheck = (isset($_POST['ashfordFormulaCheck']))?true:false;
+            $ashfordFormulaCheck = (isset($_POST['ashfordFormulaCheck']))?true:false;
 
-        $retorplateCheck = (isset($_POST['retorplateCheck']))?true:false;
+            $retorplateCheck = (isset($_POST['retorplateCheck']))?true:false;
 
-        $domesticProjectCheck = (isset($_POST['domesticProjectCheck']))?true:false;
+            $domesticProjectCheck = (isset($_POST['domesticProjectCheck']))?true:false;
 
-        $internationalProjectCheck = (isset($_POST['internationalProjectCheck']))?true:false;
+            $internationalProjectCheck = (isset($_POST['internationalProjectCheck']))?true:false;
 
-        $leedNominatedCheck = (isset($_POST['leedNominatedCheck']))?true:false;
+            $leedNominatedCheck = (isset($_POST['leedNominatedCheck']))?true:false;
 
         /* END Header Check Boxes */
 
         /* Begin Header Text Fields */
 
-        $distributorName = (string)$this->input->get_post('distributorName', TRUE);
+            $distributorName = (string)$this->input->get_post('distributorName', TRUE);
 
-        $distributorEmail = (string)$this->input->get_post('distributorEmail', TRUE);
+            $distributorEmail = (string)$this->input->get_post('distributorEmail', TRUE);
 
-        $poNumber = (string)$this->input->get_post('poNumber', TRUE);
+            $poNumber = (string)$this->input->get_post('poNumber', TRUE);
 
         /* END Header Text Fields */
 
         /* Begin Project Information */
 
-        $projectName = (string)$this->input->get_post('projectName', TRUE);
+            $projectName = (string)$this->input->get_post('projectName', TRUE);
 
-        $projectName = (string)$this->input->get_post('projectName', TRUE);
+            $projectName = (string)$this->input->get_post('projectName', TRUE);
 
-        $amountUsed = (string)$this->input->get_post('amountUsed', TRUE);
+            $amountUsed = (string)$this->input->get_post('amountUsed', TRUE);
 
-        $amountUsed = (string)$this->input->get_post('amountUsed', TRUE);
+            $amountUsed = (string)$this->input->get_post('amountUsed', TRUE);
 
-        $address = (string)$this->input->get_post('address', TRUE);
+            $address = (string)$this->input->get_post('address', TRUE);
 
-        $squareDistance = (string)$this->input->get_post('squareDistance', TRUE);
+            $squareDistance = (string)$this->input->get_post('squareDistance', TRUE);
 
-        $city = (string)$this->input->get_post('city', TRUE);
+            $city = (string)$this->input->get_post('city', TRUE);
 
-        $initialApplicationDate = (string)$this->input->get_post('initialApplicationDate', TRUE);
+            $initialApplicationDate = (string)$this->input->get_post('initialApplicationDate', TRUE);
 
-        $state = (string)$this->input->get_post('state', TRUE);
+            $state = (string)$this->input->get_post('state', TRUE);
 
-        $finalApplicationDate = (string)$this->input->get_post('finalApplicationDate', TRUE);
+            $finalApplicationDate = (string)$this->input->get_post('finalApplicationDate', TRUE);
 
-        $country = (string)$this->input->get_post('country', TRUE);
+            $country = (string)$this->input->get_post('country', TRUE);
 
-        $buildingUse = (string)$this->input->get_post('buildingUse', TRUE);
+            $buildingUse = (string)$this->input->get_post('buildingUse', TRUE);
 
-        $projectOwner = (string)$this->input->get_post('projectOwner', TRUE);
+            $projectOwner = (string)$this->input->get_post('projectOwner', TRUE);
 
-        $industry = (string)$this->input->get_post('industry', TRUE);
+            $industry = (string)$this->input->get_post('industry', TRUE);
 
-        $specifierArchitect = (string)$this->input->get_post('specifierArchitect', TRUE);
+            $specifierArchitect = (string)$this->input->get_post('specifierArchitect', TRUE);
 
-        $comments = (string)$this->input->get_post('comments', TRUE);
+            $comments = (string)$this->input->get_post('comments', TRUE);
 
-        $generalContractor = (string)$this->input->get_post('generalContractor', TRUE);
+            $generalContractor = (string)$this->input->get_post('generalContractor', TRUE);
 
-        $applicator = (string)$this->input->get_post('applicator', TRUE);
+            $applicator = (string)$this->input->get_post('applicator', TRUE);
 
-        $flatWorker = (string)$this->input->get_post('flatWorker', TRUE);
-        
+            $flatWorker = (string)$this->input->get_post('flatWorker', TRUE);
+
         /* END Project Information */
+
+        /* Begin Drum Information */
+
+        /* END Drum Information */
+
+        /* Begin Warranty Request */
+
+            $dateFloorWarrantied = (string)$this->input->get_post('dateFloorWarrantied', TRUE);
+
+            $applicatorAddress = (string)$this->input->get_post('applicatorAddress', TRUE);
+
+            $applicatorCompany = (string)$this->input->get_post('applicatorCompany', TRUE);
+
+            $applicatorCity = (string)$this->input->get_post('applicatorCity', TRUE);
+
+            $applicatorOwner = (string)$this->input->get_post('applicatorOwner', TRUE);
+
+            $applicatorState = (string)$this->input->get_post('applicatorState', TRUE);
+
+            $applicatorPhone = (string)$this->input->get_post('applicatorPhone', TRUE);
+
+            $applicatorCountry = (string)$this->input->get_post('applicatorCountry', TRUE);
+
+            $applicatorFax = (string)$this->input->get_post('applicatorFax', TRUE);
+
+            $applicatorPostal = (string)$this->input->get_post('applicatorPostal', TRUE);
+
+        /* END Warranty Request */
+
+        /* Begin Warranty Request 2 */
+
+            $environmentalConditions = (string)$this->input->get_post('environmentalConditions', TRUE);
+
+            $weatherConditions = (string)$this->input->get_post('weatherConditions', TRUE);
+
+            $ashfordForulaCureYes = (isset($_POST['ashfordForulaCureYes']))?true:false;
+
+            $ashfordForulaCureNo = (isset($_POST['ashfordForulaCureNo']))?true:false;
+
+            $appliedOnExistingFloor = (isset($_POST['appliedOnExistingFloor']))?true:false;
+
+            $appliedAtTimeOfPlacement = (isset($_POST['appliedAtTimeOfPlacement']))?true:false;
+
+            $hoursAfterPlacementNumbers = (string)$this->input->get_post('hoursAfterPlacementNumbers', TRUE);
+
+            $floorBurnishedYes = (isset($_POST['floorBurnishedYes']))?true:false;
+
+            $floorBurnishedNo = (isset($_POST['floorBurnishedNo']))?true:false;
+
+            $applicationSupervisedByDistributorYes = (isset($_POST['applicationSupervisedByDistributorYes']))?true:false;
+
+            $applicationSupervisedByDistributorNo = (isset($_POST['applicationSupervisedByDistributorNo']))?true:false;
+
+            $maintenanceBrochureGivenYes = (isset($_POST['maintenanceBrochureGivenYes']))?true:false;
+
+            $maintenanceBrochureGivenNo = (isset($_POST['maintenanceBrochureGivenNo']))?true:false;
+
+        /* END Warranty Request 2 */
+
+        /* Begin Corporate Projects */
+
+            $corporateProjectsText = (string)$this->input->get_post('corporateProjectsText', TRUE);
+
+        /* END Corporate Projects */
 
     }
 

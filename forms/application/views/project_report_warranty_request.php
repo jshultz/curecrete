@@ -370,7 +370,7 @@
         </tr>
         <tr>
             <td class="label"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
-            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class=""></td>
+            <td class="input"><input name="dateFloorWarrantied" id="dateFloorWarrantied" type="text" class=""></td>
             <td class="label"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
             <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class=""></td>
         </tr>

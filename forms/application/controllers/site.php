@@ -366,8 +366,6 @@ class Site extends CI_Controller
 			$concrete_feet = (isset($_POST['concrete_feet']))?true:false;
 			$concrete_meter = (isset($_POST['concrete_meter']))?true:false;
 
-
-
 			$message = '<p>' . 'First <strong>Name:</strong> '. (string)$this->input->post('firstname', TRUE) .'</p>';
 			$message .= '<p>' . 'Last <strong>Name:</strong> ' . (string)$this->input->post('lastname', TRUE) .'</p>';
 			$message .= '<p>' . 'Customer Title: ' . (string)$this->input->post('cust_title', TRUE) .'</p>';
@@ -542,6 +540,24 @@ class Site extends CI_Controller
 
         /* Begin Drum Information */
 
+        $drumbs[] = $this->input->get_post('group');
+
+            foreach($drumbs as $key => $value) {
+
+                foreach($value as $key => $subvalue)
+                {
+
+                    if(!empty($subvalue['drumNumber'])) {
+                        echo 'DrumNumber' . $subvalue['drumNumber'];
+                        echo 'Size' . $subvalue['size'];
+                    }
+
+                }
+
+            }
+
+
+
         /* END Drum Information */
 
         /* Begin Warranty Request */
@@ -603,6 +619,47 @@ class Site extends CI_Controller
             $corporateProjectsText = (string)$this->input->get_post('corporateProjectsText', TRUE);
 
         /* END Corporate Projects */
+
+        /* File Handling */
+
+        $files = array();
+
+        if(empty($config))
+        {
+            $config['upload_path'] = './assets/uploads';
+            $config['allowed_types'] = 'gif|jpg|jpeg|jpe|png';
+            $config['max_size']      = '800000000';
+        }
+
+        $this->load->library('upload', $config);
+
+        $errors = FALSE;
+
+        foreach($_FILES as $key => $value)
+        {
+            if( ! empty($value['name']))
+            {
+                if( ! $this->upload->do_upload($key))
+                {
+                    $data['upload_message'] = $this->upload->display_errors(ERR_OPEN, ERR_CLOSE); // ERR_OPEN and ERR_CLOSE are error delimiters defined in a config file
+                    $this->load->vars($data);
+
+                    $errors = TRUE;
+                }
+                else
+                {
+                    // Build a file array from all uploaded files
+                    $files[] = $this->upload->data();
+                }
+            }
+        }
+
+        foreach ($files as $key) {
+
+            echo '<p>' . 'File: ' . $key['file_name'] . '</p>';
+        }
+
+        /* End File Handling */
 
     }
 

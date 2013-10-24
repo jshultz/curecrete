@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/forms/assets/css/custom-theme/jquery-ui-1.10.2.custom.min.css">
     <script src="/forms//assets/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body class="pdf">
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
@@ -51,7 +51,7 @@
     <div id="headerCheckboxes">
     <div class="block">
         <div class="checkbox">
-            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" >
+            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" value="<?php echo $projectReportOnlyCheck; ?>" >
             <label for="projectReportOnlyCheck">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/>
         </div>
         <div class="checkbox">
@@ -86,15 +86,15 @@
     <div id="headerTextFields">
     <div class="cell">
         <label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/>
-        <input name="distributorName" id="distributorName" type="text" class="required">
+        <?php echo $distributorName; ?>
     </div>
     <div class="cell">
         <label for="distributorEmail">Distributor Email<sup>*</sup></label><br/>
-        <input name="distributorEmail" id="distributorEmail" type="text" class="required">
+        <?php echo $distributorEmail; ?>
     </div>
     <div class="cell">
         <label for="poNumber">PO #</label><br/>
-        <input name="poNumber" id="poNumber" type="text" class="required">
+        <?php echo $poNumber; ?>
     </div>
 </div>
 
@@ -107,7 +107,7 @@
         </tr>
         <tr>
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
-            <td class="input"><input name="projectName" id="projectName" type="text" class="required"></td>
+            <td class="input"><?php echo $projectName; ?></td>
             <td class="label"><label for="amountUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
             <td class="input"><input name="amountUsed" id="amountUsed"> </td>
         </tr>

@@ -110,6 +110,13 @@ body {
     min-height: 800px;
 }
 
+body.pdf {
+    background: none;
+    background-color: #fff;
+    height: auto;
+    padding: 0;
+}
+
 body.thankyou {
 	background: none;
 }
@@ -328,6 +335,11 @@ body.thankyou {
     padding: 10px;
     width: 780px;
     position: relative;
+}
+
+body.pdf #content.warranty {
+    margin:0;
+    background: none;
 }
 
 #content.warranty .domestic {

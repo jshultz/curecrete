@@ -8,6 +8,7 @@ class Site extends CI_Controller
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('email');
+        $this->load->library('phpmailer');
 	}
 
 	/**
@@ -649,9 +650,36 @@ class Site extends CI_Controller
             $data['files'] = $key['file_name'];
         }
 
-        echo '<pre>';
+        $mail = new PHPMailer;
 
-        var_dump($data);
+        $body = $this->load->view('email_forms/email_project_report_warranty_request', $data, TRUE);
+
+        echo $body;
+        exit;
+
+//		$mailto = 'Garrett.Soong@ashfordformula.com';
+        $mailto = 'customercare@curecrete.com';
+
+        $this->phpmailer->AddAddress($mailto);
+
+        $this->phpmailer->IsMail();
+
+        $this->phpmailer->From = 'contact@slidingdoorco.com';
+
+        $this->phpmailer->FromName = 'The Sliding Door Company';
+
+        $this->phpmailer->IsHTML(true);
+
+        $this->phpmailer->Subject = $subject;
+
+        $this->phpmailer->Body = $body;
+
+//        $this->phpmailer->Send();
+
+
+        $this->phpmailer->ClearAddresses();
+
+        $this->phpmailer->ClearAllRecipients();
 
         /* End File Handling */
 

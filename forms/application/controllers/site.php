@@ -472,8 +472,10 @@ class Site extends CI_Controller
         /* Begin Header Check Boxes */
 
             $data['projectReportOnlyCheck'] = (isset($_POST['projectReportOnlyCheck']))?true:false;
+            if ($data['projectReportOnlyCheck'] == '1') { $data['projectReportOnlyCheck'] = '&#x2611;';} else { $data['projectReportOnlyCheck'] = '&#x2610;';}
 
             $data['warrantyRequestCheck'] = (isset($_POST['warrantyRequestCheck']))?true:false;
+            if ($data['warrantyRequestCheck'] == '1') { $data['warrantyRequestCheck'] = '&#x2611;';} else { $data['warrantyRequestCheck'] = '&#x2610;';}
 
             $data['ashfordFormulaCheck'] = (isset($_POST['ashfordFormulaCheck']))?true:false;
 

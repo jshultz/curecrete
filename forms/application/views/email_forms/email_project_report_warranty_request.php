@@ -51,33 +51,33 @@
     <div id="headerCheckboxes">
     <div class="block">
         <div class="checkbox">
-            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" value="<?php echo $projectReportOnlyCheck; ?>" >
+            <?php echo $projectReportOnlyCheck; ?>
             <label for="projectReportOnlyCheck">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/>
         </div>
         <div class="checkbox">
-            <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" >
+            <?php echo $warrantyRequestCheck; ?>
             <label for="warrantyRequestCheck">Warranty Request <span>(Sections 1 - 3)</span></label><br/>
         </div>
         <div class="checkbox">
-            <input name="ashfordFormulaCheck" id="ashfordFormulaCheck" type="checkbox" >
+            <?php echo $ashfordFormulaCheck; ?>
             <label for="ashfordFormulaCheck">Ashford Formula</label><br/>
         </div>
         <div class="checkbox">
-            <input name="retorplateCheck" id="retorplateCheck" type="checkbox" >
+            <?php echo $retorplateCheck; ?>
             <label for="retorplateCheck">Retroplate</label><br/>
         </div>
     </div>
     <div class="block">
         <div class="checkbox">
-            <input name="domesticProjectCheck" id="domesticProjectCheck" type="checkbox" >
+            <?php echo $domesticProjectCheck; ?>
             <label for="domesticProjectCheck">Domestic Project</label><br/>
         </div>
         <div class="checkbox">
-            <input name="internationalProjectCheck" id="internationalProjectCheck" type="checkbox" >
+            <?php echo $internationalProjectCheck; ?>
             <label for="internationalProjectCheck">International Project</label><br/>
         </div>
         <div class="checkbox">
-            <input name="leedNominatedCheck" id="leedNominatedCheck" type="checkbox" >
+            <?php echo $leedNominatedCheck; ?>
             <label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
         </div>
     </div>
@@ -109,79 +109,57 @@
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
             <td class="input"><?php echo $projectName; ?></td>
             <td class="label"><label for="amountUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
-            <td class="input"><input name="amountUsed" id="amountUsed"> </td>
+            <td class="input"><?php echo $amountUsed; ?> </td>
         </tr>
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
-            <td class="input"><input name="address" id="address" type="text" class=""></td>
+            <td class="input"><?php echo $address; ?></td>
             <td class="label"><label for="squareDistance"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
-            <td class="input"><input name="squareDistance" id="squareDistance"> </td>
+            <td class="input"><?php echo $squareDistance; ?> </td>
         </tr>
         <tr>
             <td class="label"><label for="city">City<sup>*</sup></label></td>
-            <td class="input"><input name="city" id="city" type="text" class="required"></td>
+            <td class="input"><?php echo $city; ?></td>
             <td class="label"><label for="initialApplicationDate">Initial Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="initialApplicationDate" id="initialApplicationDate"> </td>
+            <td class="input"><?php echo $initialApplicationDate; ?> </td>
         </tr>
         <tr>
             <td class="label"><label for="state">Province/State<sup>*</sup></label></td>
-            <td class="input"><input name="state" id="state" type="text" class="required"></td>
+            <td class="input"><?php echo $state; ?></td>
             <td class="label"><label for="finalApplicationDate">Final Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate"> </td>
+            <td class="input"><?php echo $finalApplicationDate; ?> </td>
         </tr>
         <tr>
             <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
             <td class="input"><input name="country" id="country" type="text" class="required"></td>
             <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
-                <select name="building_use" id="building_use">
-                    <option value="agricultural">Agricultural/Farm<sup>*</sup></option>
-                    <option value="airport">Airport<sup>*</sup></option>
-                    <option value="animal">Animal<sup>*</sup></option>
-                    <option value="church">Church</option>
-                    <option value="convention">Convention/Meeting Center<sup>*</sup></option>
-                    <option value="correctional">Correctional Facility<sup>*</sup></option>
-                    <option value="educational">Educational<sup>*</sup></option>
-                    <option value="freight">Freight/Shipping</option>
-                    <option value="government">Government/Municipal<sup>*</sup></option>
-                    <option value="health">Health Care</option>
-                    <option value="hotel">Hotel/Hospitality</option>
-                    <option value="manufacturing">Manufacturing</option>
-                    <option value="office">Office</option>
-                    <option value="parking">Parking<sup>*</sup></option>
-                    <option value="power">Power Generation</option>
-                    <option value="printing">Printing</option>
-                    <option value="recreation">Recreation<sup>*</sup></option>
-                    <option value="residential">Residential</option>
-                    <option value="retail">Retail</option>
-                    <option value="transportation">Transportation</option>
-                    <option value="warehouse">Warehouse/Distribution Center<sup>*</sup></option>
-                </select>
+                <?php echo $projectName; ?>
             </td>
         </tr>
         <tr>
             <td class="label"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
-            <td class="input"><input name="projectOwner" id="projectOwner" type="text" class="required"></td>
+            <td class="input"><?php echo $projectOwner; ?></td>
             <td class="label"><label for="industry">Industry<sup>*</sup></label> </td>
-            <td class="input"><select name="industry" id="industry"></select> </td>
+            <td class="input"><?php echo $industry; ?> </td>
         </tr>
         <tr>
             <td class="label"><label for="specifierArchitect">Specifier/Architect</label></td>
-            <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class=""></td>
+            <td class="input"><?php echo $specifierArchitect; ?></td>
             <td class="label" rowspan="4"><label for="comments">Comments</label> </td>
-            <td class="input" rowspan="4"><textarea id="comments" name="comments"></textarea> </td>
+            <td class="input" rowspan="4"><p><?php echo $projectName; ?></p></td>
         </tr>
         <tr>
             <td class="label"><label for="generalContractor">General Contractor</label></td>
-            <td class="input"><input name="generalContractor" id="generalContractor" type="text" class=""></td>
+            <td class="input"><?php echo $generalContractor; ?></td>
         </tr>
         <tr>
             <td class="label"><label for="applicator">Applicator<sup>*</sup></label></td>
-            <td class="input"><input name="applicator" id="applicator" type="text" class="required"></td>
+            <td class="input"><?php echo $applicator; ?></td>
         </tr>
         <tr>
             <td class="label"><label for="flatWorker">Flat Worker / Floor Maker / Sub-Contractor</label></td>
-            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class=""></td>
+            <td class="input"><?php echo $flatWorker; ?></td>
         </tr>
 
     </table>
@@ -370,33 +348,33 @@
         </tr>
         <tr>
             <td class="label"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
-            <td class="input"><input name="dateFloorWarrantied" id="dateFloorWarrantied" type="text" class=""></td>
+            <td class="input"><?php echo $dateFloorWarrantied; ?></td>
             <td class="label"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorAddress; ?></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorCompany">Applicator Company Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorCompany; ?></td>
             <td class="label"><label for="applicatorCity">City<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorCity; ?></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorOwner; ?></td>
             <td class="label"><label for="applicatorState">State/Province<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorState; ?></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorPhone; ?></td>
             <td class="label"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorCountry; ?></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorFax">Fax</label> </td>
-            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorFax; ?></td>
             <td class="label"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class=""></td>
+            <td class="input"><?php echo $applicatorPostal; ?></td>
         </tr>
 
     </table>
@@ -404,21 +382,21 @@
     <table id="warrantyRequest2">
         <tr>
             <td class="label first"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
-            <td class="input" colspan="5"><textarea name="environmentalConditions" id="environmentalConditions"></textarea> </td>
+            <td class="input" colspan="5"><p><?php echo $environmentalConditions; ?></p> </td>
         </tr>
         <tr>
             <td class="label first"><label for="weatherConditions">Weather Conditions During Ashford Formula Application<sup>*</sup></label></td>
-            <td class="input" colspan="5"><textarea name="weatherConditions" id="weatherConditions"></textarea> </td>
+            <td class="input" colspan="5"><p><?php echo $weatherConditions; ?></p> </td>
         </tr>
         <tr>
             <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox" >
+                    <?php echo $ashfordForulaCureYes; ?>
                     <label for="ashfordForulaCureYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox" >
+                    <?php echo $ashfordForulaCureNo; ?>
                     <label for="ashfordForulaCureNo">No</label>
                 </div>
             </td>
@@ -427,19 +405,20 @@
             </td>
             <td class="input" width="155px">
                 <div class="checkbox">
-                    <input name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox" >
+                    <?php echo $appliedOnExistingFloor; ?>
                     <label for="appliedOnExistingFloor">On Existing Floor?</label>
                 </div>
             <br/>
                 <div class="checkbox">
-                    <input name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox" >
+                    <?php echo $appliedAtTimeOfPlacement; ?>
                     <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
                 </div>
             </td>
             <td colspan="2">
                 <div class="checkbox" id="hoursAfterPlacementCheckbox">
-                    <input name="hoursAfterPlacement" id="hoursAfterPlacement" type="checkbox" >
-                    <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text"><br/>
+                    <?php echo $hoursAfterPlacement; ?>
+                    <?php echo $hoursAfterPlacementNumbers; ?>
+                    <br/>
                     <label for="hoursAfterPlacement" id="">Hours After Placement</label>
                 </div>
             </td>
@@ -451,11 +430,11 @@
             </td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="floorBurnishedYes" id="floorBurnishedYes" type="checkbox" >
+                    <?php echo $floorBurnishedYes; ?>
                     <label for="floorBurnishedYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="floorBurnishedNo" id="floorBurnishedNo" type="checkbox" >
+                    <?php echo $floorBurnishedNo; ?>
                     <label for="floorBurnishedNo">No</label>
                 </div>
             </td>
@@ -464,11 +443,11 @@
             </td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="applicationSupervisedByDistributorYes" id="applicationSupervisedByDistributorYes" type="checkbox" >
+                    <?php echo $applicationSupervisedByDistributorYes; ?>
                     <label for="applicationSupervisedByDistributorYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="applicationSupervisedByDistributorNo" id="applicationSupervisedByDistributorNo" type="checkbox" >
+                    <?php echo $applicationSupervisedByDistributorNo; ?>
                     <label for="applicationSupervisedByDistributorNo">No</label>
                 </div>
             </td>
@@ -477,11 +456,11 @@
             </td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="maintenanceBrochureGivenYes" id="maintenanceBrochureGivenYes" type="checkbox" >
+                    <?php echo $maintenanceBrochureGivenYes; ?>
                     <label for="maintenanceBrochureGivenYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="maintenanceBrochureGivenNo" id="maintenanceBrochureGivenNo" type="checkbox" >
+                    <?php echo $maintenanceBrochureGivenNo; ?>
                     <label for="maintenanceBrochureGivenNo">No</label>
                 </div>
             </td>
@@ -492,7 +471,7 @@
         <tr><th><p>Corporate Projects</p></th></tr>
         <tr>
             <td>
-                <textarea name="corporateProjectsText" id="corporateProjectsText" placeholder="If this is a Corporate Account Project, please indicate the final result of the project here."></textarea>
+                <p><?php echo $hoursAfterPlacementNumbers; ?></p>
             </td>
         </tr>
 
@@ -500,9 +479,9 @@
 
     <table id="photos">
         <tr>
-            <td class="input"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes"></td>
+            <td class="input"><?php echo $uploadPhotosYes; ?></td>
             <td class="label"><label for="uploadPhotosYes">I will submit photos of this project with this form.</label> </td>
-            <td class="input"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo"></td>
+            <td class="input"><?php echo $uploadPhotosNo; ?></td>
             <td class="label"><label for="uploadPhotosNo">I will submit photos of this project at a later time.</label> </td>
         </tr>
         <tr>
@@ -538,7 +517,7 @@
     </table>
 
     <table id="submission">
-        <tr><td><input type="submit" value="Submit"></td></tr>
+        <tr><td></td></tr>
     </table>
 
     <div class="dz-begin dz-message"><span>Continue uploading files as needed. File previews will appear at the bottom of the form.</span></div>

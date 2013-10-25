@@ -478,14 +478,19 @@ class Site extends CI_Controller
             if ($data['warrantyRequestCheck'] == '1') { $data['warrantyRequestCheck'] = '&#x2611;';} else { $data['warrantyRequestCheck'] = '&#x2610;';}
 
             $data['ashfordFormulaCheck'] = (isset($_POST['ashfordFormulaCheck']))?true:false;
+        if ($data['ashfordFormulaCheck'] == '1') { $data['ashfordFormulaCheck'] = '&#x2611;';} else { $data['ashfordFormulaCheck'] = '&#x2610;';}
 
             $data['retorplateCheck'] = (isset($_POST['retorplateCheck']))?true:false;
+        if ($data['retorplateCheck'] == '1') { $data['retorplateCheck'] = '&#x2611;';} else { $data['retorplateCheck'] = '&#x2610;';}
 
             $data['domesticProjectCheck'] = (isset($_POST['domesticProjectCheck']))?true:false;
+        if ($data['domesticProjectCheck'] == '1') { $data['domesticProjectCheck'] = '&#x2611;';} else { $data['domesticProjectCheck'] = '&#x2610;';}
 
             $data['internationalProjectCheck'] = (isset($_POST['internationalProjectCheck']))?true:false;
+        if ($data['internationalProjectCheck'] == '1') { $data['internationalProjectCheck'] = '&#x2611;';} else { $data['internationalProjectCheck'] = '&#x2610;';}
 
             $data['leedNominatedCheck'] = (isset($_POST['leedNominatedCheck']))?true:false;
+        if ($data['leedNominatedCheck'] == '1') { $data['leedNominatedCheck'] = '&#x2611;';} else { $data['leedNominatedCheck'] = '&#x2610;';}
 
         /* END Header Check Boxes */
 
@@ -584,26 +589,37 @@ class Site extends CI_Controller
             $data['weatherConditions'] = (string)$this->input->get_post('weatherConditions', TRUE);
 
             $data['ashfordForulaCureYes'] = (isset($_POST['ashfordForulaCureYes']))?true:false;
+        if ($data['ashfordForulaCureYes'] == '1') { $data['ashfordForulaCureYes'] = '&#x2611;';} else { $data['ashfordForulaCureYes'] = '&#x2610;';}
 
             $data['ashfordForulaCureNo'] = (isset($_POST['ashfordForulaCureNo']))?true:false;
+        if ($data['ashfordForulaCureNo'] == '1') { $data['ashfordForulaCureNo'] = '&#x2611;';} else { $data['ashfordForulaCureNo'] = '&#x2610;';}
 
             $data['appliedOnExistingFloor'] = (isset($_POST['appliedOnExistingFloor']))?true:false;
+        if ($data['leedNominatedCheck'] == '1') { $data['leedNominatedCheck'] = '&#x2611;';} else { $data['leedNominatedCheck'] = '&#x2610;';}
 
             $data['appliedAtTimeOfPlacement'] = (isset($_POST['appliedAtTimeOfPlacement']))?true:false;
+        if ($data['appliedAtTimeOfPlacement'] == '1') { $data['appliedAtTimeOfPlacement'] = '&#x2611;';} else { $data['appliedAtTimeOfPlacement'] = '&#x2610;';}
 
             $data['hoursAfterPlacementNumbers'] = (string)$this->input->get_post('hoursAfterPlacementNumbers', TRUE);
+        if ($data['hoursAfterPlacementNumbers'] == '1') { $data['hoursAfterPlacementNumbers'] = '&#x2611;';} else { $data['hoursAfterPlacementNumbers'] = '&#x2610;';}
 
             $data['floorBurnishedYes'] = (isset($_POST['floorBurnishedYes']))?true:false;
+        if ($data['floorBurnishedYes'] == '1') { $data['floorBurnishedYes'] = '&#x2611;';} else { $data['floorBurnishedYes'] = '&#x2610;';}
 
             $data['floorBurnishedNo'] = (isset($_POST['floorBurnishedNo']))?true:false;
+        if ($data['floorBurnishedNo'] == '1') { $data['floorBurnishedNo'] = '&#x2611;';} else { $data['floorBurnishedNo'] = '&#x2610;';}
 
             $data['applicationSupervisedByDistributorYes'] = (isset($_POST['applicationSupervisedByDistributorYes']))?true:false;
+        if ($data['applicationSupervisedByDistributorYes'] == '1') { $data['applicationSupervisedByDistributorYes'] = '&#x2611;';} else { $data['applicationSupervisedByDistributorYes'] = '&#x2610;';}
 
             $data['applicationSupervisedByDistributorNo'] = (isset($_POST['applicationSupervisedByDistributorNo']))?true:false;
+        if ($data['applicationSupervisedByDistributorNo'] == '1') { $data['applicationSupervisedByDistributorNo'] = '&#x2611;';} else { $data['applicationSupervisedByDistributorNo'] = '&#x2610;';}
 
             $data['maintenanceBrochureGivenYes'] = (isset($_POST['maintenanceBrochureGivenYes']))?true:false;
+        if ($data['maintenanceBrochureGivenYes'] == '1') { $data['maintenanceBrochureGivenYes'] = '&#x2611;';} else { $data['maintenanceBrochureGivenYes'] = '&#x2610;';}
 
             $data['maintenanceBrochureGivenNo'] = (isset($_POST['maintenanceBrochureGivenNo']))?true:false;
+        if ($data['maintenanceBrochureGivenNo'] == '1') { $data['maintenanceBrochureGivenNo'] = '&#x2611;';} else { $data['maintenanceBrochureGivenNo'] = '&#x2610;';}
 
         /* END Warranty Request 2 */
 

@@ -108,13 +108,13 @@
         <tr>
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
             <td class="input"><?php echo $projectName; ?></td>
-            <td class="label"><label for="amountUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
+            <td class="label"><label for="amountUsed"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?> Used<sup>*</sup></label> </td>
             <td class="input"><?php echo $amountUsed; ?> </td>
         </tr>
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
             <td class="input"><?php echo $address; ?></td>
-            <td class="label"><label for="squareDistance"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
+            <td class="label"><label for="squareDistance"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>ft2</span>';} else {echo '<span>m2</span>';} ?><sup>*</sup></label> </td>
             <td class="input"><?php echo $squareDistance; ?> </td>
         </tr>
         <tr>
@@ -180,25 +180,25 @@
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
+                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
             <td class="label">
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
+                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
             <td class="label">
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
+                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
             <td class="label">
                 <label>Drum No.</label>
             </td>
             <td class="label">
-                <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
+                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
         </tr>
         <tr>
@@ -416,7 +416,7 @@
             </td>
             <td colspan="2">
                 <div class="checkbox" id="hoursAfterPlacementCheckbox">
-                    <?php echo $hoursAfterPlacement; ?>
+                    <?php echo $hoursAfterPlacementChecked; ?>
                     <?php echo $hoursAfterPlacementNumbers; ?>
                     <br/>
                     <label for="hoursAfterPlacement" id="">Hours After Placement</label>
@@ -471,7 +471,7 @@
         <tr><th><p>Corporate Projects</p></th></tr>
         <tr>
             <td>
-                <p><?php echo $hoursAfterPlacementNumbers; ?></p>
+                <p><?php echo $corporateProjectsText; ?></p>
             </td>
         </tr>
 

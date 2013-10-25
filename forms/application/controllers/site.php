@@ -600,8 +600,8 @@ class Site extends CI_Controller
             $data['appliedAtTimeOfPlacement'] = (isset($_POST['appliedAtTimeOfPlacement']))?true:false;
         if ($data['appliedAtTimeOfPlacement'] == '1') { $data['appliedAtTimeOfPlacement'] = '&#x2611;';} else { $data['appliedAtTimeOfPlacement'] = '&#x2610;';}
 
-            $data['hoursAfterPlacement'] = (string)$this->input->get_post('hoursAfterPlacement', TRUE);
-        if ($data['hoursAfterPlacement'] == '1') { $data['hoursAfterPlacement'] = '&#x2611;';} else { $data['hoursAfterPlacement'] = '&#x2610;';}
+            $data['hoursAfterPlacementChecked'] = (isset($_POST['hoursAfterPlacementChecked']))?true:false;
+        if ($data['hoursAfterPlacementChecked'] == '1') { $data['hoursAfterPlacementChecked'] = '&#x2611;';} else { $data['hoursAfterPlacementChecked'] = '&#x2610;';}
 
             $data['hoursAfterPlacementNumbers'] = (string)$this->input->get_post('hoursAfterPlacementNumbers', TRUE);
 

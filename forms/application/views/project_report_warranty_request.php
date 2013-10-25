@@ -438,7 +438,7 @@
             </td>
             <td colspan="2">
                 <div class="checkbox" id="hoursAfterPlacementCheckbox">
-                    <input name="hoursAfterPlacement" id="hoursAfterPlacement" type="checkbox" >
+                    <input name="hoursAfterPlacementChecked" id="hoursAfterPlacementChecked" type="checkbox" >
                     <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text"><br/>
                     <label for="hoursAfterPlacement" id="">Hours After Placement</label>
                 </div>

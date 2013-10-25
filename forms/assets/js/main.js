@@ -487,6 +487,8 @@ $(function() {
         });
 
 
+
+
         $('#uploadPhotosYes').click(function() {
             if ($(this).is(":checked")) {
                 $('#uploadPhotosNo').prop("checked", false);
@@ -504,6 +506,70 @@ $(function() {
             } else {
                 $('.uploadFiles').css('display','block');
                 $('#uploadPhotosNo').prop("checked", true);
+            }
+        });
+
+        $('#ashfordForulaCureYes').click(function() {
+            if ($(this).is(":checked")) {
+                $('#ashfordForulaCureNo').prop("checked", false);
+            } else {
+                $('#ashfordForulaCureNo').prop("checked", true);
+            }
+        });
+
+        $('#ashfordForulaCureNo').click(function() {
+            if ($(this).is(":checked")) {
+                $('#ashfordForulaCureYes').prop("checked", false);
+            } else {
+                $('#ashfordForulaCureYes').prop("checked", true);
+            }
+        });
+
+        $('#floorBurnishedYes').click(function() {
+            if ($(this).is(":checked")) {
+                $('#floorBurnishedNo').prop("checked", false);
+            } else {
+                $('#floorBurnishedNo').prop("checked", true);
+            }
+        });
+
+        $('#floorBurnishedNo').click(function() {
+            if ($(this).is(":checked")) {
+                $('#floorBurnishedYes').prop("checked", false);
+            } else {
+                $('#floorBurnishedYes').prop("checked", true);
+            }
+        });
+
+        $('#applicationSupervisedByDistributorYes').click(function() {
+            if ($(this).is(":checked")) {
+                $('#applicationSupervisedByDistributorNo').prop("checked", false);
+            } else {
+                $('#applicationSupervisedByDistributorNo').prop("checked", true);
+            }
+        });
+
+        $('#applicationSupervisedByDistributorNo').click(function() {
+            if ($(this).is(":checked")) {
+                $('#applicationSupervisedByDistributorYes').prop("checked", false);
+            } else {
+                $('#applicationSupervisedByDistributorYes').prop("checked", true);
+            }
+        });
+
+        $('#maintenanceBrochureGivenYes').click(function() {
+            if ($(this).is(":checked")) {
+                $('#maintenanceBrochureGivenNo').prop("checked", false);
+            } else {
+                $('#maintenanceBrochureGivenNo').prop("checked", true);
+            }
+        });
+
+        $('#maintenanceBrochureGivenNo').click(function() {
+            if ($(this).is(":checked")) {
+                $('#maintenanceBrochureGivenYes').prop("checked", false);
+            } else {
+                $('#maintenanceBrochureGivenYes').prop("checked", true);
             }
         });
 

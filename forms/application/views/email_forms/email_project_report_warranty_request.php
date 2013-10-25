@@ -131,10 +131,10 @@
         </tr>
         <tr>
             <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
-            <td class="input"><input name="country" id="country" type="text" class="required"></td>
+            <td class="input"><?php echo $country; ?></td>
             <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
-                <?php echo $projectName; ?>
+                <?php echo $buildingUse; ?>
             </td>
         </tr>
         <tr>
@@ -489,26 +489,12 @@
                 <div class="uploadFiles">
                     <table>
                         <tr><td>
-                                <section class="row photoupload">
-                                    <label for="photo_upload_1"><strong>Upload Photo<sup>*</sup></strong></label><br/>
-                                    <input type="file" name="photo_upload_1" id="photo_upload_1">
-                                </section>
-                                <section class="row photoupload">
-                                    <label for="photo_upload_2"><strong>Upload Photo<sup>*</sup></strong></label><br/>
-                                    <input type="file" name="photo_upload_2" id="photo_upload_2">
-                                </section>
-                                <section class="row photoupload">
-                                    <label for="photo_upload_3"><strong>Upload Photo<sup>*</sup></strong></label><br/>
-                                    <input type="file" name="photo_upload_3" id="photo_upload_3">
-                                </section>
-                                <section class="row photoupload">
-                                    <label for="photo_upload_4"><strong>Upload Photo<sup>*</sup></strong></label><br/>
-                                    <input type="file" name="photo_upload_4" id="photo_upload_4">
-                                </section>
-                                <section class="row photoupload">
-                                    <label for="photo_upload_5"><strong>Upload Photo<sup>*</sup></strong></label><br/>
-                                    <input type="file" name="photo_upload_5" id="photo_upload_5">
-                                </section>
+                                <?php
+                                    if ($files >= 1) {
+                                        echo 'hello';
+
+                                    }
+                                ?>
                         </td></tr>
                     </table>
                 </div>
@@ -519,9 +505,6 @@
     <table id="submission">
         <tr><td></td></tr>
     </table>
-
-    <div class="dz-begin dz-message"><span>Continue uploading files as needed. File previews will appear at the bottom of the form.</span></div>
-
 
 
 

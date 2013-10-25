@@ -488,18 +488,22 @@ body.pdf #content.warranty {
     text-align: center;
 }
 
+#content.warranty #drumInformation td {
+    width: 50px;
+}
+
 #content.warranty #drumInformation td input {
-    width: 100%;
+    width: 84px;
 }
 
-#content.warranty #warrantyRequest input[type=text],
-#content.warranty #warrantyRequest2 input[type=text]{
+#content.warranty #warrantyRequest input[type="text"],
+#content.warranty #warrantyRequest2 input[type="text"],
+#content.warranty #projectInformation input[type="text"]{
     width: 200px;
+}
+#content.warranty input[type="text"]
+ {
     padding-left: 10px;
-}
-
-#content.warranty #projectInformation input {
-    width: 200px;
 }
 
 #content.warranty #projectInformation td.input,

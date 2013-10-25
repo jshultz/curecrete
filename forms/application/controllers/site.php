@@ -600,11 +600,13 @@ class Site extends CI_Controller
             $data['appliedAtTimeOfPlacement'] = (isset($_POST['appliedAtTimeOfPlacement']))?true:false;
         if ($data['appliedAtTimeOfPlacement'] == '1') { $data['appliedAtTimeOfPlacement'] = '&#x2611;';} else { $data['appliedAtTimeOfPlacement'] = '&#x2610;';}
 
+            $data['hoursAfterPlacement'] = (string)$this->input->get_post('hoursAfterPlacement', TRUE);
+        if ($data['hoursAfterPlacement'] == '1') { $data['hoursAfterPlacement'] = '&#x2611;';} else { $data['hoursAfterPlacement'] = '&#x2610;';}
+
             $data['hoursAfterPlacementNumbers'] = (string)$this->input->get_post('hoursAfterPlacementNumbers', TRUE);
-        if ($data['hoursAfterPlacementNumbers'] == '1') { $data['hoursAfterPlacementNumbers'] = '&#x2611;';} else { $data['hoursAfterPlacementNumbers'] = '&#x2610;';}
 
             $data['floorBurnishedYes'] = (isset($_POST['floorBurnishedYes']))?true:false;
-        if ($data['floorBurnishedYes'] == '1') { $data['floorBurnishedYes'] = '&#x2611;';} else { $data['floorBurnishedYes'] = '&#x2610;';}
+        if ($data['floorBurnishedYes'] == '1') { $data['floorappliedOnExistingFloorBurnishedYes'] = '&#x2611;';} else { $data['floorBurnishedYes'] = '&#x2610;';}
 
             $data['floorBurnishedNo'] = (isset($_POST['floorBurnishedNo']))?true:false;
         if ($data['floorBurnishedNo'] == '1') { $data['floorBurnishedNo'] = '&#x2611;';} else { $data['floorBurnishedNo'] = '&#x2610;';}

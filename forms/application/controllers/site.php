@@ -552,7 +552,7 @@ class Site extends CI_Controller
 
             foreach($tempdrums as $key => $value) {
 
-                $data['drumbdata'] = $value;
+                $data['drumdata'] = $value;
 
             }
 

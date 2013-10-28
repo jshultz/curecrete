@@ -496,6 +496,10 @@ body.pdf #content.warranty {
     width: 84px;
 }
 
+body.pdf #content.warranty #drumInformation td.size {
+    border-right: 2px solid #000;
+}
+
 #content.warranty #warrantyRequest input[type="text"],
 #content.warranty #warrantyRequest2 input[type="text"],
 #content.warranty #projectInformation input[type="text"]{

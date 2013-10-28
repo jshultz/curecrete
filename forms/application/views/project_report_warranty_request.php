@@ -227,25 +227,25 @@
             <td>
                 <input name="group[0][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[0][size]">
             </td>
             <td>
                 <input name="group[1][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[1][size]">
             </td>
             <td>
                 <input name="group[2][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[2][size]">
             </td>
             <td>
                 <input name="group[3][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[3][size]">
             </td>
             <td class="remove"></td>
@@ -254,25 +254,25 @@
             <td>
                 <input name="group[4][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[4][size]">
             </td>
             <td>
                 <input name="group[5][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[5][size]">
             </td>
             <td>
                 <input name="group[6][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[6][size]">
             </td>
             <td>
                 <input name="group[7][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[7][size]">
             </td>
             <td class="remove"></td>
@@ -281,25 +281,25 @@
             <td>
                 <input name="group[8][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[8][size]">
             </td>
             <td>
                 <input name="group[9][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[9][size]">
             </td>
             <td>
                 <input name="group[10][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[10][size]">
             </td>
             <td>
                 <input name="group[11][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[11][size]">
             </td>
             <td class="remove"></td>
@@ -308,25 +308,25 @@
             <td>
                 <input name="group[12][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[12][size]">
             </td>
             <td>
                 <input name="group[13][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[13][size]">
             </td>
             <td>
                 <input name="group[14][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[14][size]">
             </td>
             <td>
                 <input name="group[15][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[15][size]">
             </td>
             <td class="remove"></td>
@@ -335,25 +335,25 @@
             <td>
                 <input name="group[16][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[16][size]">
             </td>
             <td>
                 <input name="group[17][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[17][size]">
             </td>
             <td>
                 <input name="group[18][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[18][size]">
             </td>
             <td>
                 <input name="group[19][drumNumber]">
             </td>
-            <td>
+            <td class="size">
                 <input name="group[19][size]">
             </td>
             <td class="remove"><img src="/forms/assets/img/Plus-32.png" class="addRow"></td>

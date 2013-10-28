@@ -496,6 +496,10 @@ body.pdf #content.warranty {
     width: 84px;
 }
 
+body.pdf #content.warranty #drumInformation td {
+    text-align: center;
+}
+
 body.pdf #content.warranty #drumInformation td.size {
     border-right: 2px solid #000;
 }

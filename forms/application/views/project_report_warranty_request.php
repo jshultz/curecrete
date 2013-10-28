@@ -188,7 +188,7 @@
 
     <table id="drumInformation">
         <tr>
-            <th colspan="9"><p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
+            <th colspan="8"<p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
 
                 <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
                     "series" method shown below to avoid typing each drum number individually and to save you valuable time.</p>

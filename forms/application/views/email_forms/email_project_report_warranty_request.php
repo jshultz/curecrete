@@ -204,11 +204,26 @@
         <?php
             if (count($drumdata) > 0) {
 
+                $x = 1;
+
+                echo '<tr>';
+
                 foreach($drumdata as $key => $value) {
 
-                    echo '<td>' . $value['drumNumber'] . '</td>';
-                    echo '<td class="size">' . $value['size'] . '</td>';
+                    if ($x == 4) {
 
+                        echo '<td>' . $value['drumNumber'] . '</td>';
+                        echo '<td class="size">' . $value['size'] . '</td>';
+                        echo '</tr>';
+                        echo '<tr>';
+
+                        $x = 1;
+                    } else {
+                        echo '<td>' . $value['drumNumber'] . '</td>';
+                        echo '<td class="size">' . $value['size'] . '</td>';
+
+                        $x = $x + 1;
+                    }
                 }
             }
         ?>
@@ -347,42 +362,30 @@
         <tr><th><p>Corporate Projects</p></th></tr>
         <tr>
             <td>
-                <p><?php echo $corporateProjectsText; ?></p>
+                <p><?php if ($corporateProjectsText == '') {
+                        echo 'No details';
+                    } else {
+                        echo $corporateProjectsText;
+                    } ?></p>
             </td>
         </tr>
 
     </table>
 
     <table id="photos">
-        <tr>
-            <td class="input"><?php echo $uploadPhotosYes; ?></td>
-            <td class="label"><label for="uploadPhotosYes">I will submit photos of this project with this form.</label> </td>
-            <td class="input"><?php echo $uploadPhotosNo; ?></td>
-            <td class="label"><label for="uploadPhotosNo">I will submit photos of this project at a later time.</label> </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <div class="uploadFiles">
-                    <table>
-                        <tr><td>
-                                <?php
-                                    if ($files >= 1) {
-                                        echo 'hello';
 
-                                    }
-                                ?>
-                        </td></tr>
-                    </table>
-                </div>
+        <tr><td>
+                <?php
+                if (isset($files) && $files >= 1) {
+                    echo 'hello';
+
+                } else {
+                    echo 'No Photos Submitted';
+                }
+                ?>
             </td>
         </tr>
     </table>
-
-    <table id="submission">
-        <tr><td></td></tr>
-    </table>
-
-
 
     </form>
 

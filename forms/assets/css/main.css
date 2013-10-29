@@ -480,6 +480,10 @@ body.pdf #content.warranty {
     width: 133px;
 }
 
+body.pdf #content.warranty #warrantyRequest2 td.label.first {
+    width: 160px;
+}
+
 #content.warranty #warrantyRequest2 .checkbox {
     width: 130px;
 }

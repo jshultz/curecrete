@@ -377,7 +377,13 @@
         <tr><td>
                 <?php
                 if (isset($files) && $files >= 1) {
-                    echo 'hello';
+
+                    echo '<p><strong>The following files were uploaded:</strong></p>';
+
+                    foreach($files as $key) {
+                        echo '<p>' . $key['file_name'] . '</p>';
+                    }
+
 
                 } else {
                     echo 'No Photos Submitted';

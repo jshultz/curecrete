@@ -665,10 +665,12 @@ class Site extends CI_Controller
             }
         }
 
-        foreach ($files as $key) {
+        $data['files'] = $files;
 
-            $data['files'] = $key['file_name'];
-        }
+//        foreach ($files as $key) {
+//
+//            $data['files'] = $key['file_name'];
+//        }
 
         $mail = new PHPMailer;
 

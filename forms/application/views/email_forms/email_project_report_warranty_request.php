@@ -34,7 +34,7 @@
 <div id="content" class="warranty">
     <?php
         $attributes = array('class' => 'email', 'id' => 'warrantyRequestForm');
-        echo form_open_multipart('/site/projectsubmit', $attributes);
+        echo form_open_multipart('', $attributes);
     ?>
 
     <div id="header">

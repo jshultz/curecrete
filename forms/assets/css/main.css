@@ -476,6 +476,10 @@ body.pdf #content.warranty {
     padding-left: 5px;
 }
 
+#content.warranty td.remove {
+    text-align: center;
+}
+
 #content.warranty #warrantyRequest2 td.label.first {
     width: 133px;
 }

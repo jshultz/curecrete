@@ -113,7 +113,7 @@
         </tr>
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
-            <td class="input"><input name="address" id="address" type="text" class=""></td>
+            <td class="input"><input name="address" id="address" type="text" class="required"></td>
             <td class="label"><label for="squareDistance"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
             <td class="input"><input name="squareDistance" id="squareDistance"> </td>
         </tr>
@@ -127,14 +127,14 @@
             <td class="label"><label for="state">Province/State<sup>*</sup></label></td>
             <td class="input"><input name="state" id="state" type="text" class="required"></td>
             <td class="label"><label for="finalApplicationDate">Final Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate"> </td>
+            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate" class="required"> </td>
         </tr>
         <tr>
             <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
             <td class="input"><input name="country" id="country" type="text" class="required"></td>
             <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
-                <select name="building_use" id="building_use">
+                <select name="building_use" id="building_use" class="required">
                     <option value="agricultural">Agricultural/Farm<sup>*</sup></option>
                     <option value="airport">Airport<sup>*</sup></option>
                     <option value="animal">Animal<sup>*</sup></option>

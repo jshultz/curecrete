@@ -442,6 +442,37 @@ $(function() {
 
     if($('#content.warranty').length > 0) {
 
+        val = 20;
+        $('#drumInformation').on('click', 'img.addRow,img.removeRow', function() {
+
+            newRow = '<tr>'
+                + '<td><input name="group[' + val + '][drumNumber]"></td>'
+                + '<td class=""size"><input name="group[' + val + '][size]"></td>'
+
+                + '<td><input name="group[' + (val + 1) + '][drumNumber]"></td>'
+                + '<td class=""size"><input name="group[' + (val + 1) + '][size]"></td>'
+
+                + '<td><input name="group[' + (val + 2) + '][drumNumber]"></td>'
+                + '<td class=""size"><input name="group[' + (val + 2) + '][size]"></td>'
+
+                + '<td><input name="group[' + (val + 3) + '][drumNumber]"></td>'
+                + '<td class=""size"><input name="group[' + (val + 3) + '][size]"></td>'
+
+                + '<td class="remove"><img src="/forms/assets/img/Plus-32.png" class="addRow"></td>'
+                + '</tr>';
+            var $this = $(this);
+            if ($this.hasClass('addRow')) {
+                var curRow = $(this).closest('tr');
+                $(this).closest('img.addRow').css('display', 'none');
+                val = val + 4;
+                $(newRow).insertAfter(curRow);
+            } else {
+                $(this).closest("tr").fadeOut('slow');
+            }
+
+
+        })
+
         $('#domesticProjectCheck').click(function() {
             if ($(this).is(":checked")) {
                 $('#internationalProjectCheck').prop("checked", false);
@@ -572,6 +603,33 @@ $(function() {
                 $('#maintenanceBrochureGivenYes').prop("checked", true);
             }
         });
+
+
+        // Form Validation
+
+        $('#warrantyRequestForm').validate({
+            groups: {
+//                ship: require_ship
+            },
+            rules: {
+                AccordionField: {
+                    required: true
+                }
+            },
+
+            ignore: []
+        });
+
+        $.validator.addMethod('require-ship', function(value) {
+            return $('.require-ship:checked').size() > 0;
+        }, 'Please check at least one box.');
+
+        var ship = $('.require-ship');
+        var require_ship = $.map(ship, function(e, i) {
+            return $(e).attr("name")
+        }).join(" ");
+
+        // End Form Validation
 
         var greatestWidth = 0;   // Stores the greatest width
 

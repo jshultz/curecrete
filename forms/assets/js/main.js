@@ -501,9 +501,12 @@ $(function() {
             if ($(this).is(":checked")) {
                 $('#warrantyRequest input').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", false);
+                $('#warrantyRequest input:has(.warranty-request)').addClass('required');
+
             } else {
                 $('#warrantyRequest input').removeClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
+                $('#warrantyRequest input:has(.warranty-request)').addClass('required');
             }
         });
 
@@ -511,9 +514,11 @@ $(function() {
             if ($(this).is(":checked")) {
                 $('#warrantyRequest input').removeClass('required');
                 $('#warrantyRequestCheck').prop("checked", false);
+                $('#warrantyRequest input:has(.warranty-request)').removeClass('required');
             } else {
                 $('#warrantyRequest input').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
+                $('#warrantyRequest input:has(.warranty-request)').addClass('required');
             }
         });
 
@@ -609,7 +614,7 @@ $(function() {
 
         $('#warrantyRequestForm').validate({
             groups: {
-//                ship: require_ship
+                ship: form_type
             },
             rules: {
                 AccordionField: {
@@ -620,12 +625,12 @@ $(function() {
             ignore: []
         });
 
-        $.validator.addMethod('require-ship', function(value) {
-            return $('.require-ship:checked').size() > 0;
+        $.validator.addMethod('require-check', function(value) {
+            return $('.require-check:checked').size() > 0;
         }, 'Please check at least one box.');
 
-        var ship = $('.require-ship');
-        var require_ship = $.map(ship, function(e, i) {
+        var checks = $('.require-check');
+        var form_type = $.map(checks, function(e, i) {
             return $(e).attr("name")
         }).join(" ");
 

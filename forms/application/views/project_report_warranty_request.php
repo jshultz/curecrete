@@ -51,12 +51,12 @@
     <div id="headerCheckboxes">
     <div class="block">
         <div class="checkbox">
-            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" >
-            <label for="projectReportOnlyCheck">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/>
+            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" class="require-check">
+            <label for="projectReportOnlyCheck">Project Report ONLY</label><br/>
         </div>
         <div class="checkbox">
-            <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" >
-            <label for="warrantyRequestCheck">Warranty Request <span>(Sections 1 - 3)</span></label><br/>
+            <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" class="require-check">
+            <label for="warrantyRequestCheck">Warranty Request</label><br/>
         </div>
         <div class="checkbox">
             <input name="ashfordFormulaCheck" id="ashfordFormulaCheck" type="checkbox" >
@@ -86,15 +86,15 @@
     <div id="headerTextFields">
     <div class="cell">
         <label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/>
-        <input name="distributorName" id="distributorName" type="text" class="required">
+        <input name="distributorName" id="distributorName" type="text" class="required"><br/>
     </div>
     <div class="cell">
         <label for="distributorEmail">Distributor Email<sup>*</sup></label><br/>
-        <input name="distributorEmail" id="distributorEmail" type="text" class="required">
+        <input name="distributorEmail" id="distributorEmail" type="text" class="required"><br/>
     </div>
     <div class="cell">
         <label for="poNumber">PO #</label><br/>
-        <input name="poNumber" id="poNumber" type="text" class="required">
+        <input name="poNumber" id="poNumber" type="text" class="required"><br/>
     </div>
 </div>
 
@@ -225,10 +225,10 @@
         </tr>
         <tr>
             <td>
-                <input name="group[0][drumNumber]">
+                <input name="group[0][drumNumber]" class="required">
             </td>
             <td class="size">
-                <input name="group[0][size]">
+                <input name="group[0][size]" class="required">
             </td>
             <td>
                 <input name="group[1][drumNumber]">
@@ -370,33 +370,33 @@
         </tr>
         <tr>
             <td class="label"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
-            <td class="input"><input name="dateFloorWarrantied" id="dateFloorWarrantied" type="text" class=""></td>
+            <td class="input"><input name="dateFloorWarrantied" id="dateFloorWarrantied" type="text" class="warranty-request"></td>
             <td class="label"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class=""></td>
+            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class="warranty-request"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorCompany">Applicator Company Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class=""></td>
+            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class="warranty-request"></td>
             <td class="label"><label for="applicatorCity">City<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class=""></td>
+            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class="warranty-request"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class=""></td>
+            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class="warranty-request"></td>
             <td class="label"><label for="applicatorState">State/Province<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class=""></td>
+            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class="warranty-request"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class=""></td>
+            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class="warranty-request"></td>
             <td class="label"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class=""></td>
+            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="warranty-request"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorFax">Fax</label> </td>
             <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class=""></td>
             <td class="label"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class=""></td>
+            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="warranty-request"></td>
         </tr>
 
     </table>

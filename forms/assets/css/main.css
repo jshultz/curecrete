@@ -337,6 +337,10 @@ body.thankyou {
     position: relative;
 }
 
+#content.warranty label.error {
+    color: red;
+}
+
 body.pdf #content.warranty {
     margin:0;
     background: none;

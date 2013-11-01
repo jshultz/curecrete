@@ -418,6 +418,14 @@ body.pdf #content.warranty {
     margin-right: 0;
 }
 
+#content.warranty #headerTextFields input {
+    float: left;
+}
+
+#content.warranty #headerTextFields label.error {
+    float: left;
+}
+
 body.pdf #content.warranty #headerTextFields table,
 body.pdf #content.warranty #headerCheckboxes table {
     width: 750px;
@@ -473,10 +481,11 @@ body.pdf #content.warranty #headerCheckboxes table {
     margin-left: 16px;
 }
 
+#content.warranty #projectInformation tr,
 #content.warranty #drumInformation tr,
 #content.warranty #warrantyRequest tr,
 #content.warranty #warrantyRequest2 tr {
-    border: 1px solid #ededed;
+    border: 1px solid #fff4f4;
 }
 
 body.pdf #content.warranty #headerTextFields td.label,

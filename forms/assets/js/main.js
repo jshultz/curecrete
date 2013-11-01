@@ -621,7 +621,8 @@ $(function() {
 
         $('#warrantyRequestForm').validate({
             groups: {
-                ship: form_type
+                formtype: form_type,
+                photos: photo_upload
             },
             rules: {
                 AccordionField: {
@@ -638,6 +639,15 @@ $(function() {
 
         var checks = $('.require-check');
         var form_type = $.map(checks, function(e, i) {
+            return $(e).attr("name")
+        }).join(" ");
+
+        $.validator.addMethod('require-photo', function(value) {
+            return $('.require-photo:checked').size() > 0;
+        }, 'Please check at least one box.');
+
+        var photos = $('.require-photo');
+        var photo_upload = $.map(photos, function(e, i) {
             return $(e).attr("name")
         }).join(" ");
 

@@ -109,25 +109,25 @@
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
             <td class="input"><input name="projectName" id="projectName" type="text" class="required"></td>
             <td class="label"><label for="amountUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
-            <td class="input"><input name="amountUsed" id="amountUsed"> </td>
+            <td class="input"><input name="amountUsed" id="amountUsed" type="text" class="required"> </td>
         </tr>
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
             <td class="input"><input name="address" id="address" type="text" class="required"></td>
             <td class="label"><label for="squareDistance"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
-            <td class="input"><input name="squareDistance" id="squareDistance"> </td>
+            <td class="input"><input name="squareDistance" id="squareDistance" type="text" class="required"> </td>
         </tr>
         <tr>
             <td class="label"><label for="city">City<sup>*</sup></label></td>
             <td class="input"><input name="city" id="city" type="text" class="required"></td>
             <td class="label"><label for="initialApplicationDate">Initial Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="initialApplicationDate" id="initialApplicationDate"> </td>
+            <td class="input"><input name="initialApplicationDate" id="initialApplicationDate" type="text" class="required"> </td>
         </tr>
         <tr>
             <td class="label"><label for="state">Province/State<sup>*</sup></label></td>
             <td class="input"><input name="state" id="state" type="text" class="required"></td>
             <td class="label"><label for="finalApplicationDate">Final Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate" class="required"> </td>
+            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate" class="required" type="text"> </td>
         </tr>
         <tr>
             <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
@@ -500,9 +500,9 @@
 
     <table id="photos">
         <tr>
-            <td class="input"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes"></td>
+            <td class="input"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes" class="require-photo"></td>
             <td class="label"><label for="uploadPhotosYes">I will submit photos of this project with this form.</label> </td>
-            <td class="input"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo"></td>
+            <td class="input"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo" class="require-photo"></td>
             <td class="label"><label for="uploadPhotosNo">I will submit photos of this project at a later time.</label> </td>
         </tr>
         <tr>

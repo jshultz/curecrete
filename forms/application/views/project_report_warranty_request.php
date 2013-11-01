@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="/forms/assets/css/normalize.css">
     <link rel="stylesheet" href="/forms/assets/css/main.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="/forms/assets/css/custom-theme/jquery-ui-1.10.2.custom.min.css">
-    <script src="/forms//assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <script src="/forms/assets/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>

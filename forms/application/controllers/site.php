@@ -508,10 +508,6 @@ class Site extends CI_Controller
 
             $data['projectName'] = (string)$this->input->get_post('projectName', TRUE);
 
-            $data['projectName'] = (string)$this->input->get_post('projectName', TRUE);
-
-            $data['amountUsed'] = (string)$this->input->get_post('amountUsed', TRUE);
-
             $data['amountUsed'] = (string)$this->input->get_post('amountUsed', TRUE);
 
             $data['address'] = (string)$this->input->get_post('address', TRUE);
@@ -667,14 +663,13 @@ class Site extends CI_Controller
 
         $data['files'] = $files;
 
-//        foreach ($files as $key) {
-//
-//            $data['files'] = $key['file_name'];
-//        }
-
         $mail = new PHPMailer;
 
         $body = $this->load->view('email_forms/email_project_report_warranty_request', $data, TRUE);
+
+        $type = "S";
+
+        $this->pdf_report($body, $data['distributorName'], $data['distributorName'], $data['distributorEmail'], $type);
 
         echo $body;
         exit;

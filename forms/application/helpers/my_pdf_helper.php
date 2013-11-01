@@ -40,8 +40,8 @@ if (!function_exists('create_pdf')) {
 
 			$content = chunk_split(base64_encode($content));
 //			$mailto = 'Garrett.Soong@ashfordformula.com';
-			$mailto = 'customercare@curecrete.com';
-//			$mailto = 'jasshultz@gmail.com';
+//			$mailto = 'customercare@curecrete.com';
+			$mailto = 'jasshultz@gmail.com';
 			$from_name = 'Curecrete Postmaster';
 			$from_mail = 'postmaster@curecrete.com';
 			$replyto = 'postmaster@curecrete.com';

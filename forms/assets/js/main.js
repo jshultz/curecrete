@@ -442,6 +442,12 @@ $(function() {
 
     if($('#content.warranty').length > 0) {
 
+        $(function() {
+            $( "#initialApplicationDate" ).datepicker();
+            $( "#finalApplicationDate" ).datepicker();
+            $( "#dateFloorWarrantied" ).datepicker();
+        });
+
         val = 20;
         $('#drumInformation').on('click', 'img.addRow,img.removeRow', function() {
 
@@ -518,6 +524,7 @@ $(function() {
             } else {
                 $('#warrantyRequest input').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
+                $('#warrantyRequest input:has(.warranty-request)').addClass('required');
                 $('#warrantyRequest input:has(.warranty-request)').addClass('required');
             }
         });

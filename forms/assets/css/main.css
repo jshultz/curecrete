@@ -328,7 +328,7 @@ body.thankyou {
 }
 /* END International Order Form */
 
-/* BGIN Project Warrany Request Form */
+/* BEGIN Project Warranty Request Form */
 
 #content.warranty {
     background: #fff4f4;
@@ -418,6 +418,13 @@ body.pdf #content.warranty {
     margin-right: 0;
 }
 
+body.pdf #content.warranty #headerTextFields table,
+body.pdf #content.warranty #headerCheckboxes table {
+    width: 750px;
+    font-size: 1em;
+}
+
+
 #content.warranty #projectInformation,
 #content.warranty #drumInformation,
 #content.warranty #warrantyRequest,
@@ -472,6 +479,8 @@ body.pdf #content.warranty {
     border: 1px solid #ededed;
 }
 
+body.pdf #content.warranty #headerTextFields td.label,
+body.pdf #content.warranty #headerCheckboxes td.label,
 #content.warranty #projectInformation td.label,
 #content.warranty #drumInformation td.label,
 #content.warranty #warrantyRequest td.label,
@@ -546,7 +555,7 @@ body.pdf #content.warranty #drumInformation td.size {
 }
 
 
-/* END Project Warrany Request Form */
+/* END Project Warranty Request Form */
 
 #content {
     width: 800px;

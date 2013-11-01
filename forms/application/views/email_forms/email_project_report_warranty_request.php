@@ -49,53 +49,47 @@
 
 
     <div id="headerCheckboxes">
-    <div class="block">
-        <div class="checkbox">
-            <?php echo $projectReportOnlyCheck; ?>
-            <label for="projectReportOnlyCheck">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/>
-        </div>
-        <div class="checkbox">
-            <?php echo $warrantyRequestCheck; ?>
-            <label for="warrantyRequestCheck">Warranty Request <span>(Sections 1 - 3)</span></label><br/>
-        </div>
-        <div class="checkbox">
-            <?php echo $ashfordFormulaCheck; ?>
-            <label for="ashfordFormulaCheck">Ashford Formula</label><br/>
-        </div>
-        <div class="checkbox">
-            <?php echo $retorplateCheck; ?>
-            <label for="retorplateCheck">Retroplate</label><br/>
-        </div>
-    </div>
-    <div class="block">
-        <div class="checkbox">
-            <?php echo $domesticProjectCheck; ?>
-            <label for="domesticProjectCheck">Domestic Project</label><br/>
-        </div>
-        <div class="checkbox">
-            <?php echo $internationalProjectCheck; ?>
-            <label for="internationalProjectCheck">International Project</label><br/>
-        </div>
-        <div class="checkbox">
-            <?php echo $leedNominatedCheck; ?>
-            <label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
-        </div>
-    </div>
+        <table>
+            <tr>
+                <td><?php echo $projectReportOnlyCheck; ?></td>
+                <td><label for="projectReportOnlyCheck">Project Report ONLY <span>(Sections 1 & 2 Only)</span></label><br/></td>
+                <td><?php echo $domesticProjectCheck; ?></td>
+                <td><label for="domesticProjectCheck">Domestic Project</label><br/></td>
+            </tr>
+            <tr>
+                <td><?php echo $warrantyRequestCheck; ?></td>
+                <td><label for="warrantyRequestCheck">Warranty Request <span>(Sections 1 - 3)</span></label><br/></td>
+                <td><?php echo $internationalProjectCheck; ?></td>
+                <td><label for="internationalProjectCheck">International Project</label><br/></td>
+            </tr>
+            <tr>
+                <td><?php echo $ashfordFormulaCheck; ?></td>
+                <td><label for="ashfordFormulaCheck">Ashford Formula</label><br/></td>
+                <td><?php echo $leedNominatedCheck; ?></td>
+                <td><label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
+                </td>
+            </tr>
+            <tr>
+                <td><?php echo $retorplateCheck; ?></td>
+                <td><label for="retorplateCheck">Retroplate</label><br/></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
 </div>
 
     <div id="headerTextFields">
-    <div class="cell">
-        <label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/>
-        <?php echo $distributorName; ?>
-    </div>
-    <div class="cell">
-        <label for="distributorEmail">Distributor Email<sup>*</sup></label><br/>
-        <?php echo $distributorEmail; ?>
-    </div>
-    <div class="cell">
-        <label for="poNumber">PO #</label><br/>
-        <?php echo $poNumber; ?>
-    </div>
+        <table>
+            <tr>
+                <td class="label" style="width: 180px"><label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/></td>
+                <td><?php echo $distributorName; ?></td>
+                <td class="label" style="width: 120px"><label for="distributorEmail">Distributor Email<sup>*</sup></label><br/></td>
+                <td><?php echo $distributorEmail; ?></td>
+                <td class="label" style="width: 75px"><label for="poNumber">PO #</label><br/></td>
+                <td><?php echo $poNumber; ?></td>
+            </tr>
+        </table>
 </div>
 
     <table id="projectInformation">

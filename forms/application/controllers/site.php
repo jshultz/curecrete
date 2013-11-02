@@ -292,7 +292,7 @@ class Site extends CI_Controller
 		$message .= '</body>';
 
         $random = random_string('alnum', 4);
-        $file_name = 'IPO-' . $sendername . date('dMY') . '-' . $random;
+        $file_name = 'IPO-' . $sendername . '-' . date('dMY') . '-' . $random;
 		$type = "S";
 
 		$this->pdf_report($message, $file_name, $sendername, $senderemail, $type);
@@ -852,7 +852,7 @@ class Site extends CI_Controller
 
         $random = random_string('alnum', 4);
 
-        $file_name = 'Project_Report-' . $data['distributorName'] . date('dMY') . '-' . $random;
+        $file_name = 'Project_Report-' . $data['distributorName'] . '-' . date('dMY') . '-' . $random;
 
         $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
 

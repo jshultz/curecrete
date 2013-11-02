@@ -40,16 +40,87 @@
     <div id="header">
         <table style="width: 750px;">
             <tr>
-                <td style="width: 100px;">
+                <td style="width: 120px; vertical-align: top;">
                     <img src="/forms/assets/img/Curecrete-Logo_120x169.png" style="margin-right: 10px; height: 100px; width: 71px">
                 </td>
-                <td>
+                <td style="width: 300px; vertical-align: top;">
                     <div class="title">
                         <h3 style="font-size: .75em; line-height: 1em; margin-bottom: 7px; font-weight: 100;">Ashford Formula <sup>&trade;</sup> &amp; Retroplate <sup>&reg;</sup></h3>
                         <h1 style="font-size: 1.25em; line-height: 1.25em; color: #000000; font-weight: 100;">Project Report &amp; <br/> Warranty Request</h1>
                         <p style="font-size: .6em; line-height: .75em;">Fax: 801.489.3307 &nbsp; EMAIL | projectreports@curecrete.com</p>
                     </div>
                 </td>
+                <td style="width: 20px;">&nbsp;</td>
+                <td style="vertical-align: top; width: 130px">
+                    <p><strong>For Office Use Only</strong></p>
+                    <table style="font-size: .75em;">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Job #:</td>
+                            <td style="width: 70px; border-bottom: 1px solid #D3D3D3"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>ft<sup>2</sup>/gal</span>';} else {echo '<span>m<sup>2</sup>/L</span>';} ?>:</td>
+                            <td style="width: 70px; border-bottom: 1px solid #D3D3D3"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Invoice #:</td>
+                            <td style="width: 70px; border-bottom: 1px solid #D3D3D3"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="vertical-align: top; width: 150px">
+                    <table style="font-size: .75em; margin-top: 15px;">
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Job Posted in MAS</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Notes in MAS</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Distributor Authorized</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Invoice/Drum #s Match</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Invoice Paid</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>5 Year Labor Warranty (From Distributor)</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>20 &amp; 5 Year</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Lifetime &amp; 5 Year Labor</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Lifetime Product &amp; Labor</td>
+                        </tr>
+                    </table>
+                </td>
+
             </tr>
         </table>
 
@@ -57,7 +128,7 @@
 
 
 
-    <div id="headerCheckboxes">
+    <div id="headerCheckboxes" style="margin-top: 30px;">
         <table style="font-size: 1em; width: 750px;">
             <tr>
                 <td><?php echo $projectReportOnlyCheck; ?></td>
@@ -75,7 +146,7 @@
                 <td><?php echo $ashfordFormulaCheck; ?></td>
                 <td><label for="ashfordFormulaCheck">Ashford Formula</label><br/></td>
                 <td><?php echo $leedNominatedCheck; ?></td>
-                <td><label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
+                <td><label for="leedNominatedCheck">Will this project be applying for a LEED<br/> Award or any other “Green” distinctions?</label><br/>
                 </td>
             </tr>
             <tr>
@@ -88,7 +159,7 @@
 
 </div>
 
-    <div id="headerTextFields" style="font-size: .75em;">
+    <div id="headerTextFields" style="font-size: .75em; margin-top: 20px;">
         <table style="font-size: 1em; width: 750px;">
             <tr>
                 <td class="label" style="width: 180px; background-color: #D3D3D3; padding-left: 5px;"><label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/></td>
@@ -106,7 +177,7 @@
         </table>
 </div>
 
-    <table id="projectInformation" style="font-size: 1em; width: 750px;">
+    <table id="projectInformation" style="font-size: .75em; width: 750px;">
 
         <tr>
             <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 55px;">
@@ -122,7 +193,7 @@
         <tr>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="address">Address<sup>*</sup></label></td>
             <td class="input"><?php echo $address; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="squareDistance"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>ft2</span>';} else {echo '<span>m2</span>';} ?><sup>*</sup></label> </td>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="squareDistance"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>ft<sup>2</sup></span>';} else {echo '<span>m<sup>2</sup></span>';} ?><sup>*</sup></label> </td>
             <td class="input"><?php echo $squareDistance; ?> </td>
         </tr>
         <tr>
@@ -174,7 +245,7 @@
 
     <table id="drumInformation" style="width: 750px;">
         <tr>
-            <th colspan="9" style="background-color: #000000; color: #ffffff; text-align: center;"><p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
+            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center;"><p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
 
                 <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
                     "series" method shown below to avoid typing each drum number individually and to save you valuable time.</p>

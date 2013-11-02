@@ -114,7 +114,7 @@
         <tr>
             <td class="label"><label for="address">Address<sup>*</sup></label></td>
             <td class="input"><input name="address" id="address" type="text" class="required"></td>
-            <td class="label"><label for="squareDistance"><span class="euro">m2</span><span class="domestic">ft2</span> <sup>*</sup></label> </td>
+            <td class="label"><label for="squareDistance"><span class="euro">m<sup>2</sup></span><span class="domestic">ft<sup>2</sup></span> <sup>*</sup></label> </td>
             <td class="input"><input name="squareDistance" id="squareDistance" type="text" class="required"> </td>
         </tr>
         <tr>
@@ -188,7 +188,7 @@
 
     <table id="drumInformation">
         <tr>
-            <th colspan="8"<p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
+            <th colspan="8" style="padding: 10px;"><p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
 
                 <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
                     "series" method shown below to avoid typing each drum number individually and to save you valuable time.</p>

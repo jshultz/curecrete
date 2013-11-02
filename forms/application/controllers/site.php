@@ -461,6 +461,154 @@ class Site extends CI_Controller
 		}
 	}
 
+    public function photoupload() {
+        if (isset($_GET) || isset($_POST)) {
+            $email = $this->input->get_post('email', TRUE);
+            $key = $this->input->get_post('key', TRUE);
+
+            $customer = $this->Clients_model->getCustomer($email, $key);
+
+            foreach ($customer->result_array() as $x) {
+
+                $fullname = $x['FullName'];
+                $formid = $x['idforms'];
+                $key = $x['uniqueKey'];
+                $clientid = $x['idclients'];
+                $formname = $x['Form'];
+
+            }
+
+            $data['fullname'] = $fullname;
+            $data['formid'] = $formid;
+            $data['key'] = $key;
+            $data['clientid'] = $clientid;
+            $data['formname'] = $formname;
+            $data['email'] = $email;
+
+            $this->load->view('landing/photoupload', $data);
+
+
+        }
+    }
+
+    public function photo_upload($upload_dir = './assets/uploads', $config = array())
+    {
+        $files = array();
+
+        if(empty($config))
+        {
+            $config['upload_path'] = './assets/uploads';
+            $config['allowed_types'] = 'gif|jpg|jpeg|jpe|png';
+            $config['max_size']      = '800000000';
+        }
+
+        $this->load->library('upload', $config);
+
+        $errors = FALSE;
+
+        foreach($_FILES as $key => $value)
+        {
+            if( ! empty($value['name']))
+            {
+                if( ! $this->upload->do_upload($key))
+                {
+                    $data['upload_message'] = $this->upload->display_errors(ERR_OPEN, ERR_CLOSE); // ERR_OPEN and ERR_CLOSE are error delimiters defined in a config file
+                    $this->load->vars($data);
+
+                    $errors = TRUE;
+                }
+                else
+                {
+
+                    // Build a file array from all uploaded files
+                    $files[] = $this->upload->data();
+                }
+            }
+        }
+
+        // There was errors, we have to delete the uploaded files
+        if($errors)
+        {
+            foreach($files as $key => $file)
+            {
+                @unlink($file['full_path']);
+            }
+        }
+        elseif(empty($files) AND empty($data['upload_message']))
+        {
+            $this->lang->load('upload');
+            $data['upload_message'] = ERR_OPEN.$this->lang->line('upload_no_file_selected').ERR_CLOSE;
+            $this->load->vars($data);
+        }
+        else
+        {
+
+            if (isset($_GET) || isset($_POST)) {
+                $email = $this->input->get_post('email', TRUE);
+                $key = $this->input->get_post('key', TRUE);
+
+                $customer = $this->Clients_model->getCustomer($email, $key);
+
+                foreach ($customer->result_array() as $x) {
+
+                    $fullname = $x['FullName'];
+                    $formid = $x['idforms'];
+                    $key = $x['uniqueKey'];
+                    $clientid = $x['idclients'];
+                    $formname = $x['Form'];
+
+                }
+
+            };
+
+
+            $this->load->library('phpmailer');
+
+            $body = '<h3>Photos have been submitted for the following project:</h3>';
+
+            $body .= '<p><strong>Form ID: </strong> ' . $formid . '</p>';
+            $body .= '<p><strong>Client ID: </strong> ' . $clientid . '</p>';
+            $body .= '<p><strong>Distributor Name: </strong> ' . $fullname . '</p>';
+
+            foreach ($files as $key) {
+
+                $body .= '<p>' . 'File Uploaded: ' . $key['file_name'] . '</p>';
+            }
+
+
+//			Sending Email to Curecrete
+
+            $subject = 'Warranty Project Photo Submission';
+
+            $name = 'Curecrete Postmaster';
+
+//          $email = 'jasshultz@gmail.com';
+            $email = 'postmaster@curecrete.com';
+
+            $this->phpmailer->AddAddress($email);
+
+            $this->phpmailer->IsMail();
+
+            $this->phpmailer->From = 'postmaster@curecrete.com';
+
+            $this->phpmailer->FromName = 'Curecrete Postmaster';
+
+            $this->phpmailer->IsHTML(true);
+
+            $this->phpmailer->Subject = $subject;
+
+            $this->phpmailer->Body = $body;
+
+            $this->phpmailer->Send();
+
+            $data['message'] = '<p>Thank you for submitting the photos for your <strong>Project Report</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
+            $data['project'] = '';
+
+            $this->load->view('thankyou', $data);
+
+        }
+    }
+
     public function project_report_warranty_request() {
 
         $this->load->view('project_report_warranty_request');
@@ -688,12 +836,13 @@ class Site extends CI_Controller
 
         if ($data['uploadPhotosYes'] == '1') {
 
-            $photomessage = "";
+            $photomessage = '<p><a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">Click Here to Submit More Photos</a>.</p>';
+
 
 
         } else {
 
-            $photomessage = '<p><a alt="Contact A Specialist" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">Click Here to Submit Your Photos</a>.</p>';
+            $photomessage = '<p><a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">Click Here to Submit Your Photos</a>.</p>';
 
         }
 
@@ -708,7 +857,7 @@ class Site extends CI_Controller
         $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
 
 
-        $data['message'] = '<p>Thank you for submitting your <strong>Project Report</strong>.  </p><p>Your order was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
+        $data['message'] = '<p>Thank you for submitting your <strong>Project Report</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
         $data['project'] = '';
 
         $this->load->view('thankyou', $data);

@@ -571,6 +571,14 @@ body.pdf #content.warranty #drumInformation td.size {
     margin: 0 auto;
 }
 
+body.photoupload #content {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 5px;
+}
+
+
 #entryform {
     margin-bottom: 50px;
 }

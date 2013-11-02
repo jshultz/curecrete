@@ -69,11 +69,11 @@
     </div>
     <div class="block">
         <div class="checkbox">
-            <input name="domesticProjectCheck" id="domesticProjectCheck" type="checkbox" >
+            <input name="domesticProjectCheck" id="domesticProjectCheck" type="checkbox" class="require-check2">
             <label for="domesticProjectCheck">Domestic Project</label><br/>
         </div>
         <div class="checkbox">
-            <input name="internationalProjectCheck" id="internationalProjectCheck" type="checkbox" >
+            <input name="internationalProjectCheck" id="internationalProjectCheck" type="checkbox" class="require-check2">
             <label for="internationalProjectCheck">International Project</label><br/>
         </div>
         <div class="checkbox">

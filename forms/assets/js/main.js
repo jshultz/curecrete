@@ -622,7 +622,8 @@ $(function() {
         $('#warrantyRequestForm').validate({
             groups: {
                 formtype: form_type,
-                photos: photo_upload
+                photos: photo_upload,
+                domestic: dom_int
             },
             rules: {
                 AccordionField: {
@@ -633,9 +634,18 @@ $(function() {
             ignore: []
         });
 
+        $.validator.addMethod('require-check2', function(value) {
+            return $('.require-check2:checked').size() > 0;
+        }, 'Please check Domestic or International.');
+
+        var checks2 = $('.require-check2');
+        var dom_int = $.map(checks2, function(e, i) {
+            return $(e).attr("name")
+        }).join(" ");
+
         $.validator.addMethod('require-check', function(value) {
             return $('.require-check:checked').size() > 0;
-        }, 'Please check at least one box.');
+        }, 'Please check Project or Warranty.');
 
         var checks = $('.require-check');
         var form_type = $.map(checks, function(e, i) {

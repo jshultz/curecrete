@@ -70,29 +70,6 @@ class Clients_model extends CI_Model {
 
     }
 
-    function get_key($formid) {
-
-        $this->db->select('*')
-            ->from('forms')
-            ->where('idforms', $formid);
-
-        $query = $this->db->get();
-
-        $row = $query->row_array();
-        $num = $query->num_rows();
-
-        if ($num < 1)
-        {
-            return null;
-
-        } else {
-
-            foreach ($query->result_array() as $row) {
-                return $row['uniqueKey'];
-            }
-        }
-    }
-
     /* Not Being Used Yet */
     function email_client() {
 
@@ -139,5 +116,28 @@ class Clients_model extends CI_Model {
             return $query;
         }
 
+    }
+
+    function get_key($formid) {
+
+        $this->db->select('*')
+            ->from('forms')
+            ->where('idforms', $formid);
+
+        $query = $this->db->get();
+
+        $row = $query->row_array();
+        $num = $query->num_rows();
+
+        if ($num < 1)
+        {
+            return null;
+
+        } else {
+
+            foreach ($query->result_array() as $row) {
+                return $row['uniqueKey'];
+            }
+        }
     }
 } 

@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 if (!function_exists('create_pdf')) {
 
-	function create_pdf($html_data, $file_name = "", $type = "D",$sendername='', $senderemail='') {
+	function create_pdf($html_data, $file_name = "", $type = "D",$sendername='', $senderemail='', $photomessage='') {
 		if ($file_name == "") {
 			date_default_timezone_set('UTC');
 			$file_name = 'report' . date('dMY');

@@ -663,40 +663,45 @@ class Site extends CI_Controller
 
         $data['files'] = $files;
 
-        $mail = new PHPMailer;
+        /* Add the Customer to the Database */
+
+
+        $firstName = '';
+        $lastName = '';
+        $fullName = $data['distributorName'];
+        $address = $data['address'];
+        $state = $data['state'];
+        $zip = $data['country'];
+        $phone = '';
+        $email = $data['distributorEmail'];
+        $form = 'Warranty Request Form';
+
+
+        $data['formid'] = $this->Clients_model->create_client($firstName, $lastName, $fullName, $address, $state, $zip, $phone, $email, $form);
+
+        $key = $this->Clients_model->get_key($data['formid']);
+
+        $data['uploadPhotosYes'] = (isset($_POST['uploadPhotosYes']))?true:false;
+        if ($data['uploadPhotosYes'] == '1') {
+
+            $photomessage = "";
+
+
+        } else {
+
+            $photomessage = '<a alt="Contact A Specialist" href="'  . base_url() . 'site/photoupload?email=' . $email . '&key=' . $key . '">Click Here</a>.';
+
+        }
 
         $body = $this->load->view('email_forms/email_project_report_warranty_request', $data, TRUE);
 
         $type = "S";
 
-        $this->pdf_report($body, $data['distributorName'], $data['distributorName'], $data['distributorEmail'], $type);
+        $this->pdf_report($body, $data['distributorName'], $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
+
 
         echo $body;
         exit;
-
-//		$mailto = 'Garrett.Soong@ashfordformula.com';
-        $mailto = 'customercare@curecrete.com';
-
-        $this->phpmailer->AddAddress($mailto);
-
-        $this->phpmailer->IsMail();
-
-        $this->phpmailer->From = 'contact@slidingdoorco.com';
-
-        $this->phpmailer->FromName = 'The Sliding Door Company';
-
-        $this->phpmailer->IsHTML(true);
-
-        $this->phpmailer->Subject = $subject;
-
-        $this->phpmailer->Body = $body;
-
-//        $this->phpmailer->Send();
-
-
-        $this->phpmailer->ClearAddresses();
-
-        $this->phpmailer->ClearAllRecipients();
 
         /* End File Handling */
 

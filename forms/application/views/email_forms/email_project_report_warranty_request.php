@@ -98,6 +98,11 @@
                 <td class="label" style="width: 45px; background-color: #D3D3D3; padding-left: 5px;"><label for="poNumber">PO #</label><br/></td>
                 <td><?php echo $poNumber; ?></td>
             </tr>
+            <tr>
+                <td class="label">Customer Unique Form ID:</td>
+                <td><?php echo $formid; ?></php></td>
+                <td colspan="4"></td>
+            </tr>
         </table>
 </div>
 

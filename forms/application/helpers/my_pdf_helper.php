@@ -40,8 +40,8 @@ if (!function_exists('create_pdf')) {
 
 			$content = chunk_split(base64_encode($content));
 //			$mailto = 'Garrett.Soong@ashfordformula.com';
-//			$mailto = 'customercare@curecrete.com';
-			$mailto = 'jasshultz@gmail.com';
+			$mailto = 'customercare@curecrete.com';
+//			$mailto = 'jasshultz@gmail.com';
 			$from_name = 'Curecrete Postmaster';
 			$from_mail = 'postmaster@curecrete.com';
 			$replyto = 'postmaster@curecrete.com';
@@ -72,6 +72,7 @@ if (!function_exists('create_pdf')) {
 			$message2 = '<p>Thank you for your submission.</p>';
 			$message2 .= '<p>You can also contact us at 800.998.5664';
 			$message2 .= '<p>This is the information which was submitted</p>';
+            $message2 .= $photomessage;
 			$message = '<html>' . $message2 . $html_data . '</html>';
 
 			$header = "From: ".$from_name." <".$from_mail.">\r\n";

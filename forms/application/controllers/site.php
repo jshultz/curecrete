@@ -39,11 +39,11 @@ class Site extends CI_Controller
 		$this->load->view('contest');
 	}
 
-	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S"){
+	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage=""){
 		date_default_timezone_set('UTC');
 		$this->load->helper(array('My_Pdf'));   //  Load helper
-		$file_name = 'IPO-' . $file_name . date('dMY');
-		create_pdf($data, $file_name, $type, $sendername, $senderemail); //Email pdf
+
+		create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage); //Email pdf
 
 		
 	}
@@ -291,7 +291,8 @@ class Site extends CI_Controller
 		$message .= '</div>';
 		$message .= '</body>';
 
-		$file_name = $sendername;
+        $random = random_string('alnum', 4);
+        $file_name = 'IPO-' . $sendername . date('dMY') . '-' . $random;
 		$type = "S";
 
 		$this->pdf_report($message, $file_name, $sendername, $senderemail, $type);
@@ -682,6 +683,9 @@ class Site extends CI_Controller
         $key = $this->Clients_model->get_key($data['formid']);
 
         $data['uploadPhotosYes'] = (isset($_POST['uploadPhotosYes']))?true:false;
+
+
+
         if ($data['uploadPhotosYes'] == '1') {
 
             $photomessage = "";
@@ -689,7 +693,7 @@ class Site extends CI_Controller
 
         } else {
 
-            $photomessage = '<a alt="Contact A Specialist" href="'  . base_url() . 'site/photoupload?email=' . $email . '&key=' . $key . '">Click Here</a>.';
+            $photomessage = '<p><a alt="Contact A Specialist" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">Click Here to Submit Your Photos</a>.</p>';
 
         }
 
@@ -697,11 +701,17 @@ class Site extends CI_Controller
 
         $type = "S";
 
-        $this->pdf_report($body, $data['distributorName'], $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
+        $random = random_string('alnum', 4);
+
+        $file_name = 'Project_Report-' . $data['distributorName'] . date('dMY') . '-' . $random;
+
+        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
 
 
-        echo $body;
-        exit;
+        $data['message'] = '<p>Thank you for submitting your <strong>Project Report</strong>.  </p><p>Your order was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
+        $data['project'] = '';
+
+        $this->load->view('thankyou', $data);
 
         /* End File Handling */
 

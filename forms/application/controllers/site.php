@@ -63,6 +63,19 @@ class Site extends CI_Controller
 		$sendername = (string)$this->input->post('billToName', TRUE);
 		$senderemail = (string)$this->input->post('billToEmail', TRUE);
 
+		$firstName = '';
+		$lastName = '';
+		$fullName = $sendername;
+		$address = (string)$this->input->post('shipToAddress1', TRUE);
+		$state = (string)$this->input->post('shipToState', TRUE);
+		$zip = (string)$this->input->post('shipToPostal', TRUE);
+		$phone = (string)$this->input->post('shipToPhone', TRUE);
+		$email = $senderemail;
+		$form = 'International Purchase Order';
+
+
+		$this->Clients_model->create_client($firstName, $lastName, $fullName, $address, $state, $zip, $phone, $email, $form);
+
 		$message = '<body>';
 		$message .= '<div id="pdf">';
 		$message .= '<img src="http://curecrete.com/forms/assets/img/Curecrete-Logo_120x169.png" style="float:left; margin-left: 10px; margin-right: 10px; height: 100px; width: 71px">';

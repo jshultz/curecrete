@@ -50,20 +50,21 @@
 
     <div id="headerCheckboxes">
     <div class="block">
+	    <div class="checkbox">
+		    <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" class="require-check">
+		    <label for="warrantyRequestCheck">Warranty Request</label><br/>
+	    </div>
         <div class="checkbox">
-            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" class="require-check">
+            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" class="require-check" checked>
             <label for="projectReportOnlyCheck">Project Report ONLY</label><br/>
         </div>
+
         <div class="checkbox">
-            <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" class="require-check">
-            <label for="warrantyRequestCheck">Warranty Request</label><br/>
-        </div>
-        <div class="checkbox">
-            <input name="ashfordFormulaCheck" id="ashfordFormulaCheck" type="checkbox" >
+            <input name="ashfordFormulaCheck" id="ashfordFormulaCheck" type="checkbox" class="product-check" >
             <label for="ashfordFormulaCheck">Ashford Formula</label><br/>
         </div>
         <div class="checkbox">
-            <input name="retorplateCheck" id="retorplateCheck" type="checkbox" >
+            <input name="retorplateCheck" id="retorplateCheck" type="checkbox" class="product-check">
             <label for="retorplateCheck">Retroplate</label><br/>
         </div>
     </div>
@@ -94,7 +95,7 @@
     </div>
     <div class="cell">
         <label for="poNumber">PO #</label><br/>
-        <input name="poNumber" id="poNumber" type="text" class="required"><br/>
+        <input name="poNumber" id="poNumber" type="text" class=""><br/>
     </div>
 </div>
 

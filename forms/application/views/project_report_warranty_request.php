@@ -113,8 +113,8 @@
             <td class="input"><input name="amountUsed" id="amountUsed" type="text" class="required"> </td>
         </tr>
         <tr>
-            <td class="label"><label for="address">Address<sup>*</sup></label></td>
-            <td class="input"><input name="address" id="address" type="text" class="required"></td>
+            <td class="label"><label for="address">Address</label></td>
+            <td class="input"><input name="address" id="address" type="text" class=""></td>
             <td class="label"><label for="squareDistance"><span class="euro">m<sup>2</sup></span><span class="domestic">ft<sup>2</sup></span> <sup>*</sup></label> </td>
             <td class="input"><input name="squareDistance" id="squareDistance" type="text" class="required"> </td>
         </tr>
@@ -136,6 +136,7 @@
             <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
                 <select name="building_use" id="building_use" class="required">
+	                <option value="">Please Choose One</option>
                     <option value="agricultural">Agricultural/Farm<sup>*</sup></option>
                     <option value="airport">Airport<sup>*</sup></option>
                     <option value="animal">Animal<sup>*</sup></option>
@@ -161,8 +162,8 @@
             </td>
         </tr>
         <tr>
-            <td class="label"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
-            <td class="input"><input name="projectOwner" id="projectOwner" type="text" class="required"></td>
+            <td class="label"><label for="projectOwner">Project Owner</label></td>
+            <td class="input"><input name="projectOwner" id="projectOwner" type="text" class=""></td>
             <td class="label"><label for="industry">Industry<sup>*</sup></label> </td>
             <td class="input"><select name="industry" id="industry"></select> </td>
         </tr>
@@ -181,7 +182,7 @@
             <td class="input"><input name="applicator" id="applicator" type="text" class="required"></td>
         </tr>
         <tr>
-            <td class="label"><label for="flatWorker">Flat Worker / Floor Maker / Sub-Contractor</label></td>
+            <td class="label"><label for="flatWorker">Flat Worker / Sub-Contractor</label></td>
             <td class="input"><input name="flatWorker" id="flatWorker" type="text" class=""></td>
         </tr>
 
@@ -405,11 +406,11 @@
     <table id="warrantyRequest2">
         <tr>
             <td class="label first"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
-            <td class="input" colspan="5"><textarea name="environmentalConditions" id="environmentalConditions"></textarea> </td>
+            <td class="input" colspan="5"><textarea class="warranty-request" name="environmentalConditions" id="environmentalConditions"></textarea> </td>
         </tr>
         <tr>
             <td class="label first"><label for="weatherConditions">Weather Conditions During Ashford Formula Application<sup>*</sup></label></td>
-            <td class="input" colspan="5"><textarea name="weatherConditions" id="weatherConditions"></textarea> </td>
+            <td class="input" colspan="5"><textarea class="warranty-request" name="weatherConditions" id="weatherConditions"></textarea> </td>
         </tr>
         <tr>
             <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>

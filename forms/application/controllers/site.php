@@ -871,7 +871,10 @@ class Site extends CI_Controller
 
         $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
 
-        $data['message'] = '<p>Thank you for submitting your <strong>Project Report</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
+        $data['message'] = '<p>Thank you for submitting your <strong>Project Information/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="projectreports@curecrete.com">projectreports@curecrete.com</a>.</p>';
+	    $data['message'] .= '<p>You can also reach us by telephone at 801-489-5663.</p>';
+	    $data['message'] .= '<p>Would you like to submit another form? <a href="' . base_url() . 'site/project_report_warranty_request">Click Here.</a></p>';
+
         $data['project'] = '';
 
         $this->load->view('thankyou', $data);

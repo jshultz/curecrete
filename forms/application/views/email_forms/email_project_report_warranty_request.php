@@ -237,7 +237,7 @@
             <td class="input"><?php echo $applicator; ?></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="flatWorker">Flat Worker / Floor Maker / Sub-Contractor</label></td>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="flatWorker">Flat Worker / Sub-Contractor</label></td>
             <td class="input"><?php echo $flatWorker; ?></td>
         </tr>
 

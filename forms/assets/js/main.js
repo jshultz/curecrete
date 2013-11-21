@@ -4,6 +4,8 @@ $(function() {
     $("#building_use").change(function () {
         var str = "";
 
+		var start = '<option value="">Please Choose One</option>';
+
         var agricultural = '<option value="barn">Barn</option>' +
             '<option value="botanical">Botanical/Garden</option>' +
             '<option value="dairy">Dairy</option>' +
@@ -506,28 +508,57 @@ $(function() {
         $('#warrantyRequestCheck').click(function() {
             if ($(this).is(":checked")) {
                 $('#warrantyRequest input').addClass('required');
+				$('#warrantyRequest2 textarea').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", false);
                 $('#warrantyRequest input:has(.warranty-request)').addClass('required');
 
             } else {
                 $('#warrantyRequest input').removeClass('required');
+				$('#warrantyRequest2 textarea').removeClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
-                $('#warrantyRequest input:has(.warranty-request)').addClass('required');
+                $('#warrantyRequest input:has(.warranty-request)').removeClass('required');
             }
         });
 
         $('#projectReportOnlyCheck').click(function() {
             if ($(this).is(":checked")) {
                 $('#warrantyRequest input').removeClass('required');
+				$('#warrantyRequest2 textarea').removeClass('required');
                 $('#warrantyRequestCheck').prop("checked", false);
                 $('#warrantyRequest input:has(.warranty-request)').removeClass('required');
             } else {
                 $('#warrantyRequest input').addClass('required');
+				$('#warrantyRequest2 textarea').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
-                $('#warrantyRequest input:has(.warranty-request)').addClass('required');
                 $('#warrantyRequest input:has(.warranty-request)').addClass('required');
             }
         });
+
+		$('#ashfordFormulaCheck').click(function() {
+			if ($(this).is(":checked")) {
+				$('#retorplateCheck').prop("checked", false);
+				$('#ashfordForulaCureYes').prop('disabled', false);
+				$('#ashfordForulaCureNo').prop('disabled', false);
+			} else {
+				$('#ashfordFormulaCheck').prop("checked", true);
+				$('#ashfordForulaCureYes').prop('disabled', true);
+				$('#ashfordForulaCureNo').prop('disabled', true);
+			}
+		});
+
+
+
+		$('#retorplateCheck').click(function() {
+			if ($(this).is(":checked")) {
+				$('#ashfordFormulaCheck').prop("checked", false);
+				$('#ashfordForulaCureYes').prop('disabled', true);
+				$('#ashfordForulaCureNo').prop('disabled', true);
+			} else {
+				$('#retorplateCheck').prop("checked", true);
+				$('#ashfordForulaCureYes').prop('disabled', false);
+				$('#ashfordForulaCureNo').prop('disabled', false);
+			}
+		});
 
 
 
@@ -623,7 +654,8 @@ $(function() {
             groups: {
                 formtype: form_type,
                 photos: photo_upload,
-                domestic: dom_int
+                domestic: dom_int,
+				product: product
             },
             rules: {
                 AccordionField: {
@@ -633,6 +665,15 @@ $(function() {
 
             ignore: []
         });
+
+		$.validator.addMethod('product-check', function(value) {
+			return $('.product-check:checked').size() > 0;
+		}, 'Please check Ashford Formula or Retroplate.');
+
+		var checks3 = $('.product-check');
+		var product = $.map(checks3, function(e, i) {
+			return $(e).attr("name")
+		}).join(" ");
 
         $.validator.addMethod('require-check2', function(value) {
             return $('.require-check2:checked').size() > 0;

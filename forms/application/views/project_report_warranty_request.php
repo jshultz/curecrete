@@ -51,36 +51,48 @@
     <div id="headerCheckboxes">
     <div class="block">
 	    <div class="checkbox">
-		    <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" class="require-check">
-		    <label for="warrantyRequestCheck">Warranty Request</label><br/>
+		    <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" class="require-check" title="Only Fill out Project Information and Drum Information" checked>
+		    <label for="projectReportOnlyCheck">Project Report ONLY</label><br/>
 	    </div>
-        <div class="checkbox">
-            <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" class="require-check" checked>
-            <label for="projectReportOnlyCheck">Project Report ONLY</label><br/>
-        </div>
+
+
 
         <div class="checkbox">
             <input name="ashfordFormulaCheck" id="ashfordFormulaCheck" type="checkbox" class="product-check" >
             <label for="ashfordFormulaCheck">Ashford Formula</label><br/>
         </div>
-        <div class="checkbox">
-            <input name="retorplateCheck" id="retorplateCheck" type="checkbox" class="product-check">
-            <label for="retorplateCheck">Retroplate</label><br/>
-        </div>
+
     </div>
     <div class="block">
-        <div class="checkbox">
-            <input name="domesticProjectCheck" id="domesticProjectCheck" type="checkbox" class="require-check2">
-            <label for="domesticProjectCheck">Domestic Project</label><br/>
-        </div>
-        <div class="checkbox">
-            <input name="internationalProjectCheck" id="internationalProjectCheck" type="checkbox" class="require-check2">
-            <label for="internationalProjectCheck">International Project</label><br/>
-        </div>
-        <div class="checkbox">
-            <input name="leedNominatedCheck" id="leedNominatedCheck" type="checkbox" >
-            <label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
-        </div>
+	    <div class="checkbox">
+		    <input name="warrantyRequestCheck" id="warrantyRequestCheck" type="checkbox" class="require-check" title="You Must Fill Out All Three Sections of Information">
+		    <label for="warrantyRequestCheck">Warranty Request</label><br/>
+	    </div>
+	    <div class="checkbox">
+		    <input name="retroplateCheck" id="retroplateCheck" type="checkbox" class="product-check">
+		    <label for="retroplateCheck">Retroplate</label><br/>
+	    </div>
+
+
+
+    </div>
+    <div class="block" style="width: 330px;;">
+	    <div class="clearfix">
+		    <div class="checkbox" style="float: left; margin-right:10px;">
+			    <input name="domesticProjectCheck" id="domesticProjectCheck" type="checkbox" class="require-check2">
+			    <label for="domesticProjectCheck">Domestic Project</label><br/>
+		    </div>
+
+		    <div class="checkbox" style="float: left;">
+			    <input name="internationalProjectCheck" id="internationalProjectCheck" type="checkbox" class="require-check2">
+			    <label for="internationalProjectCheck">International Project</label><br/>
+		    </div>
+	    </div>
+	    <div class="checkbox">
+		    <input name="leedNominatedCheck" id="leedNominatedCheck" type="checkbox" >
+		    <label for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
+	    </div>
+
     </div>
 </div>
 

@@ -32,10 +32,7 @@
 <div role="main" id="wrapper">
 
 <div id="content" class="warranty">
-    <?php
-        $attributes = array('class' => 'email', 'id' => 'warrantyRequestForm');
-        echo form_open_multipart('', $attributes);
-    ?>
+
 
     <div id="header">
         <table style="width: 750px;">
@@ -133,27 +130,27 @@
             <tr>
                 <td><?php echo $projectReportOnlyCheck; ?></td>
                 <td><label for="projectReportOnlyCheck">Project Report ONLY</label><br/></td>
+	            <td></td>
+	            <td><?php echo $warrantyRequestCheck; ?></td>
+	            <td><label for="warrantyRequestCheck">Warranty Request</label><br/></td>
+	            <td></td>
                 <td><?php echo $domesticProjectCheck; ?></td>
                 <td><label for="domesticProjectCheck">Domestic Project</label><br/></td>
-            </tr>
-            <tr>
-                <td><?php echo $warrantyRequestCheck; ?></td>
-                <td><label for="warrantyRequestCheck">Warranty Request</label><br/></td>
-                <td><?php echo $internationalProjectCheck; ?></td>
-                <td><label for="internationalProjectCheck">International Project</label><br/></td>
+	            <td></td>
+	            <td><?php echo $internationalProjectCheck; ?></td>
+	            <td><label for="internationalProjectCheck">International Project</label><br/></td>
+	            <td></td>
             </tr>
             <tr>
                 <td><?php echo $ashfordFormulaCheck; ?></td>
                 <td><label for="ashfordFormulaCheck">Ashford Formula</label><br/></td>
+	            <td></td>
+	            <td><?php echo $retroplateCheck; ?></td>
+	            <td><label for="retroplateCheck">Retroplate</label><br/></td>
+	            <td></td>
                 <td><?php echo $leedNominatedCheck; ?></td>
-                <td><label for="leedNominatedCheck">Will this project be applying for a LEED<br/> Award or any other “Green” distinctions?</label><br/>
+                <td colspan="4"><label for="leedNominatedCheck">Will this project be applying for a LEED<br/> Award or any other “Green” distinctions?</label><br/>
                 </td>
-            </tr>
-            <tr>
-                <td><?php echo $retorplateCheck; ?></td>
-                <td><label for="retorplateCheck">Retroplate</label><br/></td>
-                <td></td>
-                <td></td>
             </tr>
         </table>
 
@@ -180,7 +177,7 @@
     <table id="projectInformation" style="font-size: .75em; width: 750px;">
 
         <tr>
-            <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 55px;">
+            <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;">
                 <p>Project Information</p>
             </th>
         </tr>
@@ -245,13 +242,9 @@
 
     <table id="drumInformation" style="width: 750px;">
         <tr>
-            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center;"><p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s) Used</p>
+            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;"><p>D R U M  I N F O R M A T I O N</p>
 
-                <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
-                    "series" method shown below to avoid typing each drum number individually and to save you valuable time.</p>
 
-                <p>Example:<br/>
-                    10001, 10002, 10003, 10004, 10005, 10006 or 10001 - 10006</p>
             </th>
         </tr>
         <tr class="labelRow">
@@ -285,21 +278,21 @@
 
                 $x = 1;
 
-                echo '<tr>';
+                echo '<tr style="border-bottom: 1px solid #000;">';
 
                 foreach($drumdata as $key => $value) {
 
                     if ($x == 4) {
 
-                        echo '<td>' . $value['drumNumber'] . '</td>';
-                        echo '<td class="size">' . $value['size'] . '</td>';
+                        echo '<td style="border-left: 1px solid #000; border-bottom:1px solid #000; border-right: 1px solid #000; height:25px; width:80px;">' . $value['drumNumber'] . '</td>';
+                        echo '<td class="size" style="height:25px; border-bottom:1px solid #000; border-right: 1px solid #000;width:80px;">' . $value['size'] . '</td>';
                         echo '</tr>';
                         echo '<tr>';
 
                         $x = 1;
                     } else {
-                        echo '<td>' . $value['drumNumber'] . '</td>';
-                        echo '<td class="size">' . $value['size'] . '</td>';
+                        echo '<td style="border-left: 1px solid #000; border-bottom:1px solid #000; border-right: 1px solid #000; height:25px;width:80px;">' . $value['drumNumber'] . '</td>';
+                        echo '<td class="size" style="height:25px; border-bottom:1px solid #000;width:80px;">' . $value['size'] . '</td>';
 
                         $x = $x + 1;
                     }
@@ -437,8 +430,8 @@
         </tr>
     </table>
 
-    <table id="corporateProjects" style="width: 750px;">
-        <tr><th style="background-color: #000000; color: #ffffff; text-align: center; height: 55px;"><p>Corporate Projects</p></th></tr>
+    <table id="corporateProjects" style="width: 750px; ">
+        <tr><th style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;"><p>Corporate Projects</p></th></tr>
         <tr>
             <td>
                 <p><?php if ($corporateProjectsText == '') {
@@ -472,7 +465,6 @@
         </tr>
     </table>
 
-    </form>
 
 </div>
 

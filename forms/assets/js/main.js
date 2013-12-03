@@ -448,6 +448,10 @@ $(function() {
             $( "#initialApplicationDate" ).datepicker();
             $( "#finalApplicationDate" ).datepicker();
             $( "#dateFloorWarrantied" ).datepicker();
+			$('#warrantyRequest input').prop('disabled', true);
+			$('#warrantyRequest2 input').prop('disabled', true);
+			$('#warrantyRequest2 textarea').prop('disabled', true);
+			$( document ).tooltip();
         });
 
         val = 20;
@@ -511,12 +515,18 @@ $(function() {
 				$('#warrantyRequest2 textarea').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", false);
                 $('#warrantyRequest input:has(.warranty-request)').addClass('required');
+				$('#warrantyRequest input').prop('disabled', false);
+				$('#warrantyRequest2 input').prop('disabled', false);
+				$('#warrantyRequest2 textarea').prop('disabled', false);
 
             } else {
                 $('#warrantyRequest input').removeClass('required');
 				$('#warrantyRequest2 textarea').removeClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
                 $('#warrantyRequest input:has(.warranty-request)').removeClass('required');
+				$('#warrantyRequest input').prop('disabled', true);
+				$('#warrantyRequest2 input').prop('disabled', true);
+				$('#warrantyRequest2 textarea').prop('disabled', true);
             }
         });
 
@@ -526,17 +536,23 @@ $(function() {
 				$('#warrantyRequest2 textarea').removeClass('required');
                 $('#warrantyRequestCheck').prop("checked", false);
                 $('#warrantyRequest input:has(.warranty-request)').removeClass('required');
+				$('#warrantyRequest input').prop('disabled', true);
+				$('#warrantyRequest2 input').prop('disabled', true);
+				$('#warrantyRequest2 textarea').prop('disabled', true);
             } else {
                 $('#warrantyRequest input').addClass('required');
 				$('#warrantyRequest2 textarea').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", true);
                 $('#warrantyRequest input:has(.warranty-request)').addClass('required');
+				$('#warrantyRequest input').prop('disabled', false);
+				$('#warrantyRequest2 input').prop('disabled', false);
+				$('#warrantyRequest2 textarea').prop('disabled', false);
             }
         });
 
 		$('#ashfordFormulaCheck').click(function() {
 			if ($(this).is(":checked")) {
-				$('#retorplateCheck').prop("checked", false);
+				$('#retroplateCheck').prop("checked", false);
 				$('#ashfordForulaCureYes').prop('disabled', false);
 				$('#ashfordForulaCureNo').prop('disabled', false);
 			} else {
@@ -548,19 +564,26 @@ $(function() {
 
 
 
-		$('#retorplateCheck').click(function() {
+		$('#retroplateCheck').click(function() {
 			if ($(this).is(":checked")) {
 				$('#ashfordFormulaCheck').prop("checked", false);
 				$('#ashfordForulaCureYes').prop('disabled', true);
 				$('#ashfordForulaCureNo').prop('disabled', true);
 			} else {
-				$('#retorplateCheck').prop("checked", true);
+				$('#retroplateCheck').prop("checked", true);
 				$('#ashfordForulaCureYes').prop('disabled', false);
 				$('#ashfordForulaCureNo').prop('disabled', false);
 			}
 		});
 
 
+		$('#hoursAfterPlacementChecked').click(function() {
+			if ($(this).is(":checked")) {
+				$('#hoursAfterPlacementNumbers').addClass('required');
+			} else {
+				$('#hoursAfterPlacementNumbers').removeClass('required');
+			}
+		});
 
 
         $('#uploadPhotosYes').click(function() {

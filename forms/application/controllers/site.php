@@ -642,8 +642,8 @@ class Site extends CI_Controller
             $data['ashfordFormulaCheck'] = (isset($_POST['ashfordFormulaCheck']))?true:false;
         if ($data['ashfordFormulaCheck'] == '1') { $data['ashfordFormulaCheck'] = '&#x2611;';} else { $data['ashfordFormulaCheck'] = '&#x2610;';}
 
-            $data['retorplateCheck'] = (isset($_POST['retorplateCheck']))?true:false;
-        if ($data['retorplateCheck'] == '1') { $data['retorplateCheck'] = '&#x2611;';} else { $data['retorplateCheck'] = '&#x2610;';}
+            $data['retroplateCheck'] = (isset($_POST['retroplateCheck']))?true:false;
+        if ($data['retroplateCheck'] == '1') { $data['retroplateCheck'] = '&#x2611;';} else { $data['retroplateCheck'] = '&#x2610;';}
 
             $data['domesticProjectCheck'] = (isset($_POST['domesticProjectCheck']))?true:false;
         if ($data['domesticProjectCheck'] == '1') { $data['domesticProjectCheck'] = '&#x2611;';} else { $data['domesticProjectCheck'] = '&#x2610;';}
@@ -860,7 +860,6 @@ class Site extends CI_Controller
         }
 
         $body = $this->load->view('email_forms/email_project_report_warranty_request', $data, TRUE);
-
 
 
         $type = "S";

@@ -428,11 +428,11 @@
             <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox" >
+                    <input name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox" class="cure-check" >
                     <label for="ashfordForulaCureYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox" >
+                    <input name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox" class="cure-check" >
                     <label for="ashfordForulaCureNo">No</label>
                 </div>
             </td>
@@ -441,19 +441,19 @@
             </td>
             <td class="input" width="155px">
                 <div class="checkbox">
-                    <input name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox" >
+                    <input name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox" class="applied-check" >
                     <label for="appliedOnExistingFloor">On Existing Floor?</label>
                 </div>
             <br/>
                 <div class="checkbox">
-                    <input name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox" >
+                    <input name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox" class="applied-check" >
                     <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
                 </div>
             </td>
             <td colspan="2">
                 <div class="checkbox" id="hoursAfterPlacementCheckbox">
                     <input name="hoursAfterPlacementChecked" id="hoursAfterPlacementChecked" type="checkbox" >
-                    <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text"><br/>
+                    <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text" class="hours-check"><br/>
                     <label for="hoursAfterPlacement" id="">Hours After Placement</label>
                 </div>
             </td>
@@ -465,11 +465,11 @@
             </td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="floorBurnishedYes" id="floorBurnishedYes" type="checkbox" >
+                    <input name="floorBurnishedYes" id="floorBurnishedYes" type="checkbox" class="burnished-check" >
                     <label for="floorBurnishedYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="floorBurnishedNo" id="floorBurnishedNo" type="checkbox" >
+                    <input name="floorBurnishedNo" id="floorBurnishedNo" type="checkbox" class="burnished-check" >
                     <label for="floorBurnishedNo">No</label>
                 </div>
             </td>
@@ -478,11 +478,11 @@
             </td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="applicationSupervisedByDistributorYes" id="applicationSupervisedByDistributorYes" type="checkbox" >
+                    <input name="applicationSupervisedByDistributorYes" id="applicationSupervisedByDistributorYes" type="checkbox" class="app-check" >
                     <label for="applicationSupervisedByDistributorYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="applicationSupervisedByDistributorNo" id="applicationSupervisedByDistributorNo" type="checkbox" >
+                    <input name="applicationSupervisedByDistributorNo" id="applicationSupervisedByDistributorNo" type="checkbox" class="app-check" >
                     <label for="applicationSupervisedByDistributorNo">No</label>
                 </div>
             </td>
@@ -491,11 +491,11 @@
             </td>
             <td class="input">
                 <div class="checkbox">
-                    <input name="maintenanceBrochureGivenYes" id="maintenanceBrochureGivenYes" type="checkbox" >
+                    <input name="maintenanceBrochureGivenYes" id="maintenanceBrochureGivenYes" type="checkbox" class="brochure-check">
                     <label for="maintenanceBrochureGivenYes">Yes</label>
                 </div><br/>
                 <div class="checkbox">
-                    <input name="maintenanceBrochureGivenNo" id="maintenanceBrochureGivenNo" type="checkbox" >
+                    <input name="maintenanceBrochureGivenNo" id="maintenanceBrochureGivenNo" type="checkbox" class="brochure-check" >
                     <label for="maintenanceBrochureGivenNo">No</label>
                 </div>
             </td>

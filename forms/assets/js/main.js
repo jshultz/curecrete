@@ -509,6 +509,14 @@ $(function() {
             }
         });
 
+		$('#hoursAfterPlacementChecked').click(function() {
+			if($(this).is(":checked")) {
+				$.validator.addMethod('hours-check', function(value) {
+					return $('.hours-check:checked').size() > 0;
+				}, 'Please check at least one box.');
+			}
+		})
+
         $('#warrantyRequestCheck').click(function() {
             if ($(this).is(":checked")) {
                 $('#warrantyRequest input').addClass('required');
@@ -518,6 +526,32 @@ $(function() {
 				$('#warrantyRequest input').prop('disabled', false);
 				$('#warrantyRequest2 input').prop('disabled', false);
 				$('#warrantyRequest2 textarea').prop('disabled', false);
+
+				console.log('hello');
+
+				$.validator.addMethod('cure-check', function(value) {
+					return $('.cure-check:checked').size() > 0;
+				}, 'Please check at least one box.');
+
+				$.validator.addMethod('applied-check', function(value) {
+					return $('.applied-check:checked').size() > 0;
+				}, 'Please check at least one box.');
+
+				$.validator.addMethod('applied-check', function(value) {
+					return $('.applied-check:checked').size() > 0;
+				}, 'Please check at least one box.');
+
+				$.validator.addMethod('burnished-check', function(value) {
+					return $('.burnished-check:checked').size() > 0;
+				}, 'Please check at least one box.');
+
+				$.validator.addMethod('app-check', function(value) {
+					return $('.app-check:checked').size() > 0;
+				}, 'Please check at least one box.');
+
+				$.validator.addMethod('brochure-check', function(value) {
+					return $('.brochure-check:checked').size() > 0;
+				}, 'Please check at least one box.');
 
             } else {
                 $('#warrantyRequest input').removeClass('required');
@@ -693,28 +727,28 @@ $(function() {
 			return $('.product-check:checked').size() > 0;
 		}, 'Please check Ashford Formula or Retroplate.');
 
-		var checks3 = $('.product-check');
-		var product = $.map(checks3, function(e, i) {
-			return $(e).attr("name")
-		}).join(" ");
-
         $.validator.addMethod('require-check2', function(value) {
             return $('.require-check2:checked').size() > 0;
         }, 'Please check Domestic or International.');
+
+		var checks = $('.require-check');
+		var form_type = $.map(checks, function(e, i) {
+			return $(e).attr("name")
+		}).join(" ");
 
         var checks2 = $('.require-check2');
         var dom_int = $.map(checks2, function(e, i) {
             return $(e).attr("name")
         }).join(" ");
 
+		var checks3 = $('.product-check');
+		var product = $.map(checks3, function(e, i) {
+			return $(e).attr("name")
+		}).join(" ");
+
         $.validator.addMethod('require-check', function(value) {
             return $('.require-check:checked').size() > 0;
         }, 'Please check Project or Warranty.');
-
-        var checks = $('.require-check');
-        var form_type = $.map(checks, function(e, i) {
-            return $(e).attr("name")
-        }).join(" ");
 
         $.validator.addMethod('require-photo', function(value) {
             return $('.require-photo:checked').size() > 0;
@@ -724,6 +758,8 @@ $(function() {
         var photo_upload = $.map(photos, function(e, i) {
             return $(e).attr("name")
         }).join(" ");
+
+
 
         // End Form Validation
 

@@ -727,6 +727,7 @@ $(function() {
 			return $('.product-check:checked').size() > 0;
 		}, 'Please check Ashford Formula or Retroplate.');
 
+
         $.validator.addMethod('require-check2', function(value) {
             return $('.require-check2:checked').size() > 0;
         }, 'Please check Domestic or International.');

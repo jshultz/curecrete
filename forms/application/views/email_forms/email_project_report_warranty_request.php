@@ -174,7 +174,7 @@
         </table>
 </div>
 
-    <table id="projectInformation" style="font-size: .75em; width: 750px;">
+    <table id="projectInformation" style="width: 750px;">
 
         <tr>
             <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;">

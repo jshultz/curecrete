@@ -511,10 +511,10 @@ $(function() {
 
 		$('#hoursAfterPlacementChecked').click(function() {
 			if($(this).is(":checked")) {
-				$.validator.addMethod('hours-check', function(value) {
-					return $('.hours-check:checked').size() > 0;
-				}, 'Please check at least one box.');
-			}
+                $('#warrantyRequest #hoursAfterPlacementNumbers input').addClass('required');
+			} else {
+                $('#warrantyRequest #hoursAfterPlacementNumbers input').removeClass('required');
+            }
 		})
 
         $('#warrantyRequestCheck').click(function() {

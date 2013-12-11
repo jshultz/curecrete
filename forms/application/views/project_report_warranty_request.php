@@ -407,8 +407,8 @@
             <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="warranty-request"></td>
         </tr>
         <tr>
-            <td class="label"><label for="applicatorFax">Fax</label> </td>
-            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class=""></td>
+            <td class="label"><label for="applicatorFax">Fax<sup>*</sup></label> </td>
+            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class="warranty-request"></td>
             <td class="label"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
             <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="warranty-request"></td>
         </tr>

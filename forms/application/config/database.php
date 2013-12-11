@@ -65,7 +65,7 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 $db['local']['hostname'] = 'localhost';
-$db['local']['username'] = 'root';
+$db['local']['username'] = 'axis41';
 $db['local']['password'] = '';
 $db['local']['database'] = 'curecrete_sitedb';
 $db['local']['dbdriver'] = 'mysql';

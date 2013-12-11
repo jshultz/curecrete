@@ -99,15 +99,15 @@
     <div id="headerTextFields">
     <div class="cell">
         <label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/>
-        <input name="distributorName" id="distributorName" type="text" class="required"><br/>
+        <input name="distributorName" id="distributorName" type="text" class="required" tabindex="1"><br/>
     </div>
     <div class="cell">
         <label for="distributorEmail">Distributor Email<sup>*</sup></label><br/>
-        <input name="distributorEmail" id="distributorEmail" type="text" class="required"><br/>
+        <input name="distributorEmail" id="distributorEmail" type="text" class="required" tabindex="2"><br/>
     </div>
     <div class="cell">
         <label for="poNumber">PO #</label><br/>
-        <input name="poNumber" id="poNumber" type="text" class=""><br/>
+        <input name="poNumber" id="poNumber" type="text" class="" tabindex="3"><br/>
     </div>
 </div>
 
@@ -120,34 +120,34 @@
         </tr>
         <tr>
             <td class="label"><label for="projectName">Project Name<sup>*</sup></label></td>
-            <td class="input"><input name="projectName" id="projectName" type="text" class="required"></td>
+            <td class="input"><input name="projectName" id="projectName" type="text" class="required" tabindex="4"></td>
             <td class="label"><label for="amountUsed"><span class="euro">Liters</span><span class="domestic">Gallons</span> Used<sup>*</sup></label> </td>
-            <td class="input"><input name="amountUsed" id="amountUsed" type="text" class="required"> </td>
+            <td class="input"><input name="amountUsed" id="amountUsed" type="text" class="required" tabindex="14"> </td>
         </tr>
         <tr>
             <td class="label"><label for="address">Address</label></td>
-            <td class="input"><input name="address" id="address" type="text" class=""></td>
+            <td class="input"><input name="address" id="address" type="text" class="" tabindex="5"></td>
             <td class="label"><label for="squareDistance"><span class="euro">m<sup>2</sup></span><span class="domestic">ft<sup>2</sup></span> <sup>*</sup></label> </td>
-            <td class="input"><input name="squareDistance" id="squareDistance" type="text" class="required"> </td>
+            <td class="input"><input name="squareDistance" id="squareDistance" type="text" class="required" tabindex="15"> </td>
         </tr>
         <tr>
             <td class="label"><label for="city">City<sup>*</sup></label></td>
-            <td class="input"><input name="city" id="city" type="text" class="required"></td>
+            <td class="input"><input name="city" id="city" type="text" class="required" tabindex="6"></td>
             <td class="label"><label for="initialApplicationDate">Initial Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="initialApplicationDate" id="initialApplicationDate" type="text" class="required"> </td>
+            <td class="input"><input name="initialApplicationDate" id="initialApplicationDate" type="text" class="required" tabindex="16"> </td>
         </tr>
         <tr>
             <td class="label"><label for="state">Province/State<sup>*</sup></label></td>
-            <td class="input"><input name="state" id="state" type="text" class="required"></td>
+            <td class="input"><input name="state" id="state" type="text" class="required" tabindex="7"></td>
             <td class="label"><label for="finalApplicationDate">Final Application Date<sup>*</sup></label> </td>
-            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate" class="required" type="text"> </td>
+            <td class="input"><input name="finalApplicationDate" id="finalApplicationDate" class="required" type="text" tabindex="17"> </td>
         </tr>
         <tr>
             <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
-            <td class="input"><input name="country" id="country" type="text" class="required"></td>
+            <td class="input"><input name="country" id="country" type="text" class="required" tabindex="8"></td>
             <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
-                <select name="building_use" id="building_use" class="required">
+                <select name="building_use" tabindex="18" id="building_use" class="required">
 	                <option value="">Please Choose One</option>
                     <option value="agricultural">Agricultural/Farm<sup>*</sup></option>
                     <option value="airport">Airport<sup>*</sup></option>
@@ -175,27 +175,27 @@
         </tr>
         <tr>
             <td class="label"><label for="projectOwner">Project Owner</label></td>
-            <td class="input"><input name="projectOwner" id="projectOwner" type="text" class=""></td>
+            <td class="input"><input name="projectOwner" id="projectOwner" type="text" class="" tabindex="9"></td>
             <td class="label"><label for="industry">Industry<sup>*</sup></label> </td>
-            <td class="input"><select name="industry" id="industry"></select> </td>
+            <td class="input"><select name="industry" id="industry" tabindex="19"></select> </td>
         </tr>
         <tr>
             <td class="label"><label for="specifierArchitect">Specifier/Architect</label></td>
-            <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class=""></td>
+            <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class="" tabindex="10""></td>
             <td class="label" rowspan="4"><label for="comments">Comments</label> </td>
-            <td class="input" rowspan="4"><textarea id="comments" name="comments"></textarea> </td>
+            <td class="input" rowspan="4"><textarea id="comments" name="comments" tabindex="20"></textarea> </td>
         </tr>
         <tr>
             <td class="label"><label for="generalContractor">General Contractor</label></td>
-            <td class="input"><input name="generalContractor" id="generalContractor" type="text" class=""></td>
+            <td class="input"><input name="generalContractor" id="generalContractor" type="text" class="" tabindex="11"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicator">Applicator<sup>*</sup></label></td>
-            <td class="input"><input name="applicator" id="applicator" type="text" class="required"></td>
+            <td class="input"><input name="applicator" id="applicator" type="text" class="required" tabindex="12"></td>
         </tr>
         <tr>
             <td class="label"><label for="flatWorker">Flat Worker / Sub-Contractor</label></td>
-            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class=""></td>
+            <td class="input"><input name="flatWorker" id="flatWorker" type="text" class="" tabindex="13"></td>
         </tr>
 
     </table>
@@ -384,33 +384,33 @@
         </tr>
         <tr>
             <td class="label"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
-            <td class="input"><input name="dateFloorWarrantied" id="dateFloorWarrantied" type="text" class="warranty-request"></td>
+            <td class="input"><input name="dateFloorWarrantied" id="dateFloorWarrantied" type="text" class="warranty-request" tabindex="21"></td>
             <td class="label"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorAddress" id="applicatorAddress" type="text" class="warranty-request" tabindex="26"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorCompany">Applicator Company Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorCompany" id="applicatorCompany" type="text" class="warranty-request" tabindex="22"></td>
             <td class="label"><label for="applicatorCity">City<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorCity" id="applicatorCity" type="text" class="warranty-request" tabindex="27"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class="warranty-request" tabindex="23"></td>
             <td class="label"><label for="applicatorState">State/Province<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorState" id="applicatorState" type="text" class="warranty-request" tabindex="28"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class="warranty-request" tabindex="24"></td>
             <td class="label"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="warranty-request" tabindex="29"></td>
         </tr>
         <tr>
             <td class="label"><label for="applicatorFax">Fax<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class="warranty-request" tabindex="25"></td>
             <td class="label"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
-            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="warranty-request"></td>
+            <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="warranty-request" tabindex="30"></td>
         </tr>
 
     </table>
@@ -418,11 +418,11 @@
     <table id="warrantyRequest2">
         <tr>
             <td class="label first"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
-            <td class="input" colspan="5"><textarea class="warranty-request" name="environmentalConditions" id="environmentalConditions"></textarea> </td>
+            <td class="input" colspan="5"><textarea class="warranty-request" name="environmentalConditions" id="environmentalConditions" tabindex="31"></textarea> </td>
         </tr>
         <tr>
             <td class="label first"><label for="weatherConditions">Weather Conditions During Ashford Formula Application<sup>*</sup></label></td>
-            <td class="input" colspan="5"><textarea class="warranty-request" name="weatherConditions" id="weatherConditions"></textarea> </td>
+            <td class="input" colspan="5"><textarea class="warranty-request" name="weatherConditions" id="weatherConditions" tabindex="32"></textarea> </td>
         </tr>
         <tr>
             <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>

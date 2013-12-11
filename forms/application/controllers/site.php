@@ -686,7 +686,7 @@ class Site extends CI_Controller
 
             $data['country'] = (string)$this->input->get_post('country', TRUE);
 
-            $data['buildingUse'] = (string)$this->input->get_post('buildingUse', TRUE);
+            $data['building_use'] = (string)$this->input->get_post('building_use', TRUE);
 
             $data['projectOwner'] = (string)$this->input->get_post('projectOwner', TRUE);
 

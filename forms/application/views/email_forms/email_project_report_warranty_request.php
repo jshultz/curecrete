@@ -210,7 +210,7 @@
             <td class="input"><?php echo $country; ?></td>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
-                <?php echo $buildingUse; ?>
+                <?php echo $building_use; ?>
             </td>
         </tr>
         <tr>
@@ -223,7 +223,7 @@
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="specifierArchitect">Specifier/Architect</label></td>
             <td class="input"><?php echo $specifierArchitect; ?></td>
             <td class="label" rowspan="4" style="width: 180px; background-color: #D3D3D3;"><label for="comments">Comments</label> </td>
-            <td class="input" rowspan="4"><p><?php echo $projectName; ?></p></td>
+            <td class="input" rowspan="4"><p><?php echo $comments; ?></p></td>
         </tr>
         <tr>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="generalContractor">General Contractor</label></td>

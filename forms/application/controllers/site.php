@@ -753,7 +753,7 @@ class Site extends CI_Controller
         if ($data['ashfordForulaCureNo'] == '1') { $data['ashfordForulaCureNo'] = '&#x2611;';} else { $data['ashfordForulaCureNo'] = '&#x2610;';}
 
             $data['appliedOnExistingFloor'] = (isset($_POST['appliedOnExistingFloor']))?true:false;
-        if ($data['leedNominatedCheck'] == '1') { $data['leedNominatedCheck'] = '&#x2611;';} else { $data['leedNominatedCheck'] = '&#x2610;';}
+        if ($data['appliedOnExistingFloor'] == '1') { $data['appliedOnExistingFloor'] = '&#x2611;';} else { $data['appliedOnExistingFloor'] = '&#x2610;';}
 
             $data['appliedAtTimeOfPlacement'] = (isset($_POST['appliedAtTimeOfPlacement']))?true:false;
         if ($data['appliedAtTimeOfPlacement'] == '1') { $data['appliedAtTimeOfPlacement'] = '&#x2611;';} else { $data['appliedAtTimeOfPlacement'] = '&#x2610;';}
@@ -764,7 +764,7 @@ class Site extends CI_Controller
             $data['hoursAfterPlacementNumbers'] = (string)$this->input->get_post('hoursAfterPlacementNumbers', TRUE);
 
             $data['floorBurnishedYes'] = (isset($_POST['floorBurnishedYes']))?true:false;
-        if ($data['floorBurnishedYes'] == '1') { $data['floorappliedOnExistingFloorBurnishedYes'] = '&#x2611;';} else { $data['floorBurnishedYes'] = '&#x2610;';}
+        if ($data['floorBurnishedYes'] == '1') { $data['floorBurnishedYes'] = '&#x2611;';} else { $data['floorBurnishedYes'] = '&#x2610;';}
 
             $data['floorBurnishedNo'] = (isset($_POST['floorBurnishedNo']))?true:false;
         if ($data['floorBurnishedNo'] == '1') { $data['floorBurnishedNo'] = '&#x2611;';} else { $data['floorBurnishedNo'] = '&#x2610;';}

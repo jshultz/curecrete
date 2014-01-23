@@ -19,10 +19,10 @@
 define('DB_NAME', 'curecret_sitedb');
 
 /** MySQL database username */
-define('DB_USER', 'curecret_siteu');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'vm0]w(QF8DFV');
+define('DB_PASSWORD', 'vagrant');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

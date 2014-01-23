@@ -45,7 +45,7 @@
 | the active record class
 */
 
-$active_group = 'local';
+$active_group = 'develop';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
@@ -64,21 +64,37 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-$db['local']['hostname'] = 'localhost';
-$db['local']['username'] = 'axis41';
-$db['local']['password'] = '';
-$db['local']['database'] = 'curecrete_sitedb';
-$db['local']['dbdriver'] = 'mysql';
-$db['local']['dbprefix'] = '';
-$db['local']['pconnect'] = TRUE;
-$db['local']['db_debug'] = TRUE;
-$db['local']['cache_on'] = FALSE;
-$db['local']['cachedir'] = '';
-$db['local']['char_set'] = 'utf8';
-$db['local']['dbcollat'] = 'utf8_general_ci';
-$db['local']['swap_pre'] = '';
-$db['local']['autoinit'] = TRUE;
-$db['local']['stricton'] = FALSE;
+$db['axis41']['hostname'] = 'localhost';
+$db['axis41']['username'] = 'axis41';
+$db['axis41']['password'] = '';
+$db['axis41']['database'] = 'curecrete_sitedb';
+$db['axis41']['dbdriver'] = 'mysql';
+$db['axis41']['dbprefix'] = '';
+$db['axis41']['pconnect'] = TRUE;
+$db['axis41']['db_debug'] = TRUE;
+$db['axis41']['cache_on'] = FALSE;
+$db['axis41']['cachedir'] = '';
+$db['axis41']['char_set'] = 'utf8';
+$db['axis41']['dbcollat'] = 'utf8_general_ci';
+$db['axis41']['swap_pre'] = '';
+$db['axis41']['autoinit'] = TRUE;
+$db['axis41']['stricton'] = FALSE;
+
+$db['develop']['hostname'] = 'localhost';
+$db['develop']['username'] = 'root';
+$db['develop']['password'] = 'vagrant';
+$db['develop']['database'] = 'curecret_sitedb';
+$db['develop']['dbdriver'] = 'mysql';
+$db['develop']['dbprefix'] = '';
+$db['develop']['pconnect'] = TRUE;
+$db['develop']['db_debug'] = TRUE;
+$db['develop']['cache_on'] = FALSE;
+$db['develop']['cachedir'] = '';
+$db['develop']['char_set'] = 'utf8';
+$db['develop']['dbcollat'] = 'utf8_general_ci';
+$db['develop']['swap_pre'] = '';
+$db['develop']['autoinit'] = TRUE;
+$db['develop']['stricton'] = FALSE;
 
 $db['production']['hostname'] = 'localhost';
 $db['production']['username'] = 'curecret_siteu';

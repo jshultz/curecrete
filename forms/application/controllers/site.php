@@ -39,22 +39,18 @@ class Site extends CI_Controller
 		$this->load->view('contest');
 	}
 
-	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage=""){
+	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage="", $photouploaded=""){
 		date_default_timezone_set('UTC');
 		$this->load->helper(array('My_Pdf'));   //  Load helper
 
-		create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage); //Email pdf
+		create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage, $photouploaded); //Email pdf
 
 		
 	}
 
 	public function int_purchase_order() {
 
-		if ($this->agent->is_referral() || base_url() == "http://curecrete-forms.local/forms/")
-		{
-			$this->load->view('int_purchase_order');
-
-		}
+        $this->load->view('int_purchase_order');
 	}
 
 	public function formsubmit()
@@ -474,6 +470,7 @@ class Site extends CI_Controller
 		}
 	}
 
+    /* Landing Page for Uploading Photos. Form submits to photo_upload */
     public function photoupload() {
         if (isset($_GET) || isset($_POST)) {
             $email = $this->input->get_post('email', TRUE);
@@ -569,6 +566,7 @@ class Site extends CI_Controller
                     $key = $x['uniqueKey'];
                     $clientid = $x['idclients'];
                     $formname = $x['Form'];
+                    $custemail = $x['Email'];
 
                 }
 
@@ -583,9 +581,12 @@ class Site extends CI_Controller
             $body .= '<p><strong>Client ID: </strong> ' . $clientid . '</p>';
             $body .= '<p><strong>Distributor Name: </strong> ' . $fullname . '</p>';
 
+            $custbody = '<p>Thank you for Your Submission. The following files were uploaded: </p>';
+
             foreach ($files as $key) {
 
                 $body .= '<p>' . 'File Uploaded: ' . $key['file_name'] . '</p>';
+                $custbody .= '<p>' . 'File Uploaded: ' . $key['file_name'] . '</p>';
             }
 
 
@@ -596,7 +597,7 @@ class Site extends CI_Controller
             $name = 'Curecrete Postmaster';
 
 //          $email = 'jasshultz@gmail.com';
-            $email = 'postmaster@curecrete.com';
+            $email = 'marketing@curecrete.com';
 
             $this->phpmailer->AddAddress($email);
 
@@ -613,6 +614,25 @@ class Site extends CI_Controller
             $this->phpmailer->Body = $body;
 
             $this->phpmailer->Send();
+
+            /* Send Email Confirmation to Customer */
+
+            $this->phpmailer->AddAddress($custemail);
+
+            $this->phpmailer->IsMail();
+
+            $this->phpmailer->From = 'postmaster@curecrete.com';
+
+            $this->phpmailer->FromName = 'Curecrete Postmaster';
+
+            $this->phpmailer->IsHTML(true);
+
+            $this->phpmailer->Subject = $subject;
+
+            $this->phpmailer->Body = $custbody;
+
+            $this->phpmailer->Send();
+
 
             $data['message'] = '<p>Thank you for submitting the photos for your <strong>Project Report</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
             $data['project'] = '';
@@ -836,7 +856,7 @@ class Site extends CI_Controller
         $zip = $data['country'];
         $phone = '';
         $email = $data['distributorEmail'];
-        $form = 'Warranty Request Form';
+        $form = 'Project Report/Warranty Request Form';
 
 
         $data['formid'] = $this->Clients_model->create_client($firstName, $lastName, $fullName, $address, $state, $zip, $phone, $email, $form);
@@ -849,13 +869,13 @@ class Site extends CI_Controller
 
         if ($data['uploadPhotosYes'] == '1') {
 
-            $photomessage = '<p><a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">Click Here to Submit More Photos</a>.</p>';
+            $photouploaded = '1';
 
-
+            $photomessage = '<p>Also, if you would like to upload photos for this particular project, or add more photos to the photos you have already submitted, please <a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">CLICK HERE TO SUBMIT MORE PROJECT PHOTOS</a>.  PLEASE NOTE:  This link is a unique link that will connect your photos to the project submitted below.  Please be sure you are submitting photos that pertain to this project only.  Thank you!</p>';
 
         } else {
 
-            $photomessage = '<p><a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">Click Here to Submit Your Photos</a>.</p>';
+            $photomessage = '<p>Also, if you would like to upload photos for this particular project, or add more photos to the photos you have already submitted, please <a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">CLICK HERE TO SUBMIT PROJECT PHOTOS</a>.  PLEASE NOTE:  This link is a unique link that will connect your photos to the project submitted below.  Please be sure you are submitting photos that pertain to this project only.  Thank you!</p>';
 
         }
 
@@ -868,7 +888,7 @@ class Site extends CI_Controller
 
         $file_name = 'Project_Report-' . $data['distributorName'] . '-' . date('dMY') . '-' . $random;
 
-        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage);
+        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded);
 
         $data['message'] = '<p>Thank you for submitting your <strong>Project Information/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="projectreports@curecrete.com">projectreports@curecrete.com</a>.</p>';
 	    $data['message'] .= '<p>You can also reach us by telephone at 801-489-5663.</p>';

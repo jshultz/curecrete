@@ -339,6 +339,7 @@ body.thankyou {
 
 #content.warranty label.error {
     color: red;
+    float: right;
 }
 
 body.pdf #content.warranty {
@@ -356,6 +357,23 @@ body.pdf #content.warranty {
 
 #content.warranty #header {
     height: 140px;
+}
+
+#content.warranty #header img.floatleft {
+    float: left;
+}
+
+#content.warranty #header h1 {
+    color: red;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 0;
+    float: left;
+}
+
+#content.warranty #header hr {
+    float: left;
+    width: 85%;
 }
 
 #content.warranty #header .title {
@@ -386,16 +404,49 @@ body.pdf #content.warranty {
 }
 
 #content.warranty #headerCheckboxes {
-    height: 100px;
+    height: 50px;
     width: 780px;
     font-size: .75em;
     margin-top: 30px;
 }
 
-#content.warranty #headerCheckboxes .block {
-    height: 75px;
-    width: 220px;
+#content.warranty #headerCheckboxes2 {
+    /* height: 100px; */
+    width: 660px;
+    font-size: .75em;
+    margin-top: 5px;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+    padding: 20px 60px;
+}
+
+#content.warranty #instructions {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    clear: both;
+}
+
+#content.warranty #instructions .leftcolumn {
     float: left;
+    width: 400px;
+}
+
+#content.warranty #instructions .address {
+    float:left;
+    margin-left:100px;
+    width: 215px;
+}
+
+#content.warranty #headerCheckboxes .block {
+    height: 40px;
+    width: 130px;
+    float: left;
+    padding: 5px 60px;
+}
+
+#content.warranty #headerCheckboxes .block.borderright {
+    border-right: 3px solid gray;
 }
 
 #content.warranty #headerCheckboxes .block .checkbox {
@@ -404,16 +455,19 @@ body.pdf #content.warranty {
 }
 
 #content.warranty #headerTextFields {
-    height: 75px;
+    height: 65px;
     width: 780px;
     font-size: .75em;
-    margin-top: 20px;
+    margin-top: 15px;
+    border-bottom: 3px solid gray;
+    margin-bottom: 20px;
 }
 
 #content.warranty #headerTextFields .cell {
+    height: 50px;
+    width: 161px;
     float: left;
-    width: 200px;
-    margin-right: 10px;
+    padding: 5px 45px;
 }
 
 #content.warranty #headerTextFields .cell:last-of-type {
@@ -480,7 +534,7 @@ body.pdf #content.warranty #headerCheckboxes table {
 }
 
 #content.warranty #warrantyRequest2 #hoursAfterPlacementCheckbox label {
-    margin-left: 16px;
+    margin-left: 0px;
 }
 
 #content.warranty #projectInformation tr,

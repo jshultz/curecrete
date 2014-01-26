@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 if (!function_exists('create_pdf')) {
 
-	function create_pdf($html_data, $file_name = "", $type = "D",$sendername='', $senderemail='', $photomessage='') {
+	function create_pdf($html_data, $file_name = "", $type = "D",$sendername='', $senderemail='', $photomessage='', $photouploaded='') {
 		if ($file_name == "") {
 			date_default_timezone_set('UTC');
 			$file_name = 'report' . date('dMY');
@@ -40,6 +40,8 @@ if (!function_exists('create_pdf')) {
 
 			$content = chunk_split(base64_encode($content));
 //			$mailto = 'Garrett.Soong@ashfordformula.com';
+
+
 			$mailto = 'customercare@curecrete.com';
 //			$mailto = 'jasshultz@gmail.com';
 			$from_name = 'Curecrete Postmaster';
@@ -51,7 +53,13 @@ if (!function_exists('create_pdf')) {
 			$filename = $file_name .'.pdf';
 
 			$header = "From: ".$from_name." <".$from_mail.">\r\n";
-			$header .= "Reply-To: ".$replyto."\r\n";
+
+            if ($photouploaded == '1') {
+                $marketing = 'marketing@ashfordformula.com';
+                $header .= "Bcc: $marketing\r\n";
+            }
+
+            $header .= "Reply-To: ".$replyto."\r\n";
 			$header .= "MIME-Version: 1.0\r\n";
 			$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
 			$header .= "This is a multi-part message in MIME format.\r\n";
@@ -69,10 +77,17 @@ if (!function_exists('create_pdf')) {
 
 			// Send to Customer
 
-			$message2 = '<p>Thank you for your submission.</p>';
-			$message2 .= '<p>You can also contact us at 800.998.5664';
-			$message2 .= '<p>This is the information which was submitted</p>';
+			$message2 = '<p>"Thank you for your submission.  If you have questions or concerns regarding your submission, please contact the Customer Care team at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or call 801-489-5663.</p>';
+
             $message2 .= $photomessage;
+
+            if (strlen($photomessage) > 0) {
+                $message2 .= '<p>The information you submitted for your Project Report/Warranty Request is as follows:</p>';
+            } else {
+                $message2 .= '<p>This is the information which was submitted</p>';
+            }
+
+
 			$message = '<html>' . $message2 . $html_data . '</html>';
 
 			$header = "From: ".$from_name." <".$from_mail.">\r\n";

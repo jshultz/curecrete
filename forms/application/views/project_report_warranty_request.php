@@ -38,77 +38,77 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 ?>
 
 
-<div id="header">
-    <img class="floatleft" src="/forms/assets/img/Curecrete-Logo_120x169.png"
-         style="margin-right: 10px; height: 100px; width: 71px">
+<div id="header" class="clearfix">
+    <section>
+        <img class="floatleft" src="/forms/assets/img/Curecrete-Logo_120x169.png"
+             style="margin-right: 10px; height: 100px; width: 71px">
 
-    <h1>Project Report &amp; Warranty Request</h1>
-    <hr>
-</div>
+        <h1>Project Report &amp; Warranty Request</h1>
+        <hr>
+    </section>
 
-<div id="instructions" class="clearfix" style="">
     <div class="leftcolumn" style="">
 
         <p>This form is intended to be used for submitting Project Reports and Warranty
             Requests for Ashford FormulaTM and RetroPlate® System projects.</p>
 
         <p><strong>INSTRUCTIONS:</strong></p>
-        <ol>
+        <ol style="padding-left: 15px; margin-top:0;">
             <li>
-                <p>If you are submitting a <strong>Project Report ONLY</strong>, complete “Project Information”
-                    and “Drum Information” sections.</p>
+                If you are submitting a <strong>Project Report ONLY</strong>, complete “Project Information”
+                    and “Drum Information” sections.
             </li>
             <li>
-                <p>If you are submitting a <strong>Warranty Request</strong>, or <strong>Project Report & Warranty
-                        Request</strong>, complete ALL sections.</p>
+                If you are submitting a <strong>Warranty Request</strong>, or <strong>Project Report & Warranty
+                        Request</strong>, complete ALL sections.
             </li>
             <li>
-                <p>Photos can be uploaded for <strong>Project Reports</strong>, <strong>Warranty Requests</strong>, and
+                Photos can be uploaded for <strong>Project Reports</strong>, <strong>Warranty Requests</strong>, and
                     <strong>Project
-                        Report & Warranty Requests</strong>.</p>
+                        Report & Warranty Requests</strong>.
 
-                <p><strong>Photos can be submitted with this form or uploaded at a later time</strong>. If you
+                <strong>Photos can be submitted with this form or uploaded at a later time</strong>. If you
                     have submitted photos with this form, but wish to upload more photos to this
                     particular project at a different time, please reference the link included in your
-                    confirmation email.</p>
+                    confirmation email.
 
-                <p>In order to identify that you are uploading the photos to the correct Project
+                In order to identify that you are uploading the photos to the correct Project
                     Report/Warranty Request, please identify the confirmation email which you
                     should have received for that specific project and follow the link provided at the
-                    top of that email.</p>
+                    top of that email.
 
-                <p><strong><em>PLEASE NOTE: The link to upload photos provided in the confirmation email is
-                            specific to that project, and is not a generic, use-for-all link.</em></strong></p>
+                <strong><em>PLEASE NOTE: The link to upload photos provided in the confirmation email is
+                            specific to that project, and is not a generic, use-for-all link.</em></strong>
 
             </li>
             <li>
-                <p>Required fields are identified by an asterisk (*).</p>
+                Required fields are identified by an asterisk (*).
             </li>
             <li>
-                <p>A “Thank You” confirmation webpage will let you know that your request has
-                    been successffully submitted to the Customer Care team.</p>
+                A “Thank You” confirmation webpage will let you know that your request has
+                    been successffully submitted to the Customer Care team.
             </li>
             <li>
-                <p>If you do not reach the “Thank You” confirmation webpage, your request has
+                If you do not reach the “Thank You” confirmation webpage, your request has
                     not been received. Please review the form to make sure all the required fields
-                    have been completed and then re-submit the request.</p>
+                    have been completed and then re-submit the request.
             </li>
             <li>
-                <p>Once your request has been successfully submitted, you will also receive a
+                Once your request has been successfully submitted, you will also receive a
                     confirmation email detailing your entire order submission to be kept for your
-                    records.</p>
+                    records.
             </li>
             <li>
-                <p>If you continue to experience problems with this form, contact the Customer
+                If you continue to experience problems with this form, contact the Customer
                     Care team at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or by phone
-                    at <strong>801-489-5663</strong>.</p>
+                    at <strong>801-489-5663</strong>.
             </li>
         </ol>
 
-
     </div>
+
     <div class="address" style="">
-        <p>
+        <p style="margin-top: 10px">
             <strong>Curecrete Distribution, Inc.</strong><br/>
             1203 W. Spring Creek Place<br/>
             Springville, UT 84663 USA
@@ -117,15 +117,16 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <p>
             PHN: 801.489.5663<br/>
             FAX: 801.489.3307<br/>
-            EMAIL: <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a>
+            EMAIL: <a href="mailto:projectreports@curecrete.com">projectreports@curecrete.com</a>
         </p>
     </div>
+
 </div>
 
 
 <div id="headerCheckboxes">
 
-    <div class="block borderright">
+    <div class="block borderright first">
         <div class="checkbox">
             <input name="projectReportOnlyCheck" id="projectReportOnlyCheck" type="checkbox" class="require-check"
                    title="Only Fill out Project Information and Drum Information" checked>
@@ -184,7 +185,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
 
 <div id="headerTextFields">
-    <div class="cell">
+    <div class="cell first">
         <label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/>
         <input name="distributorName" id="distributorName" type="text" class="required" tabindex="1"><br/>
     </div>
@@ -202,7 +203,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
     <tr>
         <th colspan="5">
-            <p>Project Information</p>
+            <p><span>Project Information</span></p>
         </th>
     </tr>
     <tr>
@@ -296,7 +297,11 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
 <table id="drumInformation">
     <tr>
-        <th colspan="8" style="padding: 10px;"><p>D R U M I N F O R M A T I O N – Drum Number(s) / Liter(s) or Gallon(s)
+        <th colspan="9" style="padding: 10px;">
+
+            <p><span>Drum Information</span></p>
+
+            <p>Drum Number(s) / Liter(s) or Gallon(s)
                 Used</p>
 
             <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
@@ -474,7 +479,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 <table id="warrantyRequest">
     <tr>
         <th colspan="4">
-            <p>Warranty Request</p>
+            <p><span>Warranty Request</span></p>
 
             <p>International Distributors are to provide a signed, binding letter of certification stating they will
                 assume financial responsibility for the 5-Year Labor portion of the warranty.</p>
@@ -634,7 +639,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
 <table id="corporateProjects">
     <tr>
-        <th><p>Corporate Projects</p></th>
+        <th><p><span>Partnering Services Projects</span></p></th>
     </tr>
     <tr>
         <td>
@@ -647,9 +652,14 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
 <table id="photos">
     <tr>
+        <th colspan="4">
+            <p><span>Photos</span></p>
+        </th>
+    </tr>
+    <tr>
         <td class="input"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes" class="require-photo"></td>
         <td class="label"><label for="uploadPhotosYes">I will submit photos of this project with this form.</label></td>
-        <td rowspan="2"><input type="submit" value="Submit"></td>
+        <td rowspan="2"><input style="margin:0 auto;height: 35px;width: 120px;font-size: 16px;line-height: 16px;" type="submit" value="Submit"></td>
     </tr>
     <tr>
         <td class="input"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo" class="require-photo"></td>

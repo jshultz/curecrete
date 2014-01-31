@@ -520,6 +520,18 @@ body.pdf #content.warranty #headerCheckboxes table {
     margin-bottom: 20px;
 }
 
+#content.warranty #photos {
+    width: 769px;
+}
+
+#content.warranty #building_use {
+    width: 243px;
+}
+
+#content.warranty #industry {
+    width: 243px;
+}
+
 #content.warranty #warrantyRequest {
     margin-bottom: 0;
 }
@@ -528,14 +540,18 @@ body.pdf #content.warranty #headerCheckboxes table {
     display: none;
 }
 
+#content.warranty #corporateProjects {
+    width: 769px;
+}
+
 #content.warranty #corporateProjects #corporateProjectsText {
-    width: 750px;
+    width: 763px;
     height: 100px;
 }
 
 #content.warranty #projectInformation #comments {
     width: 238px;
-    height: 75px;
+    height: 95px;
 }
 
 #content.warranty #warrantyRequest2 #environmentalConditions,
@@ -549,7 +565,8 @@ body.pdf #content.warranty #headerCheckboxes table {
 }
 
 #content.warranty #warrantyRequest2 #hoursAfterPlacementCheckbox {
-    width: 150px;
+    width: 125px;
+    margin-left: 15px;
 }
 
 #content.warranty #warrantyRequest2 #hoursAfterPlacementCheckbox label {
@@ -586,7 +603,7 @@ body.pdf #content.warranty #warrantyRequest2 td.label.first {
 }
 
 #content.warranty #warrantyRequest2 .checkbox {
-    width: 130px;
+    width: 140px;
 }
 
 #content.warranty #drumInformation td.label {
@@ -604,6 +621,12 @@ body.pdf #content.warranty #warrantyRequest2 td.label.first {
 body.pdf #content.warranty #drumInformation td {
     text-align: center;
 }
+
+#content.warranty table img.addRow {
+    height: 16px;
+    width: 16px;
+}
+
 
 #content.warranty #warrantyRequest input[type="text"],
 #content.warranty #warrantyRequest2 input[type="text"],
@@ -625,7 +648,8 @@ body.pdf #content.warranty #drumInformation td {
 #content.warranty #projectInformation th,
 #content.warranty #drumInformation th,
 #content.warranty #warrantyRequest th,
-#content.warranty #corporateProjects th {
+#content.warranty #corporateProjects th,
+#content.warranty #photos th {
     background-color: #000000;
     color: #ffffff;
     text-align: center;

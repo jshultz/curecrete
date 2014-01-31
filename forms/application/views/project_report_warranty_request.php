@@ -337,6 +337,9 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <td class="label">
             <label><span class="euro">Liters</span><span class="domestic">Gallons</span></label>
         </td>
+        <td class="label">
+            <label>Add Row</label>
+        </td>
     </tr>
     <tr>
         <td>
@@ -555,7 +558,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
                 <label for="ashfordForulaCureNo">No</label>
             </div>
         </td>
-        <td class="label">
+        <td class="label" rowspan="2">
             <label for="appliedToConcrete">Applied To Concrete?<sup>*</sup></label>
         </td>
         <td class="input" width="155px">
@@ -605,9 +608,9 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
                 <label for="floorBurnishedNo">No</label>
             </div>
         </td>
-        <td class="label">
-
-        </td>
+<!--        <td class="label">-->
+<!---->
+<!--        </td>-->
         <td class="input">
             <div class="checkbox" id="hoursAfterPlacementCheckbox">
                 <input name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text"
@@ -655,6 +658,9 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <th colspan="4">
             <p><span>Photos</span></p>
         </th>
+    </tr>
+    <tr>
+        <td colspan="4"><p>&nbsp;</p></td>
     </tr>
     <tr>
         <td class="input"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes" class="require-photo"></td>

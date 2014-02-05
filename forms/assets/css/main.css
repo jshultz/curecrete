@@ -473,9 +473,9 @@ body.pdf #content.warranty {
 
 #content.warranty #headerTextFields .cell {
     height: 50px;
-    width: 155px;
+    width: 231px;
     float: left;
-    padding: 5px 59px;
+    padding: 5px 50px;
 }
 
 #content.warranty #headerTextFields .cell.first {
@@ -484,6 +484,9 @@ body.pdf #content.warranty {
 
 #content.warranty #headerTextFields .cell:last-of-type {
     margin-right: 0;
+    width: 94px;
+    padding: 0 0px;
+    margin-left: 50px;
 }
 
 #content.warranty #headerTextFields .cell input {
@@ -491,7 +494,7 @@ body.pdf #content.warranty {
 }
 
 #content.warranty #headerTextFields .cell:last-of-type input {
-    width: 175px;
+    width: 80px;
 }
 
 #content.warranty #headerTextFields input {
@@ -556,7 +559,7 @@ body.pdf #content.warranty #headerCheckboxes table {
 
 #content.warranty #warrantyRequest2 #environmentalConditions,
 #content.warranty #warrantyRequest2 #weatherConditions {
-    width: 630px;
+    width: 628px;
     height: 75px;
 }
 
@@ -594,8 +597,17 @@ body.pdf #content.warranty #headerCheckboxes td.label,
     text-align: center;
 }
 
-#content.warranty #warrantyRequest2 td.label.first {
-    width: 118px;
+#content.warranty #warrantyRequest2 td.label.applied {
+    width: 65px;
+}
+
+#content.warranty #warrantyRequest2 td.label.applied {
+    width: 86px;
+}
+
+#content.warranty #warrantyRequest2 td.input.first .checkbox,
+#content.warranty #warrantyRequest2 td.input.last .checkbox {
+    width: 130px;
 }
 
 body.pdf #content.warranty #warrantyRequest2 td.label.first {
@@ -603,7 +615,7 @@ body.pdf #content.warranty #warrantyRequest2 td.label.first {
 }
 
 #content.warranty #warrantyRequest2 .checkbox {
-    width: 140px;
+    width: 150px;
 }
 
 #content.warranty #drumInformation td.label {

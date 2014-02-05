@@ -147,7 +147,7 @@ $(function() {
                 $('#industry').html(recreation);
             }
 
-            else if (str == 'warehouse') {
+            else if (str == 'warehouse' || str == 'retail' || str == 'manufacturing') {
                 $('#industry').find('option').remove();
                 $('#industry').html(warehouse);
             }

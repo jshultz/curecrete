@@ -875,6 +875,8 @@ class Site extends CI_Controller
 
         } else {
 
+            $photouploaded = '0';
+
             $photomessage = '<p>Also, if you would like to upload photos for this particular project, or add more photos to the photos you have already submitted, please <a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">CLICK HERE TO SUBMIT PROJECT PHOTOS</a>.  PLEASE NOTE:  This link is a unique link that will connect your photos to the project submitted below.  Please be sure you are submitting photos that pertain to this project only.  Thank you!</p>';
 
         }
@@ -890,8 +892,10 @@ class Site extends CI_Controller
 
         $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded);
 
-        $data['message'] = '<p>Thank you for submitting your <strong>Project Information/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.  If you have any questions, please email the Customer Care team at <a href="projectreports@curecrete.com">projectreports@curecrete.com</a>.</p>';
-	    $data['message'] .= '<p>You can also reach us by telephone at 801-489-5663.</p>';
+        $data['message'] = '<p>Thank you for submitting your <strong>Project Report/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.</p>';
+        $data['message'] .= '<p>If you have general questions regarding your submission, please email the Customer Care team at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
+	    $data['message'] .= '<p>If you have questions regarding your inventory or consignment, please email <a href="mailto:projectreports@curecrete.com">projectreports@curecrete.com</a>.</p>';
+        $data['message'] .= '<p>You can also reach us by telephone at 801-489-5663.</p>';
 	    $data['message'] .= '<p>Would you like to submit another form? <a href="' . base_url() . 'site/project_report_warranty_request">Click Here.</a></p>';
 
         $data['project'] = '';

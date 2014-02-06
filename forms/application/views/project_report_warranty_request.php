@@ -53,53 +53,56 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
             Requests for Ashford Formula<sup>&trade;</sup> and RetroPlate<sup>®</sup> System projects.</p>
 
         <p><strong>INSTRUCTIONS:</strong></p>
-        <ol style="padding-left: 15px; margin-top:0;">
+        <ol class="instructions" style="padding-left: 15px; margin-top:0;">
             <li>
-                If you are submitting a <strong>Project Report ONLY</strong>, complete “Project Information”
-                    and “Drum Information” sections.
+                <p>If you are submitting a <strong>Project Report ONLY</strong>, complete “Project Information”
+                    and “Drum Information” sections.</p>
             </li>
             <li>
-                If you are submitting a <strong>Warranty Request</strong>, complete all sections.<br/><br/>
-                <em>PLEASE NOTE: By submitting a Warranty Request, you are automatically completing the form for a Project Report.</em>
-            </li>
-            <li>
-                Photos can be uploaded for <strong>Project Reports</strong> and <strong>Warranty Requests</strong>.<br/><br/>
+                <p>If you are submitting a <strong>Warranty Request</strong>, complete all sections.</p>
 
-                <strong>Photos can be submitted with this form or uploaded at a later time</strong>. If you
+                <p><em>PLEASE NOTE: By submitting a Warranty Request, you are automatically completing a Project
+                        Report.</em></p>
+            </li>
+            <li>
+                <p>Photos can be uploaded for <strong>Project Reports</strong> and <strong>Warranty Requests</strong>.
+                </p>
+
+                <p><strong>Photos can be submitted with this form or uploaded at a later time</strong>. If you
                     have submitted photos with this form, but wish to upload more photos to this
                     particular project at a different time, please reference the link included in your
-                    confirmation email.
-<br/><Br/>
-                In order to identify that you are uploading the photos to the correct Project
+                    confirmation email.</p>
+
+                <p>In order to identify that you are uploading the photos to the correct Project
                     Report/Warranty Request, please identify the confirmation email which you
                     should have received for that specific project and follow the link provided at the
-                    top of that email.
-<br/><br/>
-                <strong><em>PLEASE NOTE: The link to upload photos provided in the confirmation email is
-                            specific to that project, and is not a generic, use-for-all link.</em></strong>
+                    top of that email.</p>
+
+                <p><strong><em>PLEASE NOTE: The link to upload photos provided in the confirmation email is
+                            specific to that project, and is not a generic, use-for-all link.</em></strong></p>
 
             </li>
             <li>
-                Required fields are identified by an asterisk (*).
+                <p>Required fields are identified by an asterisk (*).</p>
             </li>
             <li>
-                A “Thank You” confirmation webpage will let you know that your request has
-                    been successfully submitted to the Customer Care team.
+                <p>A “Thank You” confirmation webpage will let you know that your request has
+                    been successfully submitted to the Customer Care team.</p>
             </li>
             <li>
-                If you do not reach the “Thank You” confirmation webpage, your request has
+                <p>If you do not reach the “Thank You” confirmation webpage, your request has
                     not been received. Please review the form to make sure all the required fields
-                    have been completed and then re-submit the request.
+                    have been completed and then re-submit the request.</p>
             </li>
             <li>
-                Once your request has been successfully submitted, you will also receive a
+                <p>Once your request has been successfully submitted, you will also receive a
                     confirmation email detailing your entire order submission to be kept for your
-                    records.
+                    records.</p>
             </li>
             <li>
-                If you continue to experience problems with this form, contact the Customer
+                <p>If you continue to experience problems with this form, contact the Customer
                     Care team at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or by phone
-                    at <strong>801-489-5663</strong>.
+                    at <strong>801-489-5663</strong>.</p>
             </li>
         </ol>
 
@@ -188,8 +191,11 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <input name="distributorName" id="distributorName" type="text" class="required" tabindex="1"><br/>
     </div>
     <div class="cell">
-        <label for="distributorEmail" title="A confirmation email of your submission will be sent to this email address.">Distributor Email<sup>*</sup></label><br/>
-        <input name="distributorEmail" id="distributorEmail" type="text" class="required" tabindex="2" title="A confirmation email of your submission will be sent to this email address."><br/>
+        <label for="distributorEmail"
+               title="A confirmation email of your submission will be sent to this email address.">Distributor
+            Email<sup>*</sup></label><br/>
+        <input name="distributorEmail" id="distributorEmail" type="text" class="required" tabindex="2"
+               title="A confirmation email of your submission will be sent to this email address."><br/>
     </div>
     <div class="cell">
         <label for="poNumber">PO #</label><br/>
@@ -251,14 +257,14 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
                 <option value="government">Government/Municipal<sup>*</sup></option>
                 <option value="health">Health Care</option>
                 <option value="hotel">Hotel/Hospitality</option>
-                <option value="manufacturing">Manufacturing</option>
+                <option value="manufacturing">Manufacturing<sup>*</sup></option>
                 <option value="office">Office</option>
                 <option value="parking">Parking<sup>*</sup></option>
                 <option value="power">Power Generation</option>
                 <option value="printing">Printing</option>
                 <option value="recreation">Recreation<sup>*</sup></option>
                 <option value="residential">Residential</option>
-                <option value="retail">Retail</option>
+                <option value="retail">Retail<sup>*</sup></option>
                 <option value="transportation">Transportation</option>
                 <option value="warehouse">Warehouse/Distribution Center<sup>*</sup></option>
             </select>
@@ -506,8 +512,8 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <td class="label"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label></td>
         <td class="input"><input name="applicatorOwner" id="applicatorOwner" type="text" class="warranty-request"
                                  tabindex="23"></td>
-        <td class="label"><label for="applicatorState">State/Province<sup>*</sup></label></td>
-        <td class="input"><input name="applicatorState" id="applicatorState" type="text" class="warranty-request"
+        <td class="label"><label for="applicatorState">State/Province</label></td>
+        <td class="input"><input name="applicatorState" id="applicatorState" type="text" class=""
                                  tabindex="28"></td>
     </tr>
     <tr>
@@ -546,13 +552,15 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <td class="label first"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
         <td class="input first">
             <div class="checkbox">
-                <input tabindex="33" name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox" class="cure-check">
+                <input tabindex="33" name="ashfordForulaCureYes" id="ashfordForulaCureYes" type="checkbox"
+                       class="cure-check">
                 <label for="ashfordForulaCureYes">Yes</label>
             </div>
 
 
             <div class="checkbox">
-                <input tabindex="34" name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox" class="cure-check">
+                <input tabindex="34" name="ashfordForulaCureNo" id="ashfordForulaCureNo" type="checkbox"
+                       class="cure-check">
                 <label for="ashfordForulaCureNo">No</label>
             </div>
         </td>
@@ -561,29 +569,33 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         </td>
         <td class="input">
             <div class="checkbox">
-                <input tabindex="35" name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox" class="applied-check">
+                <input tabindex="37" name="appliedOnExistingFloor" id="appliedOnExistingFloor" type="checkbox"
+                       class="applied-check">
                 <label for="appliedOnExistingFloor">On Existing Floor?</label>
             </div>
 
 
             <div class="checkbox">
-                <input tabindex="36" name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox"
+                <input tabindex="38" name="appliedAtTimeOfPlacement" id="appliedAtTimeOfPlacement" type="checkbox"
                        class="applied-check">
                 <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
             </div>
         </td>
         <td class="label supervised">
-            <label for="applicationSupervisedByDistributor">Application Supervised by Rep/Distributor?<sup>*</sup></label>
+            <label for="applicationSupervisedByDistributor">Application Supervised by
+                Rep/Distributor?<sup>*</sup></label>
         </td>
         <td class="input last">
             <div class="checkbox">
-                <input tabindex="37" name="applicationSupervisedByDistributorYes" id="applicationSupervisedByDistributorYes"
+                <input tabindex="40" name="applicationSupervisedByDistributorYes"
+                       id="applicationSupervisedByDistributorYes"
                        type="checkbox" class="app-check">
                 <label for="applicationSupervisedByDistributorYes">Yes</label>
             </div>
 
             <div class="checkbox">
-                <input tabindex="38" name="applicationSupervisedByDistributorNo" id="applicationSupervisedByDistributorNo"
+                <input tabindex="41" name="applicationSupervisedByDistributorNo"
+                       id="applicationSupervisedByDistributorNo"
                        type="checkbox" class="app-check">
                 <label for="applicationSupervisedByDistributorNo">No</label>
             </div>
@@ -596,22 +608,25 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         </td>
         <td class="input first">
             <div class="checkbox">
-                <input tabindex="39" name="floorBurnishedYes" id="floorBurnishedYes" type="checkbox" class="burnished-check">
+                <input tabindex="35" name="floorBurnishedYes" id="floorBurnishedYes" type="checkbox"
+                       class="burnished-check">
                 <label for="floorBurnishedYes">Yes</label>
             </div>
 
 
             <div class="checkbox">
-                <input tabindex="40" name="floorBurnishedNo" id="floorBurnishedNo" type="checkbox" class="burnished-check">
+                <input tabindex="36" name="floorBurnishedNo" id="floorBurnishedNo" type="checkbox"
+                       class="burnished-check">
                 <label for="floorBurnishedNo">No</label>
             </div>
         </td>
-<!--        <td class="label">-->
-<!---->
-<!--        </td>-->
+        <!--        <td class="label">-->
+        <!---->
+        <!--        </td>-->
         <td class="input">
             <div class="checkbox" id="rrsAfterPlacementCheckbox">
-                <input style="width: 120px;" tabindex="41" name="hoursAfterPlacementNumbers" id="hoursAfterPlacementNumbers" type="text"
+                <input style="width: 120px;" tabindex="39" name="hoursAfterPlacementNumbers"
+                       id="hoursAfterPlacementNumbers" type="text"
                        class="hours-check"><br/>
                 <label for="hoursAfterPlacement" id=""># Hours After Placement</label>
             </div>
@@ -661,12 +676,15 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <td colspan="4"><p>&nbsp;</p></td>
     </tr>
     <tr>
-        <td class="input" tabindex="45"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes" class="require-photo"></td>
+        <td class="input" tabindex="45"><input type="checkbox" id="uploadPhotosYes" name="uploadPhotosYes"
+                                               class="require-photo"></td>
         <td class="label"><label for="uploadPhotosYes">I will submit photos of this project with this form.</label></td>
-        <td rowspan="2"><input style="margin:0 auto;height: 35px;width: 120px;font-size: 16px;line-height: 16px;" type="submit" value="Submit"></td>
+        <td rowspan="2"><input style="margin:0 auto;height: 35px;width: 120px;font-size: 16px;line-height: 16px;"
+                               type="submit" value="Submit"></td>
     </tr>
     <tr>
-        <td class="input" tabindex="46"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo" class="require-photo"></td>
+        <td class="input" tabindex="46"><input type="checkbox" id="uploadPhotosNo" name="uploadPhotosNo"
+                                               class="require-photo"></td>
         <td class="label"><label for="uploadPhotosNo">I will submit photos of this project at a later time.</label></td>
     </tr>
     <tr>

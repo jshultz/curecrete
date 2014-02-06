@@ -891,13 +891,12 @@ class Site extends CI_Controller
         $file_name = 'Project_Report-' . $data['distributorName'] . '-' . date('dMY') . '-' . $random;
 
         $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded);
-
-        $data['message'] = '<p>Thank you for submitting your <strong>Project Report/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.</p>';
-        $data['message'] .= '<p>If you have general questions regarding your submission, please email the Customer Care team at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a>.</p>';
-	    $data['message'] .= '<p>If you have questions regarding your inventory or consignment, please email <a href="mailto:projectreports@curecrete.com">projectreports@curecrete.com</a>.</p>';
-        $data['message'] .= '<p>You can also reach us by telephone at 801-489-5663.</p>';
-	    $data['message'] .= '<p>Would you like to submit another form? <a href="' . base_url() . 'site/project_report_warranty_request">Click Here.</a></p>';
-
+        $data['message'] = '<div style="text-align:center;">';
+        $data['message'] .= '<p>Thank you for submitting your <strong>Project Report/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.</p>';
+        $data['message'] .= '<p><strong><em><span style="text-decoration: underline">Questions Regarding Your Submission?</span></em></strong><br/><a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or 801-489-5663</p>';
+	    $data['message'] .= '<p><strong><em><span style="text-decoration: underline">Questions Regarding Inventory and Consignment?</span> </em></strong><br/><a href="mailto:projectreports@curecrete.com">projectreports@curecrete.com</a></p>';
+	    $data['message'] .= '<p>Would you like to submit another form?<br/><a href="' . base_url() . 'site/project_report_warranty_request">Click Here</a></p>';
+        $data['message'] .= '</div>';
         $data['project'] = '';
 
         $this->load->view('thankyou', $data);

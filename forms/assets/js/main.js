@@ -519,7 +519,13 @@ $(function() {
 
         $('#warrantyRequestCheck').click(function() {
             if ($(this).is(":checked")) {
-                $('#warrantyRequest input').addClass('required');
+
+                $('#warrantyRequest input').each(function(i){
+                    if($(this).hasClass('warranty-request')) {
+                        $(this).addClass('required');
+                    }
+                })
+
 				$('#warrantyRequest2 textarea').addClass('required');
                 $('#projectReportOnlyCheck').prop("checked", false);
                 $('#warrantyRequest input:has(.warranty-request)').addClass('required');
@@ -669,6 +675,27 @@ $(function() {
                 $('#floorBurnishedYes').prop("checked", false);
             } else {
                 $('#floorBurnishedYes').prop("checked", true);
+            }
+        });
+
+        $('#appliedOnExistingFloor').click(function() {
+            if ($(this).is(":checked")) {
+                $('#appliedAtTimeOfPlacement').prop("checked", false);
+                $('#hoursAfterPlacementNumbers').removeClass('required');
+            } else {
+                $('#appliedAtTimeOfPlacement').prop("checked", true);
+                $('#hoursAfterPlacementNumbers').addClass('required');
+            }
+        });
+
+        $('#appliedAtTimeOfPlacement').click(function() {
+            if ($(this).is(":checked")) {
+                $('#appliedOnExistingFloor').prop("checked", false);
+                $('#hoursAfterPlacementNumbers').addClass('required');
+
+            } else {
+                $('#appliedOnExistingFloor').prop("checked", true);
+                $('#hoursAfterPlacementNumbers').removeClass('required');
             }
         });
 

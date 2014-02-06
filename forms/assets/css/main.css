@@ -369,16 +369,8 @@ body.pdf #content.warranty {
     font-size: 12px;
 }
 
-#content.warranty #header img.floatleft {
-    float: left;
-}
-
-#content.warranty #header h1 {
-
-}
-
-#content.warranty #header hr {
-
+#content.warranty ol.instructions p {
+    margin: .5em 0;
 }
 
 #content.warranty #instructions {

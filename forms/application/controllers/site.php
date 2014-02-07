@@ -877,7 +877,7 @@ class Site extends CI_Controller
 
         $photomessage = '<p><a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&key=' . $key . '"><strong>CLICK HERE TO SUBMIT PROJECT PHOTOS</strong></a><br/>';
 
-        $photomessage .= 'If you would like to upload photos for this project now, or at a later time, please click on the link above. </p><p> <span style="font-size: 13px;"><em>(PLEASE NOTE: This link is a unique link that connects your photos to the project listed below and is identified by the "<strong>Customer Unique Form ID</strong>" number)</em></span> </p>';
+        $photomessage .= 'If you would like to upload photos for this project now, or at a later time, please click on the link above. <br/> <span style="font-size: 13px;"><em>(PLEASE NOTE: This link is a unique link that connects your photos to the project listed below and is identified by the "<strong>Customer Unique Form ID</strong>" number)</em></span> </p>';
 
         $photomessage .= 'Questions or concerns regarding your submission?  Contact Customer Care at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or call 801-489-5663.';
 

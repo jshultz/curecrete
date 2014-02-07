@@ -877,7 +877,7 @@ class Site extends CI_Controller
 
         $photomessage = '<p><a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&key=' . $key . '"><strong>CLICK HERE TO SUBMIT PROJECT PHOTOS</strong></a><br/>';
 
-        $photomessage .= 'If you would like to upload photos for this project now, or at a later time, please click on the link above.  <span style="font-size: 13px;"><em>(PLEASE NOTE: This link is a unique link that connects your photos to the project listed below and is identified by the "<strong>Customer Unique Form ID</strong>" number)</em></span> </p>';
+        $photomessage .= 'If you would like to upload photos for this project now, or at a later time, please click on the link above. </p><p> <span style="font-size: 13px;"><em>(PLEASE NOTE: This link is a unique link that connects your photos to the project listed below and is identified by the "<strong>Customer Unique Form ID</strong>" number)</em></span> </p>';
 
         $photomessage .= 'Questions or concerns regarding your submission?  Contact Customer Care at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or call 801-489-5663.';
 
@@ -890,9 +890,9 @@ class Site extends CI_Controller
 
         $random = random_string('alnum', 4);
 
-        $file_name = 'PR-WR-' . $data['distributorName'] . '-' . $random . '-' . date('dMY');
+        $file_name = 'PR-WR-' . $data['distributorName'] . '-' . $data['formid'] . '-' . date('dMY');
 
-        $emailsubject = 'PR/WR Form Submission-' . $data['distributorName'] . '-' . $random;
+        $emailsubject = 'PR/WR Form Submission-' . $data['distributorName'] . '-' . $data['formid'];
 
         $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded, $emailsubject);
         $data['message'] = '<div style="text-align:center;">';

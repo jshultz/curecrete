@@ -25,6 +25,8 @@ if (!function_exists('create_pdf')) {
 		if ($type == 'S') {
 			// Send as Email
 
+			$message2 = '';
+
 			$message2 = '<p>You have a new submission. The details are as follows:</p>';
 
 			$content = $mypdf->Output($file_name, 'S');

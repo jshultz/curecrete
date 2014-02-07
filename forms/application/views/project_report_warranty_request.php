@@ -187,13 +187,11 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
 <div id="headerTextFields">
     <div class="cell first">
-        <label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/>
+	    <lable for="distributorName"><span class="euro">Distributor Submitting Form<sup>*</sup></span><span class="domestic">Customer/Rep Submitting Form<sup>*</sup></span> </lable><br/>
         <input name="distributorName" id="distributorName" type="text" class="required" tabindex="1"><br/>
     </div>
     <div class="cell">
-        <label for="distributorEmail"
-               title="A confirmation email of your submission will be sent to this email address.">Distributor
-            Email<sup>*</sup></label><br/>
+	    <lable for="distributorEmail" title="A confirmation email of your submission will be sent to this email address."><span class="euro">Distributor Email<sup>*</sup></span><span class="domestic">Customer/Rep Email<sup>*</sup></span> </lable><br/>
         <input name="distributorEmail" id="distributorEmail" type="text" class="required" tabindex="2"
                title="A confirmation email of your submission will be sent to this email address."><br/>
     </div>
@@ -220,8 +218,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
     <tr>
         <td class="label"><label for="address">Address</label></td>
         <td class="input"><input name="address" id="address" type="text" class="" tabindex="5"></td>
-        <td class="label"><label for="squareDistance"><span class="euro">m<sup>2</sup></span><span
-                    class="domestic">ft<sup>2</sup></span> <sup>*</sup></label></td>
+        <td class="label"><label for="squareDistance"><span class="euro">m<sup>2</sup></span><span class="domestic">ft<sup>2</sup></span> <sup>*</sup></label></td>
         <td class="input"><input name="squareDistance" id="squareDistance" type="text" class="required" tabindex="15">
         </td>
     </tr>
@@ -240,7 +237,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
                                  tabindex="17"></td>
     </tr>
     <tr>
-        <td class="label"><label for="postalCode">Postal Code<sup>*</sup></label></td>
+        <td class="label"><label for="postalCode">Postal Code</label></td>
         <td class="input"><input name="postalCode" id="postalCode" type="text" class="" tabindex="8"></td>
         <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label></td>
         <td class="input">
@@ -496,6 +493,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 
             <p>International Distributors are to provide a signed, binding letter of certification stating they will
                 <br/>assume financial responsibility for the 5-Year Labor portion of the warranty.</p>
+	        <p><a style="color: #ffffff" target="_blank" href="http://www.bluedrum.com/docs/Operations/Domestic/Warranties/5-Year%20Warranty%20Letter%205-11-10_distributed%20with%20Note.pdf">Click here to download the 5-Year Labor Warranty template.</a></p>
         </th>
     </tr>
     <tr>

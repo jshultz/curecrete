@@ -159,9 +159,15 @@
     <div id="headerTextFields" style="font-size: .75em; margin-top: 20px;">
         <table style="font-size: 1em; width: 750px;">
             <tr>
-                <td class="label" style="width: 180px; background-color: #D3D3D3; padding-left: 5px;"><label for="distributorName">Distributor Submitting Form<sup>*</sup></label><br/></td>
+                <td class="label" style="width: 180px; background-color: #D3D3D3; padding-left: 5px;">
+	                <label for="distributorName"><?php if($domesticProjectCheck == '&#x2611;') {echo 'Customer/Rep Submitting Form';} else {echo 'Distributor Submitting Form<sup>*</sup>';} ?></label>
+	                <br/>
+                </td>
                 <td><?php echo $distributorName; ?></td>
-                <td class="label" style="width: 120px; background-color: #D3D3D3; padding-left: 5px;"><label for="distributorEmail">Distributor Email<sup>*</sup></label><br/></td>
+                <td class="label" style="width: 120px; background-color: #D3D3D3; padding-left: 5px;">
+	                <label for="distributorEmail"><?php if($domesticProjectCheck == '&#x2611;') {echo 'Customer/Rep Email<sup>*</sup>';} else {echo 'Distributor Email<sup>*</sup>';} ?></label>
+	                <br/>
+                </td>
                 <td><?php echo $distributorEmail; ?></td>
                 <td class="label" style="width: 45px; background-color: #D3D3D3; padding-left: 5px;"><label for="poNumber">PO #</label><br/></td>
                 <td><?php echo $poNumber; ?></td>

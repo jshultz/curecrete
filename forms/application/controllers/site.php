@@ -39,11 +39,11 @@ class Site extends CI_Controller
 		$this->load->view('contest');
 	}
 
-	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage="", $photouploaded=""){
+	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage="", $photouploaded="", $emailsubject=""){
 		date_default_timezone_set('UTC');
 		$this->load->helper(array('My_Pdf'));   //  Load helper
 
-		create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage, $photouploaded); //Email pdf
+		create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage, $photouploaded, $emailsubject); //Email pdf
 
 		
 	}
@@ -301,7 +301,7 @@ class Site extends CI_Controller
 		$message .= '</body>';
 
         $random = random_string('alnum', 4);
-        $file_name = 'IPO-' . $sendername . '-' . date('dMY') . '-' . $random;
+        $file_name = 'IPO-' . $sendername . '-' . $random . '-' . date('dMY');
 		$type = "S";
 
 		$this->pdf_report($message, $file_name, $sendername, $senderemail, $type);
@@ -706,6 +706,8 @@ class Site extends CI_Controller
 
             $data['country'] = (string)$this->input->get_post('country', TRUE);
 
+            $data['postalCode'] = (string)$this->input->get_post('postalCode', TRUE);
+
             $data['building_use'] = (string)$this->input->get_post('building_use', TRUE);
 
             $data['projectOwner'] = (string)$this->input->get_post('projectOwner', TRUE);
@@ -853,7 +855,7 @@ class Site extends CI_Controller
         $fullName = $data['distributorName'];
         $address = $data['address'];
         $state = $data['state'];
-        $zip = $data['country'];
+        $zip = $data['postalCode'];
         $phone = '';
         $email = $data['distributorEmail'];
         $form = 'Project Report/Warranty Request Form';
@@ -868,18 +870,18 @@ class Site extends CI_Controller
 
 
         if ($data['uploadPhotosYes'] == '1') {
-
             $photouploaded = '1';
-
-            $photomessage = '<p>Also, if you would like to upload photos for this particular project, or add more photos to the photos you have already submitted, please <a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">CLICK HERE TO SUBMIT MORE PROJECT PHOTOS</a>.  PLEASE NOTE:  This link is a unique link that will connect your photos to the project submitted below.  Please be sure you are submitting photos that pertain to this project only.  Thank you!</p>';
-
         } else {
-
             $photouploaded = '0';
-
-            $photomessage = '<p>Also, if you would like to upload photos for this particular project, or add more photos to the photos you have already submitted, please <a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&ey=' . $key . '">CLICK HERE TO SUBMIT PROJECT PHOTOS</a>.  PLEASE NOTE:  This link is a unique link that will connect your photos to the project submitted below.  Please be sure you are submitting photos that pertain to this project only.  Thank you!</p>';
-
         }
+
+        $photomessage = '<a alt="Photo Submission" href="'  . base_url() . 'site/photoupload?email=' . $email . '&key=' . $key . '"><strong>CLICK HERE TO SUBMIT PROJECT PHOTOS</strong></a>';
+
+        $photomessage .= '<p>If you would like to upload photos for this project now, or at a later time, please click on the link above.  <span style="font-size: 13px;"><em>(PLEASE NOTE: This link is a unique link that connects your photos to the project listed below and identified by the "<strong>Customer Unique Form ID</strong>" number)</em></span> </p>';
+
+        $photomessage .= 'Questions or concerns regarding your submission?  Contact Customer Care at <a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or call 801-489-5663.';
+
+        $photomessage .= '<p>&nbsp;</p>';
 
         $body = $this->load->view('email_forms/email_project_report_warranty_request', $data, TRUE);
 
@@ -888,9 +890,11 @@ class Site extends CI_Controller
 
         $random = random_string('alnum', 4);
 
-        $file_name = 'Project_Report-' . $data['distributorName'] . '-' . date('dMY') . '-' . $random;
+        $file_name = 'PR-WR-' . $data['distributorName'] . '-' . $random . '-' . date('dMY');
 
-        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded);
+        $emailsubject = 'PR/WR Form Submission-' . $data['distributorName'] . '-' . $random;
+
+        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded, $emailsubject);
         $data['message'] = '<div style="text-align:center;">';
         $data['message'] .= '<p>Thank you for submitting your <strong>Project Report/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.</p>';
         $data['message'] .= '<p><strong><em><span style="text-decoration: underline">Questions Regarding Your Submission?</span></em></strong><br/><a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or 801-489-5663</p>';

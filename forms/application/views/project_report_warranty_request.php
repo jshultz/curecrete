@@ -41,7 +41,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
 <div id="header" class="clearfix">
     <section>
         <img class="floatleft" src="/forms/assets/img/Curecrete-Logo_120x169.png"
-             style="margin-right: 10px; height: 100px; width: 71px">
+             style="margin-right: 10px; height: 100px; width: 71px; float:left;">
 
         <h1>Project Report &amp; Warranty Request</h1>
         <hr>
@@ -240,8 +240,8 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
                                  tabindex="17"></td>
     </tr>
     <tr>
-        <td class="label"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
-        <td class="input"><input name="country" id="country" type="text" class="required" tabindex="8"></td>
+        <td class="label"><label for="postalCode">Postal Code<sup>*</sup></label></td>
+        <td class="input"><input name="postalCode" id="postalCode" type="text" class="" tabindex="8"></td>
         <td class="label"><label for="buildingUse">Building Use<sup>*</sup></label></td>
         <td class="input">
             <select name="building_use" tabindex="18" id="building_use" class="required">
@@ -271,17 +271,23 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         </td>
     </tr>
     <tr>
-        <td class="label"><label for="projectOwner">Project Owner</label></td>
-        <td class="input"><input name="projectOwner" id="projectOwner" type="text" class="" tabindex="9"></td>
+        <td class="label"><label for="country">Country<sup>*</sup></label></td>
+        <td class="input"><input name="country" id="country" type="text" class="required" tabindex="8"></td>
+
         <td class="label"><label for="industry">Industry<sup>*</sup></label></td>
         <td class="input"><select name="industry" id="industry" tabindex="19"></select></td>
+    </tr>
+    <tr>
+        <td class="label"><label for="projectOwner">Project Owner</label></td>
+        <td class="input"><input name="projectOwner" id="projectOwner" type="text" class="" tabindex="9"></td>
+        <td class="label" rowspan="5"><label for="comments">Comments</label></td>
+        <td class="input" rowspan="5"><textarea id="comments" name="comments" tabindex="20"></textarea></td>
     </tr>
     <tr>
         <td class="label"><label for="specifierArchitect">Specifier/Architect</label></td>
         <td class="input"><input name="specifierArchitect" id="specifierArchitect" type="text" class="" tabindex="10"">
         </td>
-        <td class="label" rowspan="4"><label for="comments">Comments</label></td>
-        <td class="input" rowspan="4"><textarea id="comments" name="comments" tabindex="20"></textarea></td>
+
     </tr>
     <tr>
         <td class="label"><label for="generalContractor">General Contractor</label></td>
@@ -520,16 +526,17 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
         <td class="label"><label for="applicatorPhone">Phone<sup>*</sup></label></td>
         <td class="input"><input name="applicatorPhone" id="applicatorPhone" type="text" class="warranty-request"
                                  tabindex="24"></td>
-        <td class="label"><label for="applicatorCountry">Country<sup>*</sup></label></td>
-        <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="warranty-request"
+        <td class="label"><label for="applicatorPostal">Postal Code</label></td>
+        <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class=""
                                  tabindex="29"></td>
+
     </tr>
     <tr>
         <td class="label"><label for="applicatorFax">Fax<sup>*</sup></label></td>
         <td class="input"><input name="applicatorFax" id="applicatorFax" type="text" class="warranty-request"
                                  tabindex="25"></td>
-        <td class="label"><label for="applicatorPostal">Postal Code<sup>*</sup></label></td>
-        <td class="input"><input name="applicatorPostal" id="applicatorPostal" type="text" class="warranty-request"
+        <td class="label"><label for="applicatorCountry">Country<sup>*</sup></label></td>
+        <td class="input"><input name="applicatorCountry" id="applicatorCountry" type="text" class="warranty-request"
                                  tabindex="30"></td>
     </tr>
 
@@ -543,8 +550,7 @@ echo form_open_multipart('/site/projectsubmit', $attributes);
                                                 id="environmentalConditions" tabindex="31"></textarea></td>
     </tr>
     <tr>
-        <td class="label first"><label for="weatherConditions">Weather Conditions During Ashford Formula
-                Application<sup>*</sup></label></td>
+        <td class="label first"><label for="weatherConditions">Weather Conditions During Application<sup>*</sup></label></td>
         <td class="input" colspan="5"><textarea class="warranty-request" name="weatherConditions" id="weatherConditions"
                                                 tabindex="32"></textarea></td>
     </tr>

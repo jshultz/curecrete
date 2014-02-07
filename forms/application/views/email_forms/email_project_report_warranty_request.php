@@ -206,24 +206,30 @@
             <td class="input"><?php echo $finalApplicationDate; ?> </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="country">Country &amp; Postal Code<sup>*</sup></label></td>
-            <td class="input"><?php echo $country; ?></td>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="postalCode">Postal Code</label></td>
+            <td class="input"><?php echo $postalCode; ?></td>
+
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
                 <?php echo $building_use; ?>
             </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
-            <td class="input"><?php echo $projectOwner; ?></td>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="country">Country<sup>*</sup></label></td>
+            <td class="input"><?php echo $country; ?></td>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="industry">Industry<sup>*</sup></label> </td>
             <td class="input"><?php echo $industry; ?> </td>
         </tr>
         <tr>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
+            <td class="input"><?php echo $projectOwner; ?></td>
+            <td class="label" rowspan="5" style="width: 180px; background-color: #D3D3D3;"><label for="comments">Comments</label> </td>
+            <td class="input" rowspan="5"><p><?php echo $comments; ?></p></td>
+        </tr>
+        <tr>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="specifierArchitect">Specifier/Architect</label></td>
             <td class="input"><?php echo $specifierArchitect; ?></td>
-            <td class="label" rowspan="4" style="width: 180px; background-color: #D3D3D3;"><label for="comments">Comments</label> </td>
-            <td class="input" rowspan="4"><p><?php echo $comments; ?></p></td>
+
         </tr>
         <tr>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="generalContractor">General Contractor</label></td>
@@ -330,14 +336,16 @@
         <tr>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorPhone; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
-            <td class="input"><?php echo $applicatorCountry; ?></td>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
+            <td class="input"><?php echo $applicatorPostal; ?></td>
+
         </tr>
         <tr>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorFax">Fax</label> </td>
             <td class="input"><?php echo $applicatorFax; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
-            <td class="input"><?php echo $applicatorPostal; ?></td>
+            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
+            <td class="input"><?php echo $applicatorCountry; ?></td>
+
         </tr>
 
     </table>
@@ -348,7 +356,7 @@
             <td class="input" colspan="5"><p><?php echo $environmentalConditions; ?></p> </td>
         </tr>
         <tr>
-            <td class="label first" style="width: 180px; background-color: #D3D3D3;"><label for="weatherConditions">Weather Conditions During Ashford Formula Application<sup>*</sup></label></td>
+            <td class="label first" style="width: 180px; background-color: #D3D3D3;"><label for="weatherConditions">Weather Conditions During Application<sup>*</sup></label></td>
             <td class="input" colspan="5"><p><?php echo $weatherConditions; ?></p> </td>
         </tr>
         <tr>
@@ -363,7 +371,7 @@
                     <label for="ashfordForulaCureNo">No</label>
                 </div>
             </td>
-            <td class="label" style="width: 65px; background-color: #D3D3D3;">
+            <td rowspan="2" class="label" style="width: 65px; background-color: #D3D3D3;">
                 <label for="appliedToConcrete">Applied To Concrete?<sup>*</sup></label>
             </td>
             <td class="input" width="180">
@@ -377,12 +385,17 @@
                     <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
                 </div>
             </td>
-            <td colspan="2">
-                <div class="checkbox" id="hoursAfterPlacementCheckbox">
-                    <?php echo $hoursAfterPlacementChecked; ?>
-                    <?php echo $hoursAfterPlacementNumbers; ?>
-                    <br/>
-                    <label for="hoursAfterPlacement" id="">Hours After Placement</label>
+            <td class="label" style="width: 65px; background-color: #D3D3D3;">
+                <label for="applicationSupervisedByDistributor">Application Supervised by Distributor?<sup>*</sup></label>
+            </td>
+            <td class="input">
+                <div class="checkbox">
+                    <?php echo $applicationSupervisedByDistributorYes; ?>
+                    <label for="applicationSupervisedByDistributorYes">Yes</label>
+                </div><br/>
+                <div class="checkbox">
+                    <?php echo $applicationSupervisedByDistributorNo; ?>
+                    <label for="applicationSupervisedByDistributorNo">No</label>
                 </div>
             </td>
 
@@ -401,19 +414,15 @@
                     <label for="floorBurnishedNo">No</label>
                 </div>
             </td>
-            <td class="label" style="width: 65px; background-color: #D3D3D3;">
-                <label for="applicationSupervisedByDistributor">Application Supervised by Distributor?<sup>*</sup></label>
-            </td>
-            <td class="input">
-                <div class="checkbox">
-                    <?php echo $applicationSupervisedByDistributorYes; ?>
-                    <label for="applicationSupervisedByDistributorYes">Yes</label>
-                </div><br/>
-                <div class="checkbox">
-                    <?php echo $applicationSupervisedByDistributorNo; ?>
-                    <label for="applicationSupervisedByDistributorNo">No</label>
+            <td>
+                <div class="checkbox" id="hoursAfterPlacementCheckbox">
+                    <?php echo $hoursAfterPlacementNumbers; ?>
+                    <br/>
+                    <label for="hoursAfterPlacement" id="">Hours After Placement</label>
                 </div>
             </td>
+
+
             <td class="label" style="width: 65px; background-color: #D3D3D3;">
                 <label for="maintenanceBrochureGiven">Maintenance Brochure Given?<sup>*</sup></label>
             </td>

@@ -130,28 +130,30 @@
             <tr>
                 <td><?php echo $projectReportOnlyCheck; ?></td>
                 <td><label for="projectReportOnlyCheck">Project Report ONLY</label><br/></td>
-	            <td></td>
-	            <td><?php echo $warrantyRequestCheck; ?></td>
-	            <td><label for="warrantyRequestCheck">Warranty Request</label><br/></td>
-	            <td></td>
+	            <td style="border-left: 1px solid #ccc"></td>
+	            <td><?php echo $ashfordFormulaCheck; ?></td>
+	            <td><label for="ashfordFormulaCheck">Ashford Formula</label><br/></td>
+	            <td style="border-left: 1px solid #ccc"></td>
                 <td><?php echo $domesticProjectCheck; ?></td>
                 <td><label for="domesticProjectCheck">Domestic Project</label><br/></td>
-	            <td></td>
-	            <td><?php echo $internationalProjectCheck; ?></td>
-	            <td><label for="internationalProjectCheck">International Project</label><br/></td>
-	            <td></td>
             </tr>
             <tr>
-                <td><?php echo $ashfordFormulaCheck; ?></td>
-                <td><label for="ashfordFormulaCheck">Ashford Formula</label><br/></td>
-	            <td></td>
-	            <td><?php echo $retroplateCheck; ?></td>
-	            <td><label for="retroplateCheck">Retroplate</label><br/></td>
-	            <td></td>
-                <td><?php echo $leedNominatedCheck; ?></td>
-                <td colspan="4"><label for="leedNominatedCheck">Will this project be applying for a LEED<br/> Award or any other “Green” distinctions?</label><br/>
-                </td>
+	            <td ><?php echo $warrantyRequestCheck; ?></td>
+	            <td ><label for="warrantyRequestCheck">Warranty Request</label><br/></td>
+	            <td style="border-left: 1px solid #ccc; "></td>
+	            <td style=""><?php echo $retroplateCheck; ?></td>
+	            <td style=""><label for="retroplateCheck">Retroplate</label><br/></td>
+	            <td style="border-left: 1px solid #ccc; "></td>
+	            <td style=""><?php echo $internationalProjectCheck; ?></td>
+	            <td style=""><label for="internationalProjectCheck">International Project</label><br/></td>
             </tr>
+	        <tr><td style="border-bottom: 1px solid #ccc" colspan="8"></td> </tr>
+	        <tr style="height: 40px" >
+		        <td style="height: 40px"><?php echo $leedNominatedCheck; ?></td>
+		        <td style="height: 40px" colspan="7"><label style="height: 40px" for="leedNominatedCheck">Will this project be applying for a LEED Award or any other “Green” distinctions?</label><br/>
+		        </td>
+	        </tr>
+	        <tr><td style="border-bottom: 1px solid #ccc" colspan="8"></td> </tr>
         </table>
 
 </div>
@@ -184,69 +186,69 @@
 
         <tr>
             <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;">
-                <p>Project Information</p>
+                <p style="text-transform: uppercase">Project Information</p>
             </th>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="projectName">Project Name<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="projectName">Project Name<sup>*</sup></label></td>
             <td class="input"><?php echo $projectName; ?></td>
             <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="amountUsed"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?> Used<sup>*</sup></label> </td>
             <td class="input"><?php echo $amountUsed; ?> </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="address">Address<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="address">Address<sup>*</sup></label></td>
             <td class="input"><?php echo $address; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="squareDistance"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>ft<sup>2</sup></span>';} else {echo '<span>m<sup>2</sup></span>';} ?><sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="squareDistance"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>ft<sup>2</sup></span>';} else {echo '<span>m<sup>2</sup></span>';} ?><sup>*</sup></label> </td>
             <td class="input"><?php echo $squareDistance; ?> </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="city">City<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="city">City<sup>*</sup></label></td>
             <td class="input"><?php echo $city; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="initialApplicationDate">Initial Application Date<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="initialApplicationDate">Initial Application Date<sup>*</sup></label> </td>
             <td class="input"><?php echo $initialApplicationDate; ?> </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="state">Province/State<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="state">Province/State<sup>*</sup></label></td>
             <td class="input"><?php echo $state; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="finalApplicationDate">Final Application Date<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="finalApplicationDate">Final Application Date<sup>*</sup></label> </td>
             <td class="input"><?php echo $finalApplicationDate; ?> </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="postalCode">Postal Code</label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="postalCode">Postal Code</label></td>
             <td class="input"><?php echo $postalCode; ?></td>
 
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="buildingUse">Building Use<sup>*</sup></label> </td>
             <td class="input">
                 <?php echo $building_use; ?>
             </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="country">Country<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="country">Country<sup>*</sup></label></td>
             <td class="input"><?php echo $country; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="industry">Industry<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="industry">Industry<sup>*</sup></label> </td>
             <td class="input"><?php echo $industry; ?> </td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="projectOwner">Project Owner<sup>*</sup></label></td>
             <td class="input"><?php echo $projectOwner; ?></td>
-            <td class="label" rowspan="5" style="width: 180px; background-color: #D3D3D3;"><label for="comments">Comments</label> </td>
+            <td class="label" rowspan="5" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="comments">Comments</label> </td>
             <td class="input" rowspan="5"><p><?php echo $comments; ?></p></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="specifierArchitect">Specifier/Architect</label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="specifierArchitect">Specifier/Architect</label></td>
             <td class="input"><?php echo $specifierArchitect; ?></td>
 
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="generalContractor">General Contractor</label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="generalContractor">General Contractor</label></td>
             <td class="input"><?php echo $generalContractor; ?></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicator">Applicator<sup>*</sup></label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicator">Applicator<sup>*</sup></label></td>
             <td class="input"><?php echo $applicator; ?></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="flatWorker">Flat Worker / Sub-Contractor</label></td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="flatWorker">Flat Worker / Sub-Contractor</label></td>
             <td class="input"><?php echo $flatWorker; ?></td>
         </tr>
 
@@ -254,35 +256,47 @@
 
     <table id="drumInformation" style="width: 750px;">
         <tr>
-            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;"><p>D R U M  I N F O R M A T I O N</p>
+            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;">
+
+	            <p style="text-transform: uppercase"><span>Drum Information</span></p>
+
+	            <p>Drum Number(s) / Liter(s) or Gallon(s)
+		            Used</p>
+
+	            <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
+		            "series" method shown below to avoid typing each drum number individually and to save you valuable
+		            time.</p>
+
+	            <p>Example:<br/>
+		            10001, 10002, 10003, 10004, 10005, 10006 or 10001 - 10006</p>
 
 
             </th>
         </tr>
         <tr class="labelRow">
-            <td class="label" style="background-color: #D3D3D3;">
-                <label>Drum No.</label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px">Drum No.</label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label>Drum No.</label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px">Drum No.</label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label>Drum No.</label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px">Drum No.</label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label>Drum No.</label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px">Drum No.</label>
             </td>
-            <td class="label" style="background-color: #D3D3D3;">
-                <label><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
+            <td class="label" style="background-color: #D3D3D3; height: 30px; text-align: center;">
+                <label style="height: 30px"><?php if($domesticProjectCheck == '&#x2611;') {echo '<span>Gallons</span>';} else {echo '<span>Liters</span>';} ?></label>
             </td>
         </tr>
         <?php
@@ -296,14 +310,14 @@
 
                     if ($x == 4) {
 
-                        echo '<td style="border-left: 1px solid #000; border-bottom:1px solid #000; border-right: 1px solid #000; height:25px; width:80px;">' . $value['drumNumber'] . '</td>';
+                        echo '<td style="border-left: 1px solid #000; border-bottom:1px solid #000; border-right: 1px solid #000; height:25px; width:75px; padding-left:5px;">' . $value['drumNumber'] . '</td>';
                         echo '<td class="size" style="height:25px; border-bottom:1px solid #000; border-right: 1px solid #000;width:80px;">' . $value['size'] . '</td>';
                         echo '</tr>';
                         echo '<tr>';
 
                         $x = 1;
                     } else {
-                        echo '<td style="border-left: 1px solid #000; border-bottom:1px solid #000; border-right: 1px solid #000; height:25px;width:80px;">' . $value['drumNumber'] . '</td>';
+                        echo '<td style="border-left: 1px solid #000; border-bottom:1px solid #000; border-right: 1px solid #000; height:25px; width:75px; padding-left:5px;">' . $value['drumNumber'] . '</td>';
                         echo '<td class="size" style="height:25px; border-bottom:1px solid #000;width:80px;">' . $value['size'] . '</td>';
 
                         $x = $x + 1;
@@ -317,39 +331,43 @@
     <table id="warrantyRequest" style="width: 750px">
         <tr>
             <th colspan="4" style="background-color: #000000; color: #ffffff; text-align: center; height: 55px;">
-                <p>Warranty Request</p>
-                <p>International Distributors are to provide a signed, binding letter of certification stating they will assume financial responsibility for the 5-Year Labor portion of the warranty.</p>
+	            <p style="text-transform: uppercase"><span>Warranty Request</span></p>
+
+	            <p>International Distributors are to provide a signed, binding letter of certification stating they will
+		            <br/>assume financial responsibility for the 5-Year Labor portion of the warranty.</p>
+	            <p><a style="color: #ffffff" target="_blank" href="http://www.bluedrum.com/docs/Operations/Domestic/Warranties/5-Year%20Warranty%20Letter%205-11-10_distributed%20with%20Note.pdf">Click here to download the 5-Year Labor Warranty template.</a></p>
+
             </th>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="dateFloorWarrantied">Date Floor To Be Warranted<sup>*</sup></label> </td>
             <td class="input"><?php echo $dateFloorWarrantied; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorAddress">Address<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorAddress; ?></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorCompany">Applicator Company Name<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorCompany">Applicator Company Name<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorCompany; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorCity">City<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorCity">City<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorCity; ?></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorOwner">Applicator Owner Name<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorOwner; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorState">State/Province<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorState">State/Province<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorState; ?></td>
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorPhone; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorPostal; ?></td>
 
         </tr>
         <tr>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorFax">Fax</label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorFax">Fax</label> </td>
             <td class="input"><?php echo $applicatorFax; ?></td>
-            <td class="label" style="width: 180px; background-color: #D3D3D3;"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorCountry">Country<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorCountry; ?></td>
 
         </tr>
@@ -358,15 +376,15 @@
 
     <table id="warrantyRequest2" style="width: 750px;">
         <tr>
-            <td class="label first" style="width: 180px; background-color: #D3D3D3;"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
+            <td class="label first" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
             <td class="input" colspan="5"><p><?php echo $environmentalConditions; ?></p> </td>
         </tr>
         <tr>
-            <td class="label first" style="width: 180px; background-color: #D3D3D3;"><label for="weatherConditions">Weather Conditions During Application<sup>*</sup></label></td>
+            <td class="label first" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="weatherConditions">Weather Conditions During Application<sup>*</sup></label></td>
             <td class="input" colspan="5"><p><?php echo $weatherConditions; ?></p> </td>
         </tr>
         <tr>
-            <td class="label first" style="width: 180px; background-color: #D3D3D3;"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
+            <td class="label first" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
             <td class="input">
                 <div class="checkbox">
                     <?php echo $ashfordForulaCureYes; ?>
@@ -377,7 +395,7 @@
                     <label for="ashfordForulaCureNo">No</label>
                 </div>
             </td>
-            <td rowspan="2" class="label" style="width: 65px; background-color: #D3D3D3;">
+            <td rowspan="2" class="label" style="padding-left: 5px; width: 60px; background-color: #D3D3D3;">
                 <label for="appliedToConcrete">Applied To Concrete?<sup>*</sup></label>
             </td>
             <td class="input" width="180">
@@ -391,7 +409,7 @@
                     <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
                 </div>
             </td>
-            <td class="label" style="width: 65px; background-color: #D3D3D3;">
+            <td class="label" style="padding-left: 5px; width: 60px; background-color: #D3D3D3;">
                 <label for="applicationSupervisedByDistributor">Application Supervised by Distributor?<sup>*</sup></label>
             </td>
             <td class="input">
@@ -407,7 +425,7 @@
 
         </tr>
         <tr>
-            <td class="label" style="width: 185px; background-color: #D3D3D3;">
+            <td class="label" style="padding-left: 5px; width: 180px; background-color: #D3D3D3;">
                 <label for="floorBurnished">Floor Burnished?<sup>*</sup></label>
             </td>
             <td class="input">
@@ -429,7 +447,7 @@
             </td>
 
 
-            <td class="label" style="width: 65px; background-color: #D3D3D3;">
+            <td class="label" style="padding-left: 5px; width: 60px; background-color: #D3D3D3;">
                 <label for="maintenanceBrochureGiven">Maintenance Brochure Given?<sup>*</sup></label>
             </td>
             <td class="input">

@@ -40,11 +40,14 @@
                 <td style="width: 120px; vertical-align: top;">
                     <img src="/forms/assets/img/Curecrete-Logo_120x169.png" style="margin-right: 10px; height: 100px; width: 71px">
                 </td>
-                <td style="width: 300px; vertical-align: top;">
+                <td style="width: 150px; vertical-align: top;">
                     <div class="title">
-                        <h3 style="font-size: .75em; line-height: 1em; margin-bottom: 7px; font-weight: 100;">Ashford Formula <sup>&trade;</sup> &amp; Retroplate <sup>&reg;</sup></h3>
-                        <h1 style="font-size: 1.25em; line-height: 1.25em; color: #000000; font-weight: 100;">Project Report &amp; <br/> Warranty Request</h1>
-                        <p style="font-size: .6em; line-height: .75em;">Fax: 801.489.3307 &nbsp; EMAIL | projectreports@curecrete.com</p>
+                        <h1 style="font-size: 2em; line-height: 1.75em; color: #000000; font-weight: bold;">Project Report &amp; <br/> Warranty Request</h1>
+	                    <p>&nbsp;</p>
+	                    <p><strong>Time Stamp (UTC): </strong> <?php echo date('Y-m-d, H:i:s'); ?></p>
+	                    <p><strong>Date Submited: </strong> <?php echo date('m-d-Y'); ?></p>
+	                    <p><strong>Customer Unique Form ID: </strong><?php echo $formid; ?></p>
+
                     </div>
                 </td>
                 <td style="width: 20px;">&nbsp;</td>
@@ -174,18 +177,14 @@
                 <td class="label" style="width: 45px; background-color: #D3D3D3; padding-left: 5px;"><label for="poNumber">PO #</label><br/></td>
                 <td><?php echo $poNumber; ?></td>
             </tr>
-            <tr>
-                <td class="label">Customer Unique Form ID:</td>
-                <td><?php echo $formid; ?></php></td>
-                <td colspan="4"></td>
-            </tr>
+
         </table>
 </div>
 
     <table id="projectInformation" style="width: 750px;">
 
         <tr>
-            <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;">
+            <th colspan="5" style="background-color: #000000; color: #ffffff; text-align: center; height: 25px;">
                 <p style="text-transform: uppercase">Project Information</p>
             </th>
         </tr>
@@ -256,21 +255,12 @@
 
     <table id="drumInformation" style="width: 750px;">
         <tr>
-            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;">
+            <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center; height: 25px;">
 
 	            <p style="text-transform: uppercase"><span>Drum Information</span></p>
 
 	            <p>Drum Number(s) / Liter(s) or Gallon(s)
 		            Used</p>
-
-	            <p> If some or all of your drum numbers fall in consecutive order, please feel free to use the
-		            "series" method shown below to avoid typing each drum number individually and to save you valuable
-		            time.</p>
-
-	            <p>Example:<br/>
-		            10001, 10002, 10003, 10004, 10005, 10006 or 10001 - 10006</p>
-
-
             </th>
         </tr>
         <tr class="labelRow">
@@ -330,12 +320,9 @@
 
     <table id="warrantyRequest" style="width: 750px">
         <tr>
-            <th colspan="4" style="background-color: #000000; color: #ffffff; text-align: center; height: 55px;">
+            <th colspan="4" style="background-color: #000000; color: #ffffff; text-align: center; height: 25px;">
 	            <p style="text-transform: uppercase"><span>Warranty Request</span></p>
 
-	            <p>International Distributors are to provide a signed, binding letter of certification stating they will
-		            <br/>assume financial responsibility for the 5-Year Labor portion of the warranty.</p>
-	            <p><a style="color: #ffffff" target="_blank" href="http://www.bluedrum.com/docs/Operations/Domestic/Warranties/5-Year%20Warranty%20Letter%205-11-10_distributed%20with%20Note.pdf">Click here to download the 5-Year Labor Warranty template.</a></p>
 
             </th>
         </tr>
@@ -360,7 +347,7 @@
         <tr>
             <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorPhone">Phone<sup>*</sup></label> </td>
             <td class="input"><?php echo $applicatorPhone; ?></td>
-            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorPostal">Postal Code<sup>*</sup></label> </td>
+            <td class="label" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="applicatorPostal">Postal Code</label> </td>
             <td class="input"><?php echo $applicatorPostal; ?></td>
 
         </tr>
@@ -376,7 +363,7 @@
 
     <table id="warrantyRequest2" style="width: 750px;">
         <tr>
-            <td class="label first" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
+            <td class="label first" width="165" style="padding-left: 5px;  background-color: #D3D3D3;"><label for="environmentalConditions">Environmental Conditions During Concrete Pour (i.e. Enclosed Building)<sup>*</sup></label></td>
             <td class="input" colspan="5"><p><?php echo $environmentalConditions; ?></p> </td>
         </tr>
         <tr>
@@ -384,7 +371,7 @@
             <td class="input" colspan="5"><p><?php echo $weatherConditions; ?></p> </td>
         </tr>
         <tr>
-            <td class="label first" style="padding-left: 5px; width: 175px; background-color: #D3D3D3;"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
+            <td class="label first" width="185" style="padding-left: 5px; background-color: #D3D3D3;"><label for="ashfordForulaCure">Ashford Formula Used As Cure?<sup>*</sup></label></td>
             <td class="input">
                 <div class="checkbox">
                     <?php echo $ashfordForulaCureYes; ?>
@@ -395,10 +382,10 @@
                     <label for="ashfordForulaCureNo">No</label>
                 </div>
             </td>
-            <td rowspan="2" class="label" style="padding-left: 5px; width: 60px; background-color: #D3D3D3;">
+            <td rowspan="2" width="65" class="label" style="padding-left: 5px; background-color: #D3D3D3;">
                 <label for="appliedToConcrete">Applied To Concrete?<sup>*</sup></label>
             </td>
-            <td class="input" width="180">
+            <td class="input" width="220">
                 <div class="checkbox">
                     <?php echo $appliedOnExistingFloor; ?>
                     <label for="appliedOnExistingFloor">On Existing Floor?</label>
@@ -409,7 +396,7 @@
                     <label for="appliedAtTimeOfPlacement">At Time Of Placement?</label>
                 </div>
             </td>
-            <td class="label" style="padding-left: 5px; width: 60px; background-color: #D3D3D3;">
+            <td class="label" width="65" style="padding-left: 5px; background-color: #D3D3D3;">
                 <label for="applicationSupervisedByDistributor">Application Supervised by Distributor?<sup>*</sup></label>
             </td>
             <td class="input">
@@ -464,7 +451,7 @@
     </table>
 
     <table id="corporateProjects" style="width: 750px; ">
-        <tr><th style="background-color: #000000; color: #ffffff; text-align: center; height: 35px;"><p>Corporate Projects</p></th></tr>
+        <tr><th style="background-color: #000000; color: #ffffff; text-align: center; height: 35px; text-transform: uppercase"><p>Partnering Services Projects</p></th></tr>
         <tr>
             <td>
                 <p><?php if ($corporateProjectsText == '') {

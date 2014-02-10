@@ -1,0 +1,396 @@
+commit e0d8f449ba0c2a7d4c2511efddbb8d7bb576ec61
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Feb 10 13:52:09 2014 -0700
+
+    removed pdf
+
+commit 4bf4c51e98d897ad771d0d88017daab7e18fdf1d
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Feb 10 13:51:41 2014 -0700
+
+    customer updates to pdf
+
+commit ef9347416efc131f573de9a88b67aa6886369a9b
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Feb 10 11:53:39 2014 -0700
+
+    customer update to emailed PDF
+
+commit d1556de281632c43d824e82e8c49ecfda018fffd
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Feb 7 20:20:53 2014 -0700
+
+    working on PDF
+
+commit 304a28ed3563a64b246130bbe26b1744456d33ea
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Feb 7 15:35:33 2014 -0700
+
+    customer update. convert p to br
+
+commit eb26beba22038f83f7baac660c0c0b0ed3d7c5d2
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Feb 7 15:11:01 2014 -0700
+
+    customer updates
+
+commit f763f83abaa93be6d9204297b8aea724126844ac
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Feb 7 12:50:10 2014 -0700
+
+    customer updates
+
+commit 4978aa3cee3e558981eabc2b373a48b3c33c5672
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Feb 6 22:09:01 2014 -0700
+
+    customer updates
+
+commit 81084a34f725da6184b319b456a907e691edc5b3
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Feb 5 19:55:42 2014 -0700
+
+    customer updates
+
+commit 952abf5257d1cf238be41128a4b0a6eba6ab85f7
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Tue Feb 4 18:27:08 2014 -0700
+
+    customer updates
+
+commit 0d8e35f679c70f9cf2f38310cf31a3b70011a355
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Jan 30 19:14:24 2014 -0700
+
+    customer updates
+
+commit 722d6c64860001cbcffe217fdeed693071655730
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Jan 29 18:54:56 2014 -0700
+
+    client updates
+
+commit 71effdf7d9d5ce87fdfbb993241c3af3e469908f
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Jan 25 17:16:55 2014 -0700
+
+    customer update requests.
+
+commit 1d3622543db68389fb7a0c7860a93e98a074b15c
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Jan 25 12:57:52 2014 -0700
+
+    removed vagrant files
+
+commit 406545dec110db0292c37f2169817f071fa7693b
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Jan 23 07:01:35 2014 -0700
+
+    update db settings for local dev.
+
+commit a7940ac80c476fa6b9c54802a398a10a13db2171
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Dec 19 20:32:18 2013 -0700
+
+    fixed strane checkbox bug
+
+commit 5223bb2029986400ada77ee319331e5cfb83d596
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Dec 11 08:52:19 2013 -0700
+
+    removed test pdfs
+
+commit 6c11846441be7ab98797ecd7814a410b486e065c
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Dec 11 08:51:41 2013 -0700
+
+    QA updates
+
+commit 4fd74f47d4d93969e947400530f50cad5c057905
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Dec 11 07:29:40 2013 -0700
+
+    project qa updates
+
+commit 23fc24c178f4abbeb1e1515400f75e02927dbb06
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Dec 6 09:20:38 2013 -0700
+
+    unified font sizes.
+
+commit 2c166750bba41fc00716d1ecb0590413e93ad3c5
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Dec 6 09:03:16 2013 -0700
+
+    made warranty section 2 required if warranty is checked
+
+commit 0d1585fc1b099668eab75425871e464bc92a75dd
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Tue Dec 3 09:25:45 2013 -0700
+
+    customer feedback
+
+commit 7589faf04ee83352fdfd5c1950c4f0f93732e4eb
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Nov 21 09:30:02 2013 -0700
+
+    customer update requests
+
+commit a7a5d813f16e57d11ce65a90377e22f6253baee4
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Nov 20 16:03:58 2013 -0700
+
+    warranty request updates
+
+commit 6c6a1ab5aa994d52d28611c3e94d7d8537a109ba
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Nov 4 10:49:29 2013 -0700
+
+    added create client to International Purchase Order
+
+commit dd11c4ff7c1b6ce8667f4335968ce850457fda8a
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Nov 2 15:45:50 2013 -0600
+
+    found something i missed. had to add office only items to pdf version;
+
+commit afa21b96706fac2537db2443e7c934482f9cc922
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Nov 2 11:26:56 2013 -0600
+
+    changed the way PDFs are named
+
+commit 3d343c4122869ba191fb6ec1060a33285c7b25a4
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Nov 2 11:18:11 2013 -0600
+
+    photo submission after the tact works. email notifications go out when a customer submits photos later
+
+commit ca142d5083d2fd91ebf74433c615e9e2ca075ed6
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Nov 2 00:07:31 2013 -0600
+
+    work on emails being snt. I also reworked how the files are being named to keep them uniquely named.
+
+commit c1d5d32d44e95203da3e4b4a0aa52872e9817275
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Nov 1 21:05:15 2013 -0600
+
+    removed dead files
+
+commit 05fa66ccbe69ac1e2532ed668e6aa0df9ab329af
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Nov 1 21:01:39 2013 -0600
+
+    working on sending form. database is created now
+
+commit be39d13fd53f304525f6636fe18fb296609dfcf9
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 31 21:07:18 2013 -0600
+
+    improved validation, styling, conversion of html to pdf looks great
+
+commit 167efeae873adcc5e0fea0c3bae2ccf81d6862ba
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 31 19:04:43 2013 -0600
+
+    working on html to pdf conversion
+
+commit b49a0d056f41b466fea8ab7fe7b2e3154810c900
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 31 18:11:24 2013 -0600
+
+    upgrade mpdf library
+
+commit 0ec4b56f9bfedee6a06dbfeb6a8b294a74f020b2
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 31 18:10:11 2013 -0600
+
+    working on html to pdf conversion.
+
+commit a25af5919b368eca65f64b4a4f9eddb586e351a8
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 31 08:09:35 2013 -0600
+
+    added validation. validation works now
+
+commit 1a07b950505aff0600a5bc69258042b63feab489
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Oct 30 17:37:16 2013 -0600
+
+    adding validation. also made table row expander work
+
+commit a243653eae6efa0bbd11660477aa734634085c07
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Tue Oct 29 07:02:28 2013 -0600
+
+    working on pdf
+
+commit f1670413dabf6e7d248cb4ca8f2476a21c280044
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Oct 28 17:40:10 2013 -0600
+
+    working on pdf
+
+commit 4a2de001d64d02c2fced080c120fd1970d047021
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Oct 28 08:30:15 2013 -0600
+
+    working on pdf
+
+commit 5017598256831d3cd96116567118ca63510d9d4f
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Oct 25 17:35:32 2013 -0600
+
+    adding jquery validation to warranty form
+
+commit 3313cb9ab66f756b4593c9f00926baca4b4b2d35
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Oct 25 07:03:02 2013 -0600
+
+    working on pdf
+
+commit 48bd8021b4cd64e6df2db339131d510be7b0cfe3
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 24 21:35:51 2013 -0600
+
+    working on pdf version of form
+
+commit 704eccb7265014d7ed182805f63f0b78a7809776
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 24 09:04:02 2013 -0600
+
+    found the code i was looking for. i can use this for all the checkboxes so the checkboxes will appear correctly in the PDF
+
+commit e4b5ff6a6189b475ae4abbc771eeba2eb7f0cb2f
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 24 07:32:13 2013 -0600
+
+    building pdf version of form
+
+commit dd6fa5d48c2734f54b31c5207f5910482e2f7f87
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Oct 23 19:09:38 2013 -0600
+
+    added phpmailer, added setting up function to pass data to the view before coverting to pdf
+
+commit 91bcc53fa61b2af661cd4bc9f9c9f79d06eed714
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Oct 23 17:19:13 2013 -0600
+
+    moved variables into data array. file uploading appears to be working. var_dump of data is showing information. need to build document to receive the data.
+
+commit 066ace0df8d3ac77687f512ac99b1e9d262d92a7
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Oct 23 07:01:58 2013 -0600
+
+    working on warranty still
+
+commit d85bb30a02ff1a18447e35cee37fb45375e4ee11
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Oct 21 08:03:07 2013 -0600
+
+    adding functions to form submit
+
+commit ea52957a6eaf342e42982c733b5178aafad467c9
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sun Oct 20 16:11:22 2013 -0600
+
+    building out form submit functions
+
+commit ee686c0ce11cebb95c8cc39fa09a47be69957750
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Oct 19 19:08:38 2013 -0600
+
+    finally done with form for now, ready to start work on form processing
+
+commit db75534bf3e91b4c15e922dcc97e992dac3d350f
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Tue Oct 15 17:20:02 2013 -0600
+
+    added requirement checks for two more sets of checkboxes on international purchase order
+
+commit 49369116f514f7ac5833f01acfff57763ae9e8b5
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Tue Oct 15 09:58:14 2013 -0600
+
+    working on project form
+
+commit 7a8281951203fbbab81838dffd30ef110134f1f9
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Mon Oct 14 19:59:48 2013 -0600
+
+    working on the form still
+
+commit 6426438ed8d6ccbe6621f0ca15fc8d983f87b91a
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sun Oct 13 20:12:26 2013 -0600
+
+    working on the form still
+
+commit 4e3a92961bff5203a1f0a8b0f715d314deaed671
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Oct 12 22:02:08 2013 -0600
+
+    working on warranty form
+
+commit 9e4b844b44a66bfd57e238cfdb52f2066811bbf7
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sat Oct 12 16:28:01 2013 -0600
+
+    working on warranty form
+
+commit ffa6c6cc2949ddbf1e925b4b9e64070c059180e7
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 10 21:38:57 2013 -0600
+
+    started building out warranty form.
+
+commit 9ec9f4161e5a339e4db6a7cd88dca97c22c65e61
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Oct 10 18:13:45 2013 -0600
+
+    beginning work on new form
+
+commit bddf0f7ce7ade9a9c89aaf3d0a0493c619e938c7
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Wed Oct 9 18:06:50 2013 -0600
+
+    added new row to int purchase order form
+
+commit 356f130de40bef8d2af257bab5be3376aba5170d
+Merge: f849daf 8f2896f
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sun Oct 6 12:07:50 2013 -0600
+
+    merge conflict
+
+commit f849dafbbf1d2150d5c679d139ba54e1d5541a24
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Sun Oct 6 12:07:23 2013 -0600
+
+    setting up on local machine
+
+commit 8f2896f8652375565c54378ea55d7b1b8dff5981
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Sep 19 11:28:08 2013 -0600
+
+    pdfs are downloaded to the server now
+
+commit 2b36a9bc9866237985ce6cc8145a57684b48b3ac
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Sep 19 09:00:40 2013 -0600
+
+    setting up for pdf file saving
+
+commit cef3c92f4e38abd57aff578ac8a6d83a219fad2c
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Fri Sep 13 16:53:03 2013 -0600
+
+    merging from live
+
+commit c462ac550a35dca246e7c669f1b10bff122bee25
+Author: Jason Shultz <jasshultz@gmail.com>
+Date:   Thu Sep 12 19:05:03 2013 -0600
+
+    initial commit

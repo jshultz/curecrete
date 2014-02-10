@@ -63,7 +63,8 @@ if (!function_exists('create_pdf')) {
 			$header = "From: ".$from_name." <".$from_mail.">\r\n";
 
             if ($photouploaded == '1') {
-                $marketing = 'marketing@ashfordformula.com';
+                $marketing = 'marketing@curecrete.com';
+
                 $header .= "Bcc: $marketing\r\n";
             }
 

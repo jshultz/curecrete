@@ -727,6 +727,7 @@ class Site extends CI_Controller
         /* END Project Information */
 
         /* Begin Drum Information */
+        $tempdrums[] = '';
 
         $tempdrums[] = $this->input->get_post('group');
 

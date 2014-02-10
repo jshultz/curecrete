@@ -37,7 +37,7 @@
     <div id="header">
         <table style="width: 750px;">
             <tr>
-                <td style="width: 120px; vertical-align: top;">
+                <td style="width: 80px; vertical-align: top;">
                     <img src="/forms/assets/img/Curecrete-Logo_120x169.png" style="margin-right: 10px; height: 100px; width: 71px">
                 </td>
                 <td style="width: 150px; vertical-align: top;">
@@ -161,7 +161,7 @@
 
 </div>
 
-    <div id="headerTextFields" style="font-size: .75em; margin-top: 20px;">
+    <div id="headerTextFields" style="font-size: .75em; margin-top: 10px;">
         <table style="font-size: 1em; width: 750px;">
             <tr>
                 <td class="label" style="width: 180px; background-color: #D3D3D3; padding-left: 5px;">
@@ -258,9 +258,6 @@
             <th colspan="8" style="background-color: #000000; color: #ffffff; text-align: center; height: 25px;">
 
 	            <p style="text-transform: uppercase"><span>Drum Information</span></p>
-
-	            <p>Drum Number(s) / Liter(s) or Gallon(s)
-		            Used</p>
             </th>
         </tr>
         <tr class="labelRow">
@@ -295,6 +292,8 @@
                 $x = 1;
 
                 echo '<tr style="border-bottom: 1px solid #000;">';
+
+
 
                 foreach($drumdata as $key => $value) {
 

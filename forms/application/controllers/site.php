@@ -272,7 +272,9 @@ class Site extends CI_Controller
 
 		$message .= '<h2 class="order">Order (USD)</h2>';
 		$message .= '<table border="1"><tbody>';
-		$message .= '<tr><th>Quantity</th>
+		$message .= '<tr>
+                    <th>Line<br/>Number</th>
+                    <th>Quantity</th>
 					<th>Size</th>
 					<th>Product</th>
 					<th>Gallons<br/>Price (USD)</th>
@@ -281,16 +283,20 @@ class Site extends CI_Controller
 
 
 
+        $line = 1;
+
 		foreach($_POST['row'] as $key => $value) {
 
 			if ($value["orderQuantity"] != '') {
-				$message .= '<tr><td>' . $value["orderQuantity"] .  '</td><td>' . $value["orderSize"] . '</td><td>' . $value["orderProduct"] . '</td><td>' . $value["orderLiter"] . '</td><td>' . $value["orderContainer"] . '</td><td class="extension"></td></tr>';
+				$message .= '<tr><td>' . $line .'</td><td>' . $value["orderQuantity"] .  '</td><td>' . $value["orderSize"] . '</td><td>' . $value["orderProduct"] . '</td><td>' . $value["orderLiter"] . '</td><td>' . $value["orderContainer"] . '</td><td class="extension"></td></tr>';
 			}
+
+            $line = $line + 1;
 
 		}
 
 
-		$message .= '<tr><td colspan="4" rowspan="3" border="1" class="comments"><p>Comments (Specific requests on shipment:)</p> <p>' . (string)$this->input->post('orderComments', TRUE) . '</p></td>';
+		$message .= '<tr><td colspan="5" rowspan="3" border="1" class="comments"><p>Comments (Specific requests on shipment:)</p> <p>' . (string)$this->input->post('orderComments', TRUE) . '</p></td>';
 		$message .= '<td style="text-align: right"><p>Warehouse Fee $65:</p></td><td class="extension"> </td></tr>';
 		$message .= '<tr><td style="text-align: right"><p>Miscellaneous:</p></td><td class="extension"> </td></tr>';
 		$message .= '<tr><td style="text-align: right"><p>Total:</p></td><td class="extension"> </td></tr>';

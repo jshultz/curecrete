@@ -404,8 +404,8 @@
 				<td class="quantity"><input name="row[0][orderQuantity]" type="text" class="required"></td>
 				<td class="size"><input name="row[0][orderSize]" type="text" class="required"> </td>
 				<td class="product"><input name="row[0][orderProduct]" type="text" class="required"> </td>
-				<td class="liter"><input name="row[0][orderLiter]" type="text" class="required"> </td>
-				<td class="container"><input name="row[0][orderContainer]" type="text" class="required"></td>
+				<td class="liter"><input name="row[0][orderLiter]" type="text" class=""> </td>
+				<td class="container"><input name="row[0][orderContainer]" type="text" class=""></td>
 				<td class="remove"></td>
 			</tr>
 			<tr>

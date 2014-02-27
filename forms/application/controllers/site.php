@@ -283,7 +283,7 @@ class Site extends CI_Controller
 
 
 
-        $line = 1;
+        $line = 'A';
 
 		foreach($_POST['row'] as $key => $value) {
 
@@ -291,7 +291,7 @@ class Site extends CI_Controller
 				$message .= '<tr><td>' . $line .'</td><td>' . $value["orderQuantity"] .  '</td><td>' . $value["orderSize"] . '</td><td>' . $value["orderProduct"] . '</td><td>' . $value["orderLiter"] . '</td><td>' . $value["orderContainer"] . '</td><td class="extension"></td></tr>';
 			}
 
-            $line = $line + 1;
+            $line++;
 
 		}
 

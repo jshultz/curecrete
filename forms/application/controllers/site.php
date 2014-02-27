@@ -273,10 +273,10 @@ class Site extends CI_Controller
 		$message .= '<h2 class="order">Order (USD)</h2>';
 		$message .= '<table border="1"><tbody>';
 		$message .= '<tr>
-                    <th>Line<br/>Number</th>
-                    <th>Quantity</th>
-					<th>Size</th>
-					<th>Product</th>
+                    <th width="50" style="width: 50px;">Line<br/>Number</th>
+                    <th width="50" style="width: 50px;">Quantity</th>
+					<th width="50" style="width: 50px;">Size</th>
+					<th width="290" style="width: 290px;">Product</th>
 					<th>Gallons<br/>Price (USD)</th>
 					<th>Container<br/>Price (USD)</th>
 					<th class="extension">Extension<br/>(Office Use)</th></tr>';

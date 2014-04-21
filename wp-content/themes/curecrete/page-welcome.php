@@ -37,10 +37,28 @@ body {
     <td width="355" bgcolor="#F3F3F4">
       <a href="http://www.retroplatesystem.com"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Small Landing Page - RetroPlate Button.png" alt="Retroplate" width="300" border="0" /></a></td>
   </tr>
-  <tr>
-    <td colspan="4" bgcolor="#F3F3F4"><div align="center"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Landing Page - Footer.png" alt="Footer" width="768" height="75" border="0" usemap="#CreteStripMap" />&nbsp;</div></td>
-  </tr>
+    <style>
+        #footerrow img {
+            width: 120px;
+        }
+    </style>
+    <tr style="background-color: #ffffff;">
+        <td colspan="4">
+            <table id="footerrow">
+                <td width="120px;">&nbsp;</td>
+                <td width="120px;"><a target="_blank" href="http://www.ashfordformula.com/overview/supporting_products_crete_strip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/fwcurecretelandingpage2/CS-Button.jpg"></a> </td>
+                <td width="75px;"></td>
+                <td width="120px;"><a target="_blank" href="http://www.ashfordformula.com/overview/supporting_products_cretefill_pro_series"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/fwcurecretelandingpage2/CFP-Button.jpg"></a></td>
+                <td width="75px;"></td>
+                <td width="120px;"><a target="_blank" href="http://www.ashfordformula.com/overview/supporting_products"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/fwcurecretelandingpage2/CCP-Button.jpg"></a></td>
+                <td width="120px;"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
+
+
 
 <map name="CreteStripMap" id="CreteStripMap">
 <area shape="rect" coords="98,5,197,70" href="http://www.ashfordformula.com/overview/supporting_products_crete_strip" target="_blank" alt="CreteStrip" />

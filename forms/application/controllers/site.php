@@ -39,11 +39,12 @@ class Site extends CI_Controller
         $this->load->view('contest');
     }
 
-    public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage="", $photouploaded="", $emailsubject=""){
-        date_default_timezone_set('UTC');
-        $this->load->helper(array('My_Pdf'));   //  Load helper
 
-        create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage, $photouploaded, $emailsubject); //Email pdf
+	public function pdf_report($data, $file_name="report", $sendername="", $senderemail="", $type = "S", $photomessage="", $photouploaded="", $emailsubject="", $recipient = ""){
+		date_default_timezone_set('UTC');
+		$this->load->helper(array('My_Pdf'));   //  Load helper
+
+		create_pdf($data, $file_name, $type, $sendername, $senderemail, $photomessage, $photouploaded, $emailsubject, $recipient); //Email pdf
 
 
     }
@@ -898,7 +899,9 @@ class Site extends CI_Controller
 
         $emailsubject = 'PR/WR Form Submission-' . $data['distributorName'] . '-' . $data['formid'];
 
-        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded, $emailsubject);
+        $recipient = 'project';
+
+        $this->pdf_report($body, $file_name, $data['distributorName'], $data['distributorEmail'], $type, $photomessage, $photouploaded, $emailsubject, $recipient);
         $data['message'] = '<div style="text-align:center;">';
         $data['message'] .= '<p>Thank you for submitting your <strong>Project Report/Warranty Request</strong>.  </p><p>Your submission was received on <strong>' . date('m-d-Y, H:i:s') . ' (UTC)</strong>. </p><p>You will be receiving a confirmation email listing the details of your submission shortly.</p>';
         $data['message'] .= '<p><strong><em><span style="text-decoration: underline">Questions Regarding Your Submission?</span></em></strong><br/><a href="mailto:customercare@curecrete.com">customercare@curecrete.com</a> or 801-489-5663</p>';

@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 if (!function_exists('create_pdf')) {
 
-	function create_pdf($html_data, $file_name = "", $type = "D",$sendername='', $senderemail='', $photomessage='', $photouploaded='', $emailsubject='') {
+	function create_pdf($html_data, $file_name = "", $type = "D",$sendername='', $senderemail='', $photomessage='', $photouploaded='', $emailsubject='', $recipient="") {
 		if ($file_name == "") {
 			date_default_timezone_set('UTC');
 			$file_name = 'report' . date('dMY');
@@ -43,8 +43,18 @@ if (!function_exists('create_pdf')) {
 			$content = chunk_split(base64_encode($content));
 //			$mailto = 'Garrett.Soong@ashfordformula.com';
 
+            if ($recipient != "") {
 
-			$mailto = 'customercare@curecrete.com';
+                $mailto = 'projectreports@curecrete.com';
+
+            } else {
+
+                $mailto = 'customercare@curecrete.com';
+
+            }
+
+
+
 //			$mailto = 'jasshultz@gmail.com';
 			$from_name = 'Curecrete Postmaster';
 			$from_mail = 'postmaster@curecrete.com';
